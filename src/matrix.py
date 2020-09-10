@@ -1,6 +1,8 @@
 class Matrix():
     def __init__(self, input_elements):
         self.elements = input_elements
+        self.num_rows = len(self.elements)
+        self.num_cols = len(self.elements[0])
 
     def copy(self):
         copied_matrix = Matrix(self.elements)
@@ -28,13 +30,13 @@ class Matrix():
         return Matrix(difference_matrix)
 
     def scalar_multiply(self, input_scalar):
-        rescaled_matrix = [[0, 0], [0, 0]]
+        rescaled_elements = [[0, 0], [0, 0]]
 
         for i in range(len(self.elements)):
             for j in range(len(self.elements[0])):
-                rescaled_matrix[i][j] = self.elements[i][j] * input_scalar
+                rescaled_elements[i][j] = self.elements[i][j] * input_scalar
 
-        return Matrix(rescaled_matrix)
+        return Matrix(rescaled_elements)
 
     def matrix_multiply(self, input_matrix):
         product_matrix = [[0, 0], [0, 0]]
@@ -46,3 +48,4 @@ class Matrix():
                         self.elements[i][k] * input_matrix.elements[k][j])
 
         return Matrix(product_matrix)
+

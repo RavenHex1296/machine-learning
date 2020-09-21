@@ -5,16 +5,17 @@ class Matrix():
         self.num_cols = len(self.elements[0])
 
     def copy(self):
-        return self
+        copied_elements = [[num for num in row] for row in self.elements]
+        return Matrix(copied_elements)
 
     def add(self, input_matrix):
         sum_matrix = []
-
         for i in range(self.num_rows):
             sum_matrix.append([])
 
             for j in range(self.num_cols):
-                sum_matrix[i].append(self.elements[i][j] + input_matrix.elements[i][j])
+                sum_matrix[i].append(
+                    self.elements[i][j] + input_matrix.elements[i][j])
 
         return Matrix(sum_matrix)
 
@@ -25,7 +26,8 @@ class Matrix():
             difference_matrix.append([])
 
             for j in range(self.num_cols):
-                difference_matrix[i].append(self.elements[i][j] - input_matrix.elements[i][j])
+                difference_matrix[i].append(
+                    self.elements[i][j] - input_matrix.elements[i][j])
 
         return Matrix(difference_matrix)
 
@@ -36,7 +38,8 @@ class Matrix():
             rescaled_elements.append([])
 
             for j in range(self.num_cols):
-                rescaled_elements[i].append(self.elements[i][j] * input_scalar)
+                rescaled_elements[i].append(
+                    self.elements[i][j] * input_scalar)
 
         return Matrix(rescaled_elements)
 
@@ -52,7 +55,8 @@ class Matrix():
         for i in range(self.num_rows):
             for j in range(input_matrix.num_cols):
                 for k in range(input_matrix.num_rows):
-                    product_matrix[i][j] += (self.elements[i][k] * input_matrix.elements[k][j])
+                    product_matrix[i][j] += (
+                        self.elements[i][k] * input_matrix.elements[k][j])
 
         return Matrix(product_matrix)
 
@@ -87,49 +91,92 @@ class Matrix():
                 if self.elements[i][column_index] != 0:
                     return i
 
-            if column_index > 0:
-                ref_num = 0
+            elif column_index > 0:
+                if self.elements[i][column_index] != 0:
+                    reference_num = 0
 
-                for j in self.elements[i][:column_index]:
-                    ref_num += j
+                    for j in self.elements[i][:column_index]:
+                        reference_num += j
+                    if reference_num == 0:
+                        return i
 
-                if ref_num == 0:
-                    return i
+                else:
+                    continue
 
-    def swap_rows(self, row_index_1, row_index_2):
-        replacement = self.elements[row_index_1]
-        self.elements[row_index_1] = self.elements[row_index_2]
-        self.elements[row_index_2] = replacement
+            else:
+                return None
+
+    def swap_rows(self, row_index1, row_index2): 
+        copied_matrix = self.copy()
+        replacement = copied_matrix.elements[row_index1]
+        copied_matrix.elements[row_index1] = copied_matrix.elements[row_index2]
+        copied_matrix.elements[row_index2] = replacement
+        return copied_matrix
 
     def normalize_row(self, row_index):
-        for j in self.elements[row_index]:
+        copied_matrix = self.copy()
+
+        for j in copied_matrix.elements[row_index]:
+
             if j != 0:
-                initial_entry = j
+                original_entry = j
                 break
 
-        for j in range(self.num_cols):
-            self.elements[row_index][j] /= initial_entry
+        for j in range(len(copied_matrix.elements[0])):
+            copied_matrix.elements[row_index][j] /= original_entry
+
+        return copied_matrix
 
     def clear_below(self, row_index):
-        for num in self.elements[row_index]:
+        copied_matrix = self.copy()
+
+        for num in copied_matrix.elements[row_index]:
             if num != 0:
                 j = num
-                ref_index = self.elements[row_index].index(j)
+                col_index = copied_matrix.elements[row_index].index(j)
                 break
 
-        for row in self.elements[row_index + 1:]:
-            while row[ref_index] != 0:
-                for num in range(self.num_cols):
-                    row[num] -= self.elements[row_index][num]
+        for row in copied_matrix.elements[row_index + 1:]:
+            while row[col_index] != 0:
+                reference_num = row[col_index]
+
+                for n in range(len(copied_matrix.elements[0])):
+                    row[n] -= copied_matrix.elements[row_index][n] * reference_num
+
+        return copied_matrix
 
     def clear_above(self, row_index):
-        for num in self.elements[row_index]:
+        copied_matrix = self.copy()
+
+        for num in copied_matrix.elements[row_index]:
             if num != 0:
                 j = num
-                ref_index = self.elements[row_index].index(j)
+                col_index = copied_matrix.elements[row_index].index(j)
                 break
 
-        for row in self.elements[:row_index]:
-            while row[ref_index] != 0:
-                for n in range(self.num_cols):
-                    row[n] -= self.elements[row_index][n]
+        for row in copied_matrix.elements[:row_index]:
+            while row[col_index] != 0:
+                reference_num = row[col_index]
+
+                for n in range(len(copied_matrix.elements[0])):
+                    row[n] -= copied_matrix.elements[row_index][n] * reference_num
+        return copied_matrix
+
+    def rref(self):
+        copied_matrix = self.copy()
+        row_index = 0
+        for j in range(copied_matrix.num_cols):
+            pivot = copied_matrix.get_pivot_row(j)
+
+            if pivot != None:
+                if pivot != row_index:
+                    copied_matrix = copied_matrix.swap_rows(row_index, pivot)
+                copied_matrix = copied_matrix.normalize_row(row_index)
+                copied_matrix = copied_matrix.clear_above(row_index)
+                copied_matrix = copied_matrix.clear_below(row_index)
+                row_index += 1
+
+            else:
+                continue
+
+        return copied_matrix

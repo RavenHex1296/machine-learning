@@ -67,54 +67,73 @@ print("Asserting A.elements")
 assert A.elements ==  [[0, 1, 2], [3, 6, 9], [2, 6, 8]], "Incorrect output"
 print("PASSED")
 
-print("Testing method 'get_pivot_row(0)'...")
+print("Testing method 'get_pivot_row(0)'")
 assert A.get_pivot_row(0) == 1, "Incorrect output"
 print("PASSED")
 
-A.swap_rows(0, 1)
-print("Testing method 'swap_rows(0, 1)'...")
+
+A = Matrix([[0, 1, 2], [3, 6, 9], [2, 6, 8]])
+
+print("Asserting method 'get_pivot_row(0)'")
+assert A.get_pivot_row(0) == 1, "Incorrect output"
+print("PASSED")
+
+A = A.swap_rows(0, 1)
+print("Asserting method 'swap_rows(0, 1)'")
 assert A.elements == [[3, 6, 9], [0, 1, 2], [2, 6, 8]], "Incorrect output"
 print("PASSED")
 
-A.normalize_row(0)
-print("Testing method 'normalize_row(0)'...")
+A = A.normalize_row(0)
+print("Asserting method 'normalize_row(0)'")
 assert A.elements == [[1, 2, 3], [0, 1, 2], [2, 6, 8]], "Incorrect output"
 print("PASSED")
 
-A.clear_below(0)
-print("Testing method 'clear_below(0)'...")
-assert A.elements == [[1, 2, 3], [0, 1, 2], [0, 2, 2]]
-print("PASSED")
-
-print("Testing method 'get_pivot_row(1)'...")
-assert A.get_pivot_row(1) == 1, "Incorrect output"
-print("PASSED")
-
-A.normalize_row(1)
-print("Testing method 'normalize_row(1)'...")
+A = A.clear_below(0)
+print("Asserting method 'clear_below(0)'")
 assert A.elements == [[1, 2, 3], [0, 1, 2], [0, 2, 2]], "Incorrect output"
 print("PASSED")
 
-A.clear_below(1)
-print("Testing method 'clear_below(1)'...")
+print("Asserting method 'get_pivot_row(1)'")
+assert A.get_pivot_row(1) == 1, "Incorrect output"
+print("PASSED")
+
+A = A.normalize_row(1)
+print("Asserting method 'normalize_row(1)'")
+assert A.elements == [[1, 2, 3], [0, 1, 2], [0, 2, 2]], "Incorrect output"
+print("PASSED")
+
+A = A.clear_below(1)
+print("Asserting method 'clear_below(1)'")
 assert A.elements == [[1, 2, 3], [0, 1, 2], [0, 0, -2]], "Incorrect output"
 print("PASSED")
 
+print("Asserting method 'get_pivot_row(2)'")
 assert A.get_pivot_row(2) == 2, "Incorrect output"
-print("Testing method 'get_pivot_row(2)'...")
 print("PASSED")
 
-A.normalize_row(2)
-print("Testing method 'normalize_row(2)'...")
+A = A.normalize_row(2)
+print("Asserting method 'normalize_row(2)'")
 assert A.elements == [[1, 2, 3], [0, 1, 2], [0, 0, 1]], "Incorrect output"
 print("PASSED")
 
-A.clear_above(2)
-print("Testing method 'clear_above(2)'...")
+A = A.clear_above(2)
+print("Asserting method 'clear_above(2)'")
 assert A.elements == [[1, 2, 0], [0, 1, 0], [0, 0, 1]], "Incorrect output"
 print("PASSED")
 
-A.clear_above(1)
-print("Testing method 'clear_above(1)'...")
+A = A.clear_above(1)
+print("Asserting method 'clear_above(1)'")
 assert A.elements == [[1, 0, 0], [0, 1, 0], [0, 0, 1]], "Incorrect output"
+print("PASSED")
+
+A = Matrix([[0, 1, 2], [3, 6, 9], [2, 6, 8]])
+A = A.rref()
+print("Testing method 'rref([[0, 1, 2], [3, 6, 9], [2, 6, 8]])'")
+assert A.elements == [[1, 0, 0], [0, 1, 0], [0, 0, 1]], "Incorrect output"
+print("PASSED")
+
+B = Matrix([[0, 0, -4, 0], [0, 0, 0.3, 0], [0, 2, 1, 0]])
+B = B.rref()
+print("Testing method 'rref([[0, 0, -4, 0], [0, 0, 0.3, 0], [0, 2, 1, 0]])'")
+assert B.elements == [[0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 0]], "Incorrect output"
 print("PASSED")

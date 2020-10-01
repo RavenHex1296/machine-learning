@@ -64,7 +64,7 @@ print("PASSED")
 
 A = Matrix([[0, 1, 2], [3, 6, 9], [2, 6, 8]])
 print("Asserting A.elements")
-assert A.elements ==  [[0, 1, 2], [3, 6, 9], [2, 6, 8]], "Incorrect output"
+assert A.elements == [[0, 1, 2], [3, 6, 9], [2, 6, 8]], "Incorrect output"
 print("PASSED")
 
 print("Testing method 'get_pivot_row(0)'")
@@ -136,4 +136,51 @@ B = Matrix([[0, 0, -4, 0], [0, 0, 0.3, 0], [0, 2, 1, 0]])
 B = B.rref()
 print("Testing method 'rref([[0, 0, -4, 0], [0, 0, 0.3, 0], [0, 2, 1, 0]])'")
 assert B.elements == [[0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 0]], "Incorrect output"
+print("PASSED")
+
+
+A = Matrix([
+    [1, 2,   3,  4],
+    [5, 6,   7,  8],
+    [9, 10, 11, 12]
+])
+B = B = Matrix([
+    [13, 14],
+    [15, 16],
+    [17, 18]
+])
+
+A_augmented = A.augment(B)
+print("Asserting method 'augment'")
+assert A_augmented.elements == [
+    [1, 2,   3,  4, 13, 14],
+    [5, 6,   7,  8, 15, 16],
+    [9, 10, 11, 12, 17, 18]
+], "Incorrect output"
+print("PASSED")
+
+rows_02 = A_augmented.get_rows([0, 2])
+print("Asserting method 'get_rows'")
+assert rows_02.elements == [
+    [1, 2,   3,  4, 13, 14],
+    [9, 10, 11, 12, 17, 18]
+], "Incorrect output"
+print("PASSED")
+
+cols_0123 = A_augmented.get_columns([0, 1, 2, 3])
+print("Asserting method 'get_columns'")
+assert cols_0123.elements == [
+    [1, 2,   3,  4],
+    [5, 6,   7,  8],
+    [9, 10, 11, 12]
+], "Incorrect output"
+print("PASSED")
+
+cols_45 = A_augmented.get_columns([4, 5])
+print("Asserting method 'get_columns'")
+assert cols_45.elements == [
+    [13, 14],
+    [15, 16],
+    [17, 18]
+], "Incorrect output"
 print("PASSED")

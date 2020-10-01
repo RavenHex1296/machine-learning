@@ -97,6 +97,7 @@ class Matrix():
 
                     for j in self.elements[i][:column_index]:
                         reference_num += j
+
                     if reference_num == 0:
                         return i
 
@@ -106,7 +107,7 @@ class Matrix():
             else:
                 return None
 
-    def swap_rows(self, row_index1, row_index2): 
+    def swap_rows(self, row_index1, row_index2):
         copied_matrix = self.copy()
         replacement = copied_matrix.elements[row_index1]
         copied_matrix.elements[row_index1] = copied_matrix.elements[row_index2]
@@ -160,11 +161,13 @@ class Matrix():
 
                 for n in range(len(copied_matrix.elements[0])):
                     row[n] -= copied_matrix.elements[row_index][n] * reference_num
+
         return copied_matrix
 
     def rref(self):
         copied_matrix = self.copy()
         row_index = 0
+
         for j in range(copied_matrix.num_cols):
             pivot = copied_matrix.get_pivot_row(j)
 
@@ -180,3 +183,34 @@ class Matrix():
                 continue
 
         return copied_matrix
+
+    def augment(self, other_matrix):
+        copied_matrix = self.copy()
+
+        for i in range(other_matrix.num_rows):
+            for j in range(other_matrix.num_cols):
+                copied_matrix.elements[i].append(other_matrix.elements[i][j])
+
+        return copied_matrix
+
+    def get_rows(self, row_nums):
+        copied_matrix = self.copy()
+        row_matrix = []
+
+        for row in row_nums:
+            row_matrix.append(copied_matrix.elements[row])
+
+        return Matrix(row_matrix)
+
+    def get_columns(self, col_nums):
+        copied_matrix = self.copy()
+        column_matrix = []
+
+        for i in range(copied_matrix.num_rows):
+            column_matrix.append([])
+
+        for i in range(copied_matrix.num_rows):
+            for column in col_nums:
+                column_matrix[i].append(copied_matrix.elements[i][column])
+
+        return Matrix(column_matrix)

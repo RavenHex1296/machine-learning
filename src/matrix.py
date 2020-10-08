@@ -166,18 +166,21 @@ class Matrix():
 
     def rref(self):
         copied_matrix = self.copy()
-        row_index = 0
+        i = 0
 
         for j in range(copied_matrix.num_cols):
-            pivot = copied_matrix.get_pivot_row(j)
+            pivot_index = copied_matrix.get_pivot_row(j)
 
-            if pivot != None:
-                if pivot != row_index:
-                    copied_matrix = copied_matrix.swap_rows(row_index, pivot)
-                copied_matrix = copied_matrix.normalize_row(row_index)
-                copied_matrix = copied_matrix.clear_above(row_index)
-                copied_matrix = copied_matrix.clear_below(row_index)
-                row_index += 1
+            if pivot_index != None:
+                if i not in range(copied_matrix.num_rows):
+                    continue
+
+                if pivot_index != i:
+                    copied_matrix = copied_matrix.swap_rows(i, pivot_index)
+                copied_matrix = copied_matrix.normalize_row(i)
+                copied_matrix = copied_matrix.clear_above(i)
+                copied_matrix = copied_matrix.clear_below(i)
+                i += 1
 
             else:
                 continue
@@ -214,3 +217,28 @@ class Matrix():
                 column_matrix[i].append(copied_matrix.elements[i][column])
 
         return Matrix(column_matrix)
+
+    def inverse(self):
+        copied_matrix = self.copy()
+
+        if copied_matrix.num_rows != copied_matrix.num_cols:
+            print("The matrix has no inverse because it isn't a square matrix")
+            return
+
+        identity_matrix = Matrix([[1 if j == i else 0 for j in range(copied_matrix.num_cols)] for i in range(copied_matrix.num_rows)])
+        rref_matrix = copied_matrix.augment(identity_matrix).rref()
+
+        for i in range(copied_matrix.num_rows):
+            if rref_matrix.get_pivot_row(i) != i:
+                print("The matrix has no inverse because it is singular")
+                return
+
+        result_matrix = []
+
+        for i in range(copied_matrix.num_rows):
+            result_matrix.append([])
+
+            for j in range(copied_matrix.num_cols, rref_matrix.num_cols):
+                result_matrix[i].append(rref_matrix.elements[i][j])
+
+        return Matrix(result_matrix)

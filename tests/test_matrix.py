@@ -1,7 +1,7 @@
 import sys
 sys.path.append('src')
 from matrix import Matrix
-
+''''
 A = Matrix([[1, 3], [2, 4]])
 
 print("Asserting A.elements")
@@ -184,3 +184,30 @@ assert cols_45.elements == [
     [17, 18]
 ], "Incorrect output"
 print("PASSED")
+
+'''
+
+A = Matrix([[1, 2], [3, 4]])
+
+A_inv = A.inverse()
+
+print("Asserting method 'inverse' on input [[1, 2], [3, 4]]")
+assert A_inv.elements == [[-2,   1], [1.5, -0.5]], "Incorrect output"
+print("PASSED")
+
+A = Matrix([[1,   2,  3], [1,   0, -1], [0.5, 0,  0]])
+A_inv = A.inverse()
+
+print("Asserting method 'inverse' on input [[1,   2,  3], [1,   0, -1], [0.5, 0,  0]]")
+assert A_inv.elements == [[0,   0,    2], [0.5, 1.5, -4], [0,  -1,    2]], "Incorrect output"
+print("PASSED")
+
+A = Matrix([[1, 2, 3, 0], [1, 0, 1, 0], [0, 1, 0, 0]])
+
+print("Asserting [[1, 2, 3, 0], [1, 0, 1, 0], [0, 1, 0, 0]] has no inverse")
+A_inv = A.inverse()
+
+A = Matrix([[1, 2, 3], [3, 2, 1], [1, 1, 1]])
+
+print("Asserting [[1, 2, 3], [3, 2, 1], [1, 1, 1]] has no inverse")
+A_inv = A.inverse()

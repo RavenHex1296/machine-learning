@@ -220,17 +220,16 @@ class Matrix():
 
     def inverse(self):
         copied_matrix = self.copy()
-
-        if copied_matrix.num_rows != copied_matrix.num_cols:
-            print("The matrix has no inverse because it isn't a square matrix")
-            return
-
         identity_matrix = Matrix([[1 if j == i else 0 for j in range(copied_matrix.num_cols)] for i in range(copied_matrix.num_rows)])
         rref_matrix = copied_matrix.augment(identity_matrix).rref()
 
+        if copied_matrix.num_rows != copied_matrix.num_cols:
+            print("Error: cannot invert a non-square matrix")
+            return
+
         for i in range(copied_matrix.num_rows):
             if rref_matrix.get_pivot_row(i) != i:
-                print("The matrix has no inverse because it is singular")
+                print("Error: cannot invert a singular matrix")
                 return
 
         result_matrix = []
@@ -242,3 +241,33 @@ class Matrix():
                 result_matrix[i].append(rref_matrix.elements[i][j])
 
         return Matrix(result_matrix)
+
+    def determinant(self):
+        determinant = 1
+        copied_matrix = self.copy()
+        i = 0
+
+        if copied_matrix.num_cols != copied_matrix.num_rows:
+           return ("Error: Cannot take determinant of non-square matrix")
+
+        for j in range(copied_matrix.num_cols):
+            pivot_index = copied_matrix.get_pivot_row(j)
+
+            if pivot_index != None:
+                if i not in range(copied_matrix.num_rows):
+                    continue
+
+                if pivot_index != i:
+                    copied_matrix = copied_matrix.swap_rows(i, pivot_index)
+
+                determinant *= copied_matrix.elements[pivot_index][j]
+                copied_matrix = copied_matrix.normalize_row(i)
+                copied_matrix = copied_matrix.clear_above(i)
+                copied_matrix = copied_matrix.clear_below(i)
+                i += 1
+
+            else:
+                determinant *= 0
+                continue
+
+        return determinant

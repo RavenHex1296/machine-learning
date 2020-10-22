@@ -185,8 +185,6 @@ assert cols_45.elements == [
 ], "Incorrect output"
 print("PASSED")
 
-'''
-
 A = Matrix([[1, 2], [3, 4]])
 
 A_inv = A.inverse()
@@ -211,3 +209,37 @@ A = Matrix([[1, 2, 3], [3, 2, 1], [1, 1, 1]])
 
 print("Asserting [[1, 2, 3], [3, 2, 1], [1, 1, 1]] has no inverse")
 A_inv = A.inverse()
+'''
+
+A = Matrix([[1, 2], [3, 4]])
+ans = A.determinant()
+
+print("Asserting method 'determinant'")
+assert round(ans, 6) == -2, "Incorrect output"
+print("PASSED")
+
+A = Matrix([[1, 2, 0.5], [3, 4, -1], [8, 7, -2]])
+ans = A.determinant()
+
+print("Asserting method 'determinant'")
+assert round(ans, 6) == -10.5, "Incorrect output"
+print("PASSED")
+
+A = Matrix([[1, 2, 0.5, 0, 1, 0], [3, 4, -1, 1, 0, 1], [8, 7, -2, 1, 1, 1], [-1, 1, 0, 1, 0, 1], [0, 0.35, 0, -5, 1, 1], [1, 1, 1, 1, 1, 0]])
+ans = A.determinant()
+
+print("Asserting method 'determinant'")
+assert round(ans, 6) == -37.3, "Incorrect output"
+print("PASSED")
+
+A = Matrix([[1, 2, 0.5, 0, 1, 0], [3, 4, -1, 1, 0, 1], [8, 7, -2, 1, 1, 1], [-1, 1, 0, 1, 0, 1], [0, 0.35, 0, -5, 1, 1], [1, 1, 1, 1, 1, 0], [2, 3, 1.5, 1, 2, 0]])
+
+print("Asserting method 'determinant' for a matrix with no determinant")
+print(A.determinant())
+
+A = Matrix([[1, 2, 0.5, 0, 1, 0, 1], [3, 4, -1, 1, 0, 1, 0], [8, 7, -2, 1, 1, 1, 0], [-1, 1, 0, 1, 0, 1, 0], [0, 0.35, 0, -5, 1, 1, 0], [1, 1, 1, 1, 1, 0, 0], [2, 3, 1.5, 1, 2, 0, 1]])
+ans = A.determinant()
+
+print("Asserting method 'determinant'")
+assert round(ans, 6) == 0, "Incorrect output"
+print("PASSED")

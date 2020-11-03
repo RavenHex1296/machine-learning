@@ -209,7 +209,7 @@ A = Matrix([[1, 2, 3], [3, 2, 1], [1, 1, 1]])
 
 print("Asserting [[1, 2, 3], [3, 2, 1], [1, 1, 1]] has no inverse")
 A_inv = A.inverse()
-'''
+
 
 A = Matrix([[1, 2], [3, 4]])
 ans = A.determinant()
@@ -242,4 +242,78 @@ ans = A.determinant()
 
 print("Asserting method 'determinant'")
 assert round(ans, 6) == 0, "Incorrect output"
+print("PASSED")
+'''
+
+A = Matrix([[1, 1, 0], [2, -1, 0], [0, 0, 3]])
+
+print("Asserting method 'exponent'")
+assert A.exponent(3).elements == [[3, 3, 0], [6, -3, 0], [0, 0, 27]], "Incorrect output"
+print("PASSED")
+
+A = Matrix([[1, 0, 2, 0, 3], [0, 4, 0, 5, 0], [6, 0, 7, 0, 8], [-1, -2, -3, -4, -5]])
+
+print("Asserting overloaded operations")
+A_t = A.transpose()
+
+print("Asserting method 'transpose'")
+assert A_t.elements == [[1,  0,  6, -1], [0,  4,  0, -2], [2,  0,  7, -3], [0,  5,  0, -4], [3,  0,  8, -5]], "Incorrect output"
+print("PASSED")
+
+B = A_t @ A
+print("Asserting overloaded operation 'matmul'")
+assert B.elements == [[38,  2, 47,  4, 56], [2, 20,  6, 28, 10], [47,  6, 62, 12, 77], [4, 28, 12, 41, 20], [56, 10, 77, 20, 98]], "Incorrect output"
+print("PASSED")
+
+C = B * 0.1
+print("Asserting overloaded operation 'mul'")
+assert C.elements == [[3.8, 0.2, 4.7, 0.4, 5.6], [0.2, 2.0, 0.6, 2.8, 1.0], [4.7, 0.6, 6.2, 1.2, 7.7], [0.4, 2.8, 1.2, 4.1, 2.0], [5.6, 1.0, 7.7, 2.0, 9.8]], "Incorrect output"
+print("PASSED")
+
+D = B - C
+print("Asserting overloaded operation 'sub'")
+assert D.elements == [[34.2, 1.8, 42.3, 3.6, 50.4], [1.8, 18., 5.4, 25.2, 9.], [42.3, 5.4, 55.8, 10.8, 69.3], [3.6, 25.2, 10.8, 36.9, 18.], [50.4, 9., 69.3, 18., 88.2]], "Incorrect output"
+print("PASSED")
+
+E = D + C
+print("Asserting overloaded operation 'add'")
+assert E.elements == [[38,  2, 47,  4, 56], [2, 20,  6, 28, 10], [47,  6, 62, 12, 77], [4, 28, 12, 41, 20], [56, 10, 77, 20, 98]], "Incorrect output"
+print("PASSED")
+
+print("Asserting overloaded operation 'eq'")
+assert (E == B) == True
+print("PASSED")
+
+print("Asserting overloaded operation 'eq'")
+assert (E == C) == False
+print("PASSED")
+
+
+A = Matrix([[1, 2], [3, 4]])
+ans = A.cofactor_method_determinant()
+print("Asserting method 'cofactor_method_determinant'")
+assert round(ans, 6) == -2, "Incorrect output"
+print("PASSED")
+
+A = Matrix([[1, 2, 0.5], [3, 4, -1], [8, 7, -2]])
+ans = A.cofactor_method_determinant()
+print("Asserting method 'cofactor_method_determinant'")
+assert round(ans, 6) == -10.5
+print("PASSED")
+
+A = Matrix([[1, 2, 0.5, 0, 1, 0], [3, 4, -1, 1, 0, 1], [8, 7, -2, 1, 1, 1], [-1, 1, 0, 1, 0, 1], [0, 0.35, 0, -5, 1, 1], [1, 1, 1, 1, 1, 0]])
+ans = A.cofactor_method_determinant()
+print("Asserting method 'cofactor_method_determinant'")
+assert round(ans, 6) == -37.3
+print("PASSED")
+
+A = Matrix([[1, 2, 0.5, 0, 1, 0], [3, 4, -1, 1, 0, 1], [8, 7, -2, 1, 1, 1], [-1, 1, 0, 1, 0, 1], [0, 0.35, 0, -5, 1, 1], [1, 1, 1, 1, 1, 0], [2, 3, 1.5, 1, 2, 0]])
+ans = A.cofactor_method_determinant()
+print("Asserting method 'cofactor_method_determinant'")
+print(ans)
+
+A = Matrix([[1, 2, 0.5, 0, 1, 0, 1], [3, 4, -1, 1, 0, 1, 0], [8, 7, -2, 1, 1, 1, 0], [-1, 1, 0, 1, 0, 1, 0], [0, 0.35, 0, -5, 1, 1, 0], [1, 1, 1, 1, 1, 0, 0], [2, 3, 1.5, 1, 2, 0, 1]])
+ans = A.cofactor_method_determinant()
+print("Asserting method 'cofactor_method_determinant'")
+assert round(ans, 6) == 0
 print("PASSED")

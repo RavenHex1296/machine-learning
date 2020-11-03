@@ -39,7 +39,7 @@ class Matrix():
 
             for j in range(self.num_cols):
                 rescaled_elements[i].append(
-                    self.elements[i][j] * input_scalar)
+                    round(self.elements[i][j] * input_scalar, 6))
 
         return Matrix(rescaled_elements)
 
@@ -248,7 +248,7 @@ class Matrix():
         i = 0
 
         if copied_matrix.num_cols != copied_matrix.num_rows:
-           return ("Error: Cannot take determinant of non-square matrix")
+            return ("Error: Cannot take determinant of non-square matrix")
 
         for j in range(copied_matrix.num_cols):
             pivot_index = copied_matrix.get_pivot_row(j)
@@ -271,3 +271,62 @@ class Matrix():
                 continue
 
         return determinant
+
+    def exponent(self, power):
+        copied_matrix = self.copy()
+        product_matrix = self.copy()
+
+        for n in range(power - 1):
+            product_matrix = product_matrix.matrix_multiply(copied_matrix)
+
+        return product_matrix
+
+    def __add__(self, other_matrix):
+        return self.add(other_matrix)
+
+    def __sub__(self, other_matrix):
+        return self.subtract(other_matrix)
+
+    def __mul__(self, scalar):
+        return self.scalar_multiply(scalar)
+
+    def __matmul__(self, other_matrix):
+        return self.matrix_multiply(other_matrix)
+
+    def __eq__(self, other_matrix):
+        return self.elements == other_matrix.elements
+
+    def cofactor_helper(self, col_num):
+        copied_matrix = self.copy()
+        row_values = []
+
+        for num in range(self.num_rows):
+            if num != 0:
+                row_values.append(num)
+
+        column_values = []
+
+        for num in range(self.num_cols):
+            if num != col_num:
+                column_values.append(num)
+
+        sub_matrix = copied_matrix.get_rows(row_values)
+        sub_matrix = sub_matrix.get_columns(column_values)
+        return sub_matrix
+
+    def cofactor_method_determinant(self):
+        det_matrix = self.copy()
+        det = 0
+        if det_matrix.num_rows == det_matrix.num_cols:
+            if det_matrix.num_cols > 1:
+                for col_index in range(det_matrix.num_cols):
+                    sub_matrix = det_matrix.cofactor_helper(col_index)
+                    det += ((-1)**col_index)*det_matrix.elements[0][col_index]*sub_matrix.cofactor_method_determinant()
+
+            else:
+                return det_matrix.elements[0][0]
+
+        else:
+            return "Error: cannot take determinant of a non-square matrix"
+
+        return det

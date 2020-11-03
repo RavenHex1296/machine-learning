@@ -3,7 +3,6 @@ sys.path.append('src')
 from matrix import Matrix
 import random
 
-
 test_matrix = Matrix([[random.random() for i in range(10)] for j in range(10)])
 
 print("RREF determinant:")

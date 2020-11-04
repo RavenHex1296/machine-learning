@@ -321,7 +321,7 @@ class Matrix():
             if det_matrix.num_cols > 1:
                 for col_index in range(det_matrix.num_cols):
                     sub_matrix = det_matrix.cofactor_helper(col_index)
-                    det += ((-1)**col_index)*det_matrix.elements[0][col_index]*sub_matrix.cofactor_method_determinant()
+                    det += ((-1) ** col_index) * det_matrix.elements[0][col_index] * sub_matrix.cofactor_method_determinant()
 
             else:
                 return det_matrix.elements[0][0]

@@ -94,7 +94,7 @@ assert A.elements == [[1, 2, 3], [0, 1, 2], [0, 2, 2]], "Incorrect output"
 print("PASSED")
 
 print("Asserting method 'get_pivot_row(1)'")
-assert A.get_pivot_row(1) == 1, "Incorrect output"
+assert A.get_pivfot_row(1) == 1, "Incorrect output"
 print("PASSED")
 
 A = A.normalize_row(1)

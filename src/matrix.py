@@ -296,6 +296,12 @@ class Matrix():
     def __eq__(self, other_matrix):
         return self.elements == other_matrix.elements
 
+    def __rmul__(self, scalar):
+        return self.scalar_multiply(scalar)
+
+    def __pow__(self, power):
+        return self.exponent(power)
+
     def cofactor_helper(self, col_num):
         copied_matrix = self.copy()
         row_values = []
@@ -320,9 +326,9 @@ class Matrix():
 
         if copied_matrix.num_rows == copied_matrix.num_cols:
             if copied_matrix.num_cols > 1:
-                for col_index in range(copied_matrix.num_cols):
-                    sub_matrix = copied_matrix.cofactor_helper(col_index)
-                    determinant += ((-1) ** col_index) * copied_matrix.elements[0][col_index] * sub_matrix.cofactor_method_determinant()
+                for j in range(copied_matrix.num_cols):
+                    sub_matrix = copied_matrix.cofactor_helper(j)
+                    determinant += ((-1) ** j) * copied_matrix.elements[0][j] * sub_matrix.cofactor_method_determinant()
 
             else:
                 return copied_matrix.elements[0][0]

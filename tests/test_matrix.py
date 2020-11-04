@@ -317,3 +317,15 @@ ans = A.cofactor_method_determinant()
 print("Asserting method 'cofactor_method_determinant'")
 assert round(ans, 6) == 0
 print("PASSED")
+
+A = Matrix([[1, 1, 0],[2, -1, 0], [0, 0, 3]])
+
+B = 0.1 * A
+print("Asserting overloaded operation 'rmul'")
+assert B.elements == [[0.1, 0.1, 0], [0.2, -0.1, 0], [0, 0, 0.3]], "Incorrect output"
+print("PASSED")
+
+C = A ** 3
+print("Asserting overloaded operation 'pow'")
+assert C.elements == [[3, 3, 0], [6, -3, 0], [0, 0, 27]], "Incorrect output"
+print("PASSED")

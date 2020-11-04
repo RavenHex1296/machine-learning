@@ -309,7 +309,7 @@ print("PASSED")
 
 A = Matrix([[1, 2, 0.5, 0, 1, 0], [3, 4, -1, 1, 0, 1], [8, 7, -2, 1, 1, 1], [-1, 1, 0, 1, 0, 1], [0, 0.35, 0, -5, 1, 1], [1, 1, 1, 1, 1, 0], [2, 3, 1.5, 1, 2, 0]])
 ans = A.cofactor_method_determinant()
-print("Asserting method 'cofactor_method_determinant'")
+print("Asserting method 'cofactor_method_determinant' detects non-square matrix")
 print(ans)
 
 A = Matrix([[1, 2, 0.5, 0, 1, 0, 1], [3, 4, -1, 1, 0, 1, 0], [8, 7, -2, 1, 1, 1, 0], [-1, 1, 0, 1, 0, 1, 0], [0, 0.35, 0, -5, 1, 1, 0], [1, 1, 1, 1, 1, 0, 0], [2, 3, 1.5, 1, 2, 0, 1]])

@@ -315,18 +315,19 @@ class Matrix():
         return sub_matrix
 
     def cofactor_method_determinant(self):
-        det_matrix = self.copy()
-        det = 0
-        if det_matrix.num_rows == det_matrix.num_cols:
-            if det_matrix.num_cols > 1:
-                for col_index in range(det_matrix.num_cols):
-                    sub_matrix = det_matrix.cofactor_helper(col_index)
-                    det += ((-1) ** col_index) * det_matrix.elements[0][col_index] * sub_matrix.cofactor_method_determinant()
+        copied_matrix = self.copy()
+        determinant = 0
+
+        if copied_matrix.num_rows == copied_matrix.num_cols:
+            if copied_matrix.num_cols > 1:
+                for col_index in range(copied_matrix.num_cols):
+                    sub_matrix = copied_matrix.cofactor_helper(col_index)
+                    determinant += ((-1) ** col_index) * copied_matrix.elements[0][col_index] * sub_matrix.cofactor_method_determinant()
 
             else:
-                return det_matrix.elements[0][0]
+                return copied_matrix.elements[0][0]
 
         else:
             return "Error: cannot take determinant of a non-square matrix"
 
-        return det
+        return determinant

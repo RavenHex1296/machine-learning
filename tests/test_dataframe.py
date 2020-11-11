@@ -2,7 +2,7 @@ import sys
 sys.path.append('src')
 from dataframe import DataFrame
 
-
+''''
 data_dict = {
     'Pete': [1, 0, 1, 0],
     'John': [2, 1, 0, 2],
@@ -55,4 +55,21 @@ assert df2.data_dict == {
     'John': [14, 7, 0, 14],
     'Sarah': [3, 1, 4, 0]
 }, "Incorrect output"
+print("PASSED")
+'''
+columns = ['firstname', 'lastname', 'age']
+arr = [['Kevin', 'Fray', 5], ['Charles', 'Trapp', 17], ['Anna', 'Smith', 13], ['Sylvia', 'Mendez', 9]]
+
+df = DataFrame.from_array(arr, columns)
+
+print("Asserting method 'select_rows_where'")
+assert df.select_rows_where(lambda row: len(row['firstname']) >= len(row['lastname']) and row['age'] > 10).to_array() == [['Charles', 'Trapp', 17]], "Incorrect output"
+print("PASSED")
+
+print("Asserting method 'to_array'")
+assert df.order_by('age', True).to_array() == [['Kevin', 'Fray', 5], ['Sylvia', 'Mendez', 9], ['Anna', 'Smith', 13], ['Charles', 'Trapp', 17]], "Incorrect output"
+print("PASSED")
+
+print("Asserting method 'order_by'")
+assert df.order_by('firstname', False).to_array() == [['Sylvia', 'Mendez', 9], ['Kevin', 'Fray', 5], ['Charles', 'Trapp', 17], ['Anna', 'Smith', 13]], "Incorrect output"
 print("PASSED")

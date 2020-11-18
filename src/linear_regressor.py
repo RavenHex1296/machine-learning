@@ -13,13 +13,13 @@ class LinearRegressor:
     def calculate_coefficients(self):
         data = self.dataframe.to_array()
         index = self.dataframe.columns.index(self.dependent_variable)
-        column = []
+        columns = []
 
         for i in range(len(data)):
-            column.append([])
-            column[i].append(data[i][index])
+            columns.append([])
+            columns[i].append(data[i][index])
 
-        column = Matrix(column)
+        columns = Matrix(columns)
         system_of_equations = []
 
         for i in range(len(data)):
@@ -39,7 +39,7 @@ class LinearRegressor:
         tranposed_matrix = sys_matrix.transpose()
         new_sys_matrix = tranposed_matrix @ sys_matrix
         sys_matrix_inverse = new_sys_matrix.inverse()
-        coefficients = sys_matrix_inverse @ tranposed_matrix @ column
+        coefficients = sys_matrix_inverse @ tranposed_matrix @ columns
         return coefficients
 
     def predict(self, input_dict):

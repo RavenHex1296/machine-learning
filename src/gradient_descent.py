@@ -8,11 +8,11 @@ class GradientDescent():
         gradient_list = []
 
         for n in range(dimension):
-            args_1 = list(self.points)
+            args = list(self.points)
             args_2 = list(self.points)
-            args_1[n] += 0.5 * delta
+            args[n] += 0.5 * delta
             args_2[n] -= 0.5 * delta
-            derivative = ((self.function(*args_1) - self.function(*args_2))) / delta
+            derivative = ((self.function(*args) - self.function(*args_2))) / delta
             gradient_list.append(derivative)
 
         return gradient_list

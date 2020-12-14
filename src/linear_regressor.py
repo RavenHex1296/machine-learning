@@ -3,7 +3,6 @@ sys.path.append('src')
 from dataframe import DataFrame
 from matrix import Matrix
 
-
 class LinearRegressor:
     def __init__(self, dataframe, dependent_variable):
         self.dataframe = dataframe
@@ -15,39 +14,47 @@ class LinearRegressor:
         index = self.dataframe.columns.index(self.dependent_variable)
         columns = []
 
-        for i in range(len(data)):
+        for row_index in range(len(data)):
             columns.append([])
-            columns[i].append(data[i][index])
+            columns[row_index].append(data[row_index][index])
 
         columns = Matrix(columns)
         system_of_equations = []
 
-        for i in range(len(data)):
+        for row_index in range(len(data)):
             system_of_equations.append([])
 
-            for j in range(len(data[0])):
-                if j == 0:
-                    system_of_equations[i].append(1)
+            for column_index in range(len(data[0])):
+                if column_index == 0:
+                    system_of_equations[row_index].append(1)
 
-                else:
-                    for n in range(len(data[i])):
-                        if n != index:
-                            system_of_equations[i].append(data[i][n])
-                            break
+                if column_index != index:
+                    system_of_equations[row_index].append(data[row_index][column_index])
 
         sys_matrix = Matrix(system_of_equations)
         tranposed_matrix = sys_matrix.transpose()
         new_sys_matrix = tranposed_matrix @ sys_matrix
         sys_matrix_inverse = new_sys_matrix.inverse()
         coefficients = sys_matrix_inverse @ tranposed_matrix @ columns
-        return coefficients
+        coefficients_dict = {}
+
+        for row_index in range(len(coefficients.elements)):
+            if row_index == 0:
+                coefficients_dict['constant'] = coefficients.elements[row_index][0]
+
+            elif row_index != 0:
+                coefficients_dict[self.dataframe.columns[row_index - 1]] = coefficients.elements[row_index][0]
+
+        return coefficients_dict
 
     def predict(self, input_dict):
-        for element in self.coefficients.elements[0]:
-            a = element
+        prediction = 0
 
-        for element in self.coefficients.elements[1]:
-            b = element
+        for key in self.coefficients:
+            if key in input_dict:
+                prediction += self.coefficients[key] * input_dict[key]
 
-        for key in input_dict:
-            return a + b * input_dict[key]
+            elif key not in input_dict:
+                prediction += self.coefficients[key]
+
+        return prediction

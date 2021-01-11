@@ -27,7 +27,6 @@ class DataFrame():
             counter += 1
         return result
 
-
     def select_columns(self, column_order):
         return DataFrame(self.data_dict, column_order)
 
@@ -112,7 +111,6 @@ class DataFrame():
         else:
             return DataFrame.from_array(new_arr[::-1], self.columns)
 
-    
     @classmethod
     def from_csv(cls, path_to_csv, header):
         with open(path_to_csv, "r") as file:

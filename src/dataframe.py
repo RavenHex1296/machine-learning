@@ -17,6 +17,17 @@ class DataFrame():
 
         return data_array
 
+    def to_array(self):
+        result = []
+        counter = 0
+        for j in range(len(self.data_dict[self.columns[0]])):
+            result.append([])
+            for key in self.columns:
+                result[counter].append(self.data_dict[key][j])
+            counter += 1
+        return result
+
+
     def select_columns(self, column_order):
         return DataFrame(self.data_dict, column_order)
 
@@ -100,3 +111,28 @@ class DataFrame():
 
         else:
             return DataFrame.from_array(new_arr[::-1], self.columns)
+
+    
+    @classmethod
+    def from_csv(cls, path_to_csv, header):
+        with open(path_to_csv, "r") as file:
+            data = {}
+            columns = []
+            splitted_file = []
+
+            for row in file.read().split('\n'):
+                splitted_file.append(row.split(', '))
+
+            for element in splitted_file[0]:
+                columns.append(element)
+
+        for n in range(len(columns)):
+            data[columns[n]] = []
+
+            for num in range(len(splitted_file)):
+                data[columns[n]].append(splitted_file[num][n])
+
+        for key in data:
+            data[key] = data[key][1:]
+
+        return cls(data, columns)

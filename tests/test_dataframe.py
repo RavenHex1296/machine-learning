@@ -56,7 +56,7 @@ assert df2.data_dict == {
     'Sarah': [3, 1, 4, 0]
 }, "Incorrect output"
 print("PASSED")
-'''
+
 columns = ['firstname', 'lastname', 'age']
 arr = [['Kevin', 'Fray', 5], ['Charles', 'Trapp', 17], ['Anna', 'Smith', 13], ['Sylvia', 'Mendez', 9]]
 
@@ -73,3 +73,12 @@ print("PASSED")
 print("Asserting method 'order_by'")
 assert df.order_by('firstname', False).to_array() == [['Sylvia', 'Mendez', 9], ['Kevin', 'Fray', 5], ['Charles', 'Trapp', 17], ['Anna', 'Smith', 13]], "Incorrect output"
 print("PASSED")
+'''
+
+path_to_datasets = '/home/runner/machine-learning/datasets/'
+filename = 'airtravel.csv' 
+filepath = path_to_datasets + filename
+df = DataFrame.from_csv(filepath, True)
+
+print(df.columns)
+print(df.to_array())

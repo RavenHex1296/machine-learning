@@ -37,15 +37,22 @@ class LinearRegressor:
         sys_matrix_inverse = new_sys_matrix.inverse()
         coefficients = sys_matrix_inverse @ tranposed_matrix @ columns
         coefficients_dict = {}
+        indpendent_variables = []
 
-        for row_index in range(len(coefficients.elements)):
-            if row_index == 0:
-                coefficients_dict['constant'] = coefficients.elements[row_index][0]
+        for column in self.dataframe.columns:
+            indpendent_variables.append(column)
 
-            elif row_index != 0:
-                coefficients_dict[self.dataframe.columns[row_index - 1]] = coefficients.elements[row_index][0]
+        indpendent_variables.remove(self.dependent_variable)
+
+        for n in range(len(indpendent_variables) + 1):
+            if n == 0:
+                coefficients_dict['constant'] = coefficients.elements[n][0]
+
+            else:
+                coefficients_dict[indpendent_variables[n - 1]] = coefficients.elements[n][0]
 
         return coefficients_dict
+        
 
     def predict(self, input_dict):
         prediction = 0

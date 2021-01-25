@@ -7,23 +7,19 @@ import math
 
 
 class LogisticRegressor:
-    def __init__(self, dataframe, dependent_variable):
+    def __init__(self, dataframe, dependent_variable, upper_bound):
         self.dataframe = dataframe
         self.dependent_variable = dependent_variable
+        self.upper_bound = upper_bound
         self.coefficients = self.calculate_coefficients()
 
     def calculate_coefficients(self):
         transformation = {}
-        transformed_values = []
 
         for key in self.dataframe.data_dict:
             transformation[key] = self.dataframe.data_dict[key]
 
-        for y in self.dataframe.data_dict[self.dependent_variable]:
-            transformed_values.append(math.log((1 / y) - 1))
-
-        for key in self.dependent_variable:
-            transformation[key] = transformed_values
+        transformation[self.dependent_variable] = [math.log(self.upper_bound / y - 1) for y in transformation[self.dependent_variable]]
 
         transformation = DataFrame(transformation, self.dataframe.columns)
         regressor = LinearRegressor(transformation, self.dependent_variable)
@@ -39,4 +35,4 @@ class LogisticRegressor:
             else:
                 prediction += self.coefficients[key]
 
-        return 1 / (1 + math.exp(prediction))
+        return self.upper_bound / (1 + math.exp(prediction))

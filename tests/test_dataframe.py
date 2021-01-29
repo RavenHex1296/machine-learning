@@ -73,7 +73,7 @@ print("PASSED")
 print("Asserting method 'order_by'")
 assert df.order_by('firstname', False).to_array() == [['Sylvia', 'Mendez', 9], ['Kevin', 'Fray', 5], ['Charles', 'Trapp', 17], ['Anna', 'Smith', 13]], "Incorrect output"
 print("PASSED")
-'''
+
 
 path_to_datasets = '/home/runner/machine-learning/datasets/'
 filename = 'airtravel.csv' 
@@ -82,3 +82,45 @@ df = DataFrame.from_csv(filepath, True)
 
 print(df.columns)
 print(df.to_array())
+'''
+
+df = DataFrame.from_array(
+    [[0, 0, [],               1],
+    [0, 0, ['mayo'],          1],
+    [0, 0, ['jelly'],         4],
+    [0, 0, ['mayo', 'jelly'], 0],
+    [5, 0, [],                4],
+    [5, 0, ['mayo'],          8],
+    [5, 0, ['jelly'],         1],
+    [5, 0, ['mayo', 'jelly'], 0],
+    [0, 5, [],                5],
+    [0, 5, ['mayo'],          0],
+    [0, 5, ['jelly'],         9],
+    [0, 5, ['mayo', 'jelly'], 0],
+    [5, 5, [],                0],
+    [5, 5, ['mayo'],          0],
+    [5, 5, ['jelly'],         0],
+    [5, 5, ['mayo', 'jelly'], 0]],
+    columns = ['beef', 'pb', 'condiments', 'rating']
+)
+
+df = df.create_dummy_variables('condiments')
+print("Asserting create_dummy_variables")
+assert df.columns == ['beef', 'pb', 'mayo', 'jelly', 'rating']
+assert df.to_array() == [[0, 0, 0, 0, 1],
+[0, 0, 1, 0, 1],
+[0, 0, 0, 1, 4],
+[0, 0, 1, 1, 0],
+[5, 0, 0, 0, 4],
+[5, 0, 1, 0, 8],
+[5, 0, 0, 1, 1],
+[5, 0, 1, 1, 0],
+[0, 5, 0, 0, 5],
+[0, 5, 1, 0, 0],
+[0, 5, 0, 1, 9],
+[0, 5, 1, 1, 0],
+[5, 5, 0, 0, 0],
+[5, 5, 1, 0, 0],
+[5, 5, 0, 1, 0],
+[5, 5, 1, 1, 0]]
+print("PASSED")

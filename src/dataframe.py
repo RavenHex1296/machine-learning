@@ -158,3 +158,38 @@ class DataFrame():
         data[column_1 + ' * ' + column_2] = interaction_terms
 
         return DataFrame(data, new_terms)
+
+    def create_dummy_variables(self, dummy_variables):
+        dummy_column = []
+        dummys = []
+        columns = []
+        data = dict(self.data_dict)
+
+        for variable in self.data_dict[dummy_variables]:
+            dummy_column.append(variable)
+        
+        for dummy in dummy_column:
+            for variable in dummy:
+                if variable not in dummys:
+                    dummys.append(variable)
+
+
+        for column in self.columns:
+            if column == dummy_variables:
+                for variable in dummys:
+                    columns.append(variable)
+
+            else:
+                columns.append(column)
+
+        for dummy_variable in dummys:
+            data[dummy_variable] = []
+
+            for variables in dummy_column:
+                if dummy_variable in variables:
+                    data[dummy_variable].append(1)
+
+                else:
+                    data[dummy_variable].append(0)
+
+        return DataFrame(data, columns)

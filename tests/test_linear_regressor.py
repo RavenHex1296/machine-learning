@@ -39,7 +39,7 @@ assert round(regressor.predict({
     'scoops of vanilla': 3
     }), 8) == 0.47102804, "Incorrect output"
 print("PASSED")
-'''
+
 
 df = DataFrame.from_array(
     [[0, 0, 1], 
@@ -71,3 +71,49 @@ print(regressor.predict({
     'pb': 5,
     'beef * pb': 25
 }))
+'''
+
+df = DataFrame.from_array(
+    [[0, 0, [],               1],
+    [0, 0, ['mayo'],          1],
+    [0, 0, ['jelly'],         4],
+    [0, 0, ['mayo', 'jelly'], 0],
+    [5, 0, [],                4],
+    [5, 0, ['mayo'],          8],
+    [5, 0, ['jelly'],         1],
+    [5, 0, ['mayo', 'jelly'], 0],
+    [0, 5, [],                5],
+    [0, 5, ['mayo'],          0],
+    [0, 5, ['jelly'],         9],
+    [0, 5, ['mayo', 'jelly'], 0],
+    [5, 5, [],                0],
+    [5, 5, ['mayo'],          0],
+    [5, 5, ['jelly'],         0],
+    [5, 5, ['mayo', 'jelly'], 0]],
+    columns = ['beef', 'pb', 'condiments', 'rating']
+)
+
+df = df.create_dummy_variables('condiments')
+
+df = df.create_interaction_terms('beef', 'pb')
+df = df.create_interaction_terms('beef', 'mayo')
+df = df.create_interaction_terms('beef', 'jelly')
+df = df.create_interaction_terms('pb', 'mayo')
+df = df.create_interaction_terms('pb', 'jelly')
+df = df.create_interaction_terms('mayo', 'jelly')
+
+regressor = LinearRegressor(df, 'rating')
+
+print("Asserting updated observations for LinearRegressor class")
+
+observation = {'beef': 8, 'mayo': 1}
+assert round(regressor.predict(observation), 2) == 11.34
+
+observation = {'beef': 8, 'pb': 4, 'mayo': 1}
+assert round(regressor.predict(observation), 2) == 3.62
+
+
+observation = {'beef': 8, 'mayo': 1, 'jelly': 1}
+assert round(regressor.predict(observation), 2) == 2.79
+
+print("PASSED")

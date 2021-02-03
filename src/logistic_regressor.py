@@ -27,6 +27,14 @@ class LogisticRegressor:
 
     def predict(self, input_dict):
         prediction = 0
+        columns = [variable for variable in self.dataframe.columns if variable != self.dependent_variable]
+
+        for variable in columns:
+            if variable not in input_dict and " * " not in variable:
+                input_dict[variable] = 0
+
+            elif variable not in input_dict and " * " in variable:
+                input_dict[variable] = input_dict[variable.split(" * ")[0]] * input_dict[variable.split(" * ")[1]]
 
         for key in self.coefficients:
             if key in input_dict:

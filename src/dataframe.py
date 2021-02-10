@@ -136,26 +136,11 @@ class DataFrame():
         return cls(data, columns)
 
     def create_interaction_terms(self, column_1, column_2):
-        data = {}
-        new_terms = []
-
-        for key in self.data_dict:
-            data[key] = self.data_dict[key]
-
-        for column in self.columns:
-            new_terms.append(column)
-
-
-        new_terms.append(column_1 + ' * ' + column_2)
-        first_column = self.data_dict[column_1]
-        second_column = self.data_dict[column_2]
-
-        interaction_terms = []
-
-        for n in range(len(first_column)):
-            interaction_terms.append(first_column[n] * second_column[n])
-
-        data[column_1 + ' * ' + column_2] = interaction_terms
+        data = self.data_dict.copy()
+        new_terms = [column for column in self.columns]
+        new_key = column_1 + ' * ' + column_2
+        new_terms.append(new_key)
+        data[new_key] = [data[column_1][n] * data[column_2][n] for n in range(len(data[column_1]))]
 
         return DataFrame(data, new_terms)
 

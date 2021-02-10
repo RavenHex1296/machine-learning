@@ -36,20 +36,16 @@ class LinearRegressor:
         new_sys_matrix = tranposed_matrix @ sys_matrix
         sys_matrix_inverse = new_sys_matrix.inverse()
         coefficients = sys_matrix_inverse @ tranposed_matrix @ columns
-        coefficients_dict = {}
-        indpendent_variables = []
+        coefficients_dict = {'constant' : coefficients.elements[0][0]}
+        independent_variables  = []
 
         for column in self.dataframe.columns:
-            indpendent_variables.append(column)
+            independent_variables .append(column)
 
-        indpendent_variables.remove(self.dependent_variable)
+        independent_variables .remove(self.dependent_variable)
 
-        for n in range(len(indpendent_variables) + 1):
-            if n == 0:
-                coefficients_dict['constant'] = coefficients.elements[n][0]
-
-            else:
-                coefficients_dict[indpendent_variables[n - 1]] = coefficients.elements[n][0]
+        for n in range(len(independent_variables )):
+            coefficients_dict[independent_variables[n]] = coefficients.elements[n + 1][0]
 
         return coefficients_dict
         

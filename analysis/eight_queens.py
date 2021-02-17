@@ -69,7 +69,7 @@ def random_optimizer(n):
             min_cost_locations = positions
 
     return {'locations': min_cost_locations, 'cost': min_cost}
-
+'''
 locations = [(0, 0), (6, 1), (2, 2), (5, 3), (4, 4), (7, 5), (1, 6), (2, 6)]
 show_board(locations)
 
@@ -79,3 +79,4 @@ print("PASSED")
 
 for n in [10, 50, 100, 500, 1000]:
     print("n = " + str(n) + ": " + str(random_optimizer(n)))
+'''

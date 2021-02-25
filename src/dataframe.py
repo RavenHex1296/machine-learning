@@ -85,9 +85,6 @@ class DataFrame():
             if function(row_dict):
                 rows.append(row)
 
-            else:
-                continue
-
         return DataFrame.from_array(rows, self.columns)
 
     def order_by(self, key, ascending):
@@ -108,8 +105,7 @@ class DataFrame():
         if ascending:
             return DataFrame.from_array(new_arr, self.columns)
 
-        else:
-            return DataFrame.from_array(new_arr[::-1], self.columns)
+        return DataFrame.from_array(new_arr[::-1], self.columns)
 
     @classmethod
     def from_csv(cls, path_to_csv, header):

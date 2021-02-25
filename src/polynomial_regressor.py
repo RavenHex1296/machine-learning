@@ -24,7 +24,7 @@ class PolynomialRegressor():
             self.coefficients = self.calculate_coefficients()
 
         else:
-            columns.remove('y')
+            columns.remove(dependent_variable)
 
             for n in range(len(dataframe.to_array())):
                 data.append([])
@@ -37,7 +37,7 @@ class PolynomialRegressor():
 
                 data[n].append(dataframe.to_array()[n][1])
 
-            columns.append('y')
+            columns.append(dependent_variable)
             self.dataframe = DataFrame.from_array(data, columns)
             self.coefficients = self.calculate_coefficients()
 

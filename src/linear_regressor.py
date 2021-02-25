@@ -64,7 +64,7 @@ class LinearRegressor:
         for key in self.coefficients:
             if key in input_dict:
                 prediction += self.coefficients[key] * input_dict[key]
-                
+
             else:
                 prediction += self.coefficients[key]
 

@@ -58,7 +58,7 @@ class LinearRegressor:
             if variable not in input_dict and " * " not in variable:
                 input_dict[variable] = 0
 
-            else:
+            elif variable not in input_dict and " * " in variable:
                 input_dict[variable] = input_dict[variable.split(" * ")[0]] * input_dict[variable.split(" * ")[1]]
 
         for key in self.coefficients:
@@ -69,3 +69,6 @@ class LinearRegressor:
                 prediction += self.coefficients[key]
 
         return prediction
+
+
+        

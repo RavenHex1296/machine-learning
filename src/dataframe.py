@@ -108,28 +108,23 @@ class DataFrame():
         return DataFrame.from_array(new_arr[::-1], self.columns)
 
     @classmethod
-    def from_csv(cls, path_to_csv, header):
+    def from_csv(cls, path_to_csv, header, data_types, parser):
         with open(path_to_csv, "r") as file:
-            data = {}
-            columns = []
             splitted_file = []
 
-            for row in file.read().split('\n'):
-                splitted_file.append(row.split(', '))
+            for n in file.read().split('\n'):
+                splitted_file.append(n.split(',  '))
 
-            for element in splitted_file[0]:
-                columns.append(element)
+            columns = parser(splitted_file[0][0].split(', ')[0])
+            parsed_file = []
 
-        for n in range(len(columns)):
-            data[columns[n]] = []
+            for row in splitted_file[1:]:
+                if row != [""]:
+                    parsed_file.append(parser(row[0]))
 
-            for num in range(len(splitted_file)):
-                data[columns[n]].append(splitted_file[num][n])
+            data = [[data_types[columns[n]](row[n]) if row[n] != "" else None for n in range(len(columns))] for row in parsed_file]
 
-        for key in data:
-            data[key] = data[key][1:]
-
-        return cls(data, columns)
+        return cls.from_array(data, columns)
 
     def create_interaction_terms(self, column_1, column_2):
         data = self.data_dict.copy()

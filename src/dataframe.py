@@ -17,16 +17,6 @@ class DataFrame():
 
         return data_array
 
-    def to_array(self):
-        result = []
-        counter = 0
-        for j in range(len(self.data_dict[self.columns[0]])):
-            result.append([])
-            for key in self.columns:
-                result[counter].append(self.data_dict[key][j])
-            counter += 1
-        return result
-
     def select_columns(self, column_order):
         return DataFrame(self.data_dict, column_order)
 
@@ -169,3 +159,26 @@ class DataFrame():
                     data[dummy_variable].append(0)
 
         return DataFrame(data, columns)
+
+    def convert_column_type(self, column_name, new_type):
+        converted_column = []
+
+        for element in self.data_dict[column_name]:
+            if element == None:
+                converted_column.append(None)
+                continue
+
+            try:
+                converted_column.append(new_type(element))
+
+            except ValueError:
+                if '.' in element:
+                    return None
+
+                else:
+                    converted_column.append(None)
+
+            except TypeError:
+                return None
+
+        self.data_dict[column_name] = converted_column

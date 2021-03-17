@@ -17,7 +17,7 @@ class DataFrame():
 
         return data_array
 
-    def select_columns(self, column_order):
+    def select(self, column_order):
         return DataFrame(self.data_dict, column_order)
 
     def select_rows(self, row_order):
@@ -65,7 +65,7 @@ class DataFrame():
 
         return data_dict
 
-    def select_rows_where(self, function):
+    def where(self, function):
         copied_arr = self.to_array()
         rows = []
 
@@ -182,3 +182,46 @@ class DataFrame():
                 return None
 
         self.data_dict[column_name] = converted_column
+
+    def group_by(self, colname):
+        columns = [column for column in self.columns]
+        data = {}
+        groups = []
+
+        for element in self.data_dict[colname]:
+            if element not in groups:
+                groups.append(element)
+
+        for column in columns:
+            if column == colname:
+                data[column] = groups
+                continue
+
+            grouped_column = []
+
+            for group in groups:
+                grouped_column.append([row[self.columns.index(column)] for row in self.to_array() if group in row])
+
+            data[column] = grouped_column
+
+        return DataFrame(data, columns)
+
+    def aggregate(self, colname, how):
+        data = {key:self.data_dict[key] for key in self.data_dict}
+
+        if how == 'count':
+            data[colname] = [len(group) for group in data[colname]]
+
+        elif how == 'max':
+            data[colname] = [max(group) for group in data[colname]]
+
+        elif how == 'min':
+            data[colname] = [min(group) for group in data[colname]]
+
+        elif how == 'sum':
+            data[colname] = [sum(group) for group in data[colname]]
+
+        elif how == 'avg':
+            data[colname] = [sum(group) / len(group) for group in data[colname]]
+
+        return DataFrame(data, self.columns)

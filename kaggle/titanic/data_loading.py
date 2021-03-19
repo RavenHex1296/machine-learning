@@ -120,3 +120,22 @@ assert df.to_array()[:5] == [[1, 0, 3, "Braund", "male", 22.0, 1, 0, "A/5", 2117
 [3, 1, 3, "Heikkinen", "female", 26.0, 0, 0, "STON/O2.", 3101282, 7.925, None, None, "S"],
 [4, 1, 1, "Futrelle", "female", 35.0, 1, 0, None, 113803, 53.1, "C", 123, "S"],
 [5, 0, 3, "Allen", "male", 35.0, 0, 0, None, 373450, 8.05, None, None, "S"]]
+'''
+print(df.group_by("Pclass").aggregate("Survived", "avg").select(["Pclass", "Survived"]).to_array(), "\n")
+print(df.group_by("Pclass").aggregate("Survived", "count").select(["Pclass", "Survived"]).to_array(), "\n")
+
+print(df.group_by("Sex").aggregate("Survived", "avg").select(["Sex", "Survived"]).to_array(), "\n")
+print(df.group_by("Sex").aggregate("Survived", "count").select(["Sex", "Survived"]).to_array())
+
+print(df.group_by("SibSp").aggregate("Survived", "avg").select(["SibSp", "Survived"]).to_array(), "\n")
+print(df.group_by("SibSp").aggregate("Survived", "count").select(["SibSp", "Survived"]).to_array())
+
+print(df.group_by("Parch").aggregate("Survived", "avg").select(["Parch", "Survived"]).to_array(), "\n")
+print(df.group_by("Parch").aggregate("Survived", "count").select(["Parch", "Survived"]).to_array())
+
+print(df.group_by("CabinType").aggregate("Survived", "avg").select(["CabinType", "Survived"]).to_array(), "\n")
+print(df.group_by("CabinType").aggregate("Survived", "count").select(["CabinType", "Survived"]).to_array())
+'''
+print(df.group_by("Embarked").aggregate("Survived", "avg").select(["Embarked", "Survived"]).to_array(), "\n")
+print(df.group_by("Embarked").aggregate("Survived", "count").select(["Embarked", "Survived"]).to_array())
+

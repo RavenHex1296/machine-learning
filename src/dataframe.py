@@ -184,15 +184,18 @@ class DataFrame():
         self.data_dict[column_name] = converted_column
 
     def group_by(self, colname):
-        columns = [column for column in self.columns]
         data = {}
         groups = []
 
-        for element in self.data_dict[colname]:
-            if element not in groups:
-                groups.append(element)
+        for item in self.data_dict[colname]:
+            if item not in groups:
+                groups.append(item)
+
+        columns = [colname] + [column for column in self.columns]
 
         for column in columns:
+            col_index = self.columns.index(column)
+
             if column == colname:
                 data[column] = groups
                 continue
@@ -200,11 +203,11 @@ class DataFrame():
             grouped_column = []
 
             for group in groups:
-                grouped_column.append([row[self.columns.index(column)] for row in self.to_array() if group in row])
+                grouped_column.append([row[col_index] for row in self.to_array() if row[self.columns.index(colname)] == group])
 
             data[column] = grouped_column
 
-        return DataFrame(data, columns)
+        return DataFrame(data, columns)   
 
     def aggregate(self, colname, how):
         data = {key:self.data_dict[key] for key in self.data_dict}
@@ -225,3 +228,15 @@ class DataFrame():
             data[colname] = [sum(group) / len(group) for group in data[colname]]
 
         return DataFrame(data, self.columns)
+
+    def query(self, selected_columns):
+        columns = selected_columns.split(" ")
+        columns.remove("SELECT")
+
+        for n in range(len(columns)):
+            if "," in columns[n]:
+                column = list(columns[n])
+                column.remove(",")
+                columns[n] = "".join([element for element in column])
+
+        return self.select(columns)

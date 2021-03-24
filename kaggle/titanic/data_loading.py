@@ -135,7 +135,66 @@ print(df.group_by("Parch").aggregate("Survived", "count").select(["Parch", "Surv
 
 print(df.group_by("CabinType").aggregate("Survived", "avg").select(["CabinType", "Survived"]).to_array(), "\n")
 print(df.group_by("CabinType").aggregate("Survived", "count").select(["CabinType", "Survived"]).to_array())
-'''
+
 print(df.group_by("Embarked").aggregate("Survived", "avg").select(["Embarked", "Survived"]).to_array(), "\n")
 print(df.group_by("Embarked").aggregate("Survived", "count").select(["Embarked", "Survived"]).to_array())
+'''
 
+age_index = df.columns.index("Age")
+age_excluding_none = []
+
+for row in df.to_array():
+    if row[age_index] != None:
+        age_excluding_none.append(row)
+
+df = DataFrame.from_array(age_excluding_none, df.columns)
+
+'''
+age_category = df.select(["Age", "Survived"]).where(lambda row: row["Age"] <= 10)
+avg = sum([data[1] for data in age_category.to_array()]) / len(age_category.to_array())
+
+age_category = df.select(["Age","Survived"]).where(lambda row: 10 < row["Age"] <= 20)
+avg = sum([data[1] for data in age_category.to_array()]) / len(age_category.to_array())
+
+age_category = df.select(["Age","Survived"]).where(lambda row: 20 < row["Age"] <= 30)
+
+age_category = df.select(["Age", "Survived"]).where(lambda row: 30 < row["Age"] <= 40)
+
+age_category = df.select(["Age", "Survived"]).where(lambda row: 40 < row["Age"] <= 50)
+
+age_category = df.select(["Age", "Survived"]).where(lambda row: 50 < row["Age"] <= 60)
+
+age_category = df.select(["Age", "Survived"]).where(lambda row: 60 < row["Age"] <= 70)
+
+age_category = df.select(["Age", "Survived"]).where(lambda row: 70 < row["Age"] <= 80)
+
+avg = sum([data[1] for data in age_category.to_array()]) / len(age_category.to_array())
+print(avg, "(", len(age_category.to_array()), ")" )
+'''
+
+fare_index = df.columns.index("Fare")
+fare_excluding_none = []
+
+for row in df.to_array():
+    if row[fare_index] != None:
+        fare_excluding_none.append(row)
+
+df = DataFrame.from_array(fare_excluding_none, df.columns)
+'''
+fare_category = df.select(['Fare', "Survived"]).where(lambda row: row['Fare'] <= 5)
+
+fare_category = df.select(['Fare', "Survived"]).where(lambda row: 5 < row['Fare'] <= 10)
+
+fare_category = df.select(['Fare', "Survived"]).where(lambda row: 10 < row['Fare'] <= 20)
+
+fare_category = df.select(['Fare', "Survived"]).where(lambda row: 20 < row['Fare'] <= 50)
+
+fare_category = df.select(['Fare', "Survived"]).where(lambda row: 50 < row['Fare'] <= 100)
+
+fare_category = df.select(['Fare', "Survived"]).where(lambda row: 100 < row['Fare'] <= 200)
+
+fare_category = df.select(['Fare', "Survived"]).where(lambda row: row['Fare'] > 200)
+'''
+avg = sum([data[1] for data in fare_category.to_array()]) / len(fare_category.to_array())
+
+print(avg, "(", len(fare_category.to_array()), ")" )

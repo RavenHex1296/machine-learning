@@ -229,14 +229,37 @@ class DataFrame():
 
         return DataFrame(data, self.columns)
 
-    def query(self, selected_columns):
-        columns = selected_columns.split(" ")
+    def query(self, query):
+        columns = query.split(" ")
+        order_bys = []
+
+        if "ORDER" in columns:
+            order_bys = columns[columns.index("ORDER"):]
+            order_bys.remove("ORDER")
+            order_bys.remove("BY")
+            columns = columns[:columns.index("ORDER")]
+
         columns.remove("SELECT")
 
         for n in range(len(columns)):
             if "," in columns[n]:
                 column = list(columns[n])
                 column.remove(",")
-                columns[n] = "".join([element for element in column])
+                columns[n] = "".join(element for element in column)
+
+        for n in range(len(order_bys)):
+            if "," in order_bys[n]:
+                order_by = list(order_bys[n])
+                order_by.remove(",")
+                order_bys[n] = "".join(element for element in order_by)
+
+        order_bys_with_ascending = [(order_bys[n - 1], order_bys[n]) for n in range(len(order_bys)) if n % 2 == 1]
+
+        for a, b in order_bys_with_ascending[::-1]:
+            if b == "DESC":
+                self = self.order_by(a, False).select(columns)
+
+            if b == "ASC":
+                self = self.order_by(a, True).select(columns)
 
         return self.select(columns)

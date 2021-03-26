@@ -1,6 +1,7 @@
 import sys
 sys.path.append('src')
 from dataframe import DataFrame
+from linear_regressor import *
 sys.path.append('kaggle/titanic')
 from parse_line import *
 
@@ -194,7 +195,153 @@ fare_category = df.select(['Fare', "Survived"]).where(lambda row: 50 < row['Fare
 fare_category = df.select(['Fare', "Survived"]).where(lambda row: 100 < row['Fare'] <= 200)
 
 fare_category = df.select(['Fare', "Survived"]).where(lambda row: row['Fare'] > 200)
-'''
+
 avg = sum([data[1] for data in fare_category.to_array()]) / len(fare_category.to_array())
 
 print(avg, "(", len(fare_category.to_array()), ")" )
+'''
+
+for n in range(len(df.data_dict['Sex'])):
+    if df.data_dict['Sex'][n] == "male":
+        df.data_dict['Sex'][n] = 0
+        continue
+
+    df.data_dict['Sex'][n] = 1
+
+data_types['Sex'] = int
+
+age_without_none = [age for age in df.data_dict['Age'] if age != None]
+mean_age = sum(age_without_none)/len(age_without_none)
+
+for n in range(len(df.data_dict['Age'])):
+    if df.data_dict['Age'][n] == None:
+        df.data_dict['Age'][n] == mean_age
+
+
+df.columns.insert(df.columns.index('SibSp') + 1 , 'SibSp=0')
+df.data_dict['SibSp=0'] = [1 if sibsp == 0 else 0 for sibsp in df.data_dict['SibSp']]
+data_types['SibSp=0'] = int
+
+df.columns.insert(df.columns.index('Parch') + 1 , 'Parch=0')
+df.data_dict['Parch=0'] = [1 if parch == 0 else 0 for parch in df.data_dict['Parch']]
+data_types['Parch=0'] = int
+del df.data_dict['Parch']
+del df.columns[df.columns.index('Parch')]
+
+df.data_dict['CabinType'] = [['CabinType=' + str(cabin_type)] if cabin_type != '' else ['CabinType=None'] for cabin_type in df.data_dict['CabinType']]
+df = df.create_dummy_variables('CabinType')
+del df.data_dict['CabinType']
+
+df.data_dict['Embarked'] = [['Embarked=' + str(embarked)] if embarked != '' else ['Embarked=None'] for embarked in df.data_dict['Embarked']]
+df = df.create_dummy_variables('Embarked')
+del df.data_dict['Embarked']
+
+def get_set_acc(input_set, input_regressor):
+    correct_predictions = 0
+    list_of_dicts = []
+    predictions = []
+
+    for n in range(len(input_set.data_dict['Survived'])):
+        data = {}
+
+        for key in input_set.data_dict:
+            if key != 'Survived':
+                data[key] = input_set.data_dict[key][n]
+
+        list_of_dicts.append(data)
+
+    for dictionary in list_of_dicts:
+        prediction = input_regressor.predict(dictionary)
+
+        if prediction >= 0.5:
+            predictions.append(1)
+
+        else:
+            predictions.append(0)
+
+
+    for n in range(len(predictions)):
+        if predictions[n] == input_set.data_dict['Survived'][n]:
+            correct_predictions += 1
+
+    return correct_predictions/len(predictions)
+
+training_set = DataFrame.from_array(df.to_array()[:500], df.columns)
+train_regressor = LinearRegressor(training_set.select(['Sex', 'Survived']), 'Survived')
+
+print("(b) Training set", get_set_acc(training_set, train_regressor))
+print(train_regressor.coefficients)
+
+testing_set = DataFrame.from_array(df.to_array()[500:], df.columns)
+test_regressor = LinearRegressor(testing_set.select(['Sex', 'Survived']), 'Survived')
+
+print("Testing set", get_set_acc(testing_set, test_regressor), "\n")
+
+
+training_set2 = DataFrame.from_array(df.to_array()[:500], df.columns)
+train_regressor2 = LinearRegressor(training_set2.select(['Sex', 'Pclass', 'Survived']), 'Survived')
+
+print("(c) Training set", get_set_acc(training_set2, train_regressor2))
+print(train_regressor2.coefficients)
+
+testing_set2 = DataFrame.from_array(df.to_array()[500:], df.columns)
+test_regressor2 = LinearRegressor(testing_set2.select(['Sex', 'Pclass', 'Survived']), 'Survived')
+
+print("Testing set", get_set_acc(testing_set2, test_regressor2), "\n")
+
+
+
+training_set3 = DataFrame.from_array(df.to_array()[:500], df.columns)
+train_regressor3 = LinearRegressor(training_set3.select(['Sex', 'Pclass', 'Fare', 'Age', 'SibSp', 'SibSp=0', 'Parch=0', 'Survived']), 'Survived')
+
+print("(d) Training set", get_set_acc(training_set3, train_regressor3))
+print(train_regressor3.coefficients)
+
+testing_set3 = DataFrame.from_array(df.to_array()[500:], df.columns)
+test_regressor3 = LinearRegressor(testing_set3.select(['Sex', 'Pclass', 'Fare', 'Age', 'SibSp', 'SibSp=0', 'Parch=0', 'Survived']), 'Survived')
+
+print("Testing set", get_set_acc(testing_set3, test_regressor3), "\n")
+
+
+
+training_set4 = DataFrame.from_array(df.to_array()[:500], df.columns)
+train_regressor4 = LinearRegressor(training_set4.select(['Sex', 'Pclass', 'Fare', 'Age', 'SibSp', 'SibSp=0', 'Parch=0', 'Embarked=C', 'Embarked=None', 'Embarked=Q', 'Embarked=S', 'Survived']), 'Survived')
+
+print("(e) Training set", get_set_acc(training_set4, train_regressor4))
+print(train_regressor4.coefficients)
+
+testing_set4 = DataFrame.from_array(df.to_array()[500:], df.columns)
+test_regressor4 = LinearRegressor(testing_set4.select(['Sex', 'Pclass', 'Fare', 'Age', 'SibSp', 'SibSp=0', 'Parch=0', 'Embarked=C', 'Embarked=None', 'Embarked=Q', 'Embarked=S', 'Survived']), 'Survived')
+
+print("Testing set", get_set_acc(testing_set4, test_regressor4), "\n")
+
+
+
+
+training_set5 = DataFrame.from_array(df.to_array()[:500], df.columns)
+train_regressor5 = LinearRegressor(training_set5.select(['Sex', 'Pclass', 'Fare', 'Age', 'SibSp', 'SibSp=0', 'Parch=0', 'Embarked=C', 'Embarked=None', 'Embarked=Q', 'Embarked=S', 'CabinType=A', 'CabinType=B', 'CabinType=C', 'CabinType=D', 'CabinType=E', 'CabinType=F', 'CabinType=G', 'CabinType=None', 'Survived']), 'Survived')
+
+print("(f) Training set", get_set_acc(training_set5, train_regressor5))
+print(train_regressor5.coefficients)
+
+
+testing_set5 = DataFrame.from_array(df.to_array()[500:], df.columns)
+test_regressor5 = LinearRegressor(testing_set5.select(['Sex', 'Pclass', 'Fare', 'Age', 'SibSp', 'SibSp=0', 'Parch=0', 'Embarked=C', 'Embarked=None', 'Embarked=Q', 'Embarked=S', 'CabinType=A', 'CabinType=B', 'CabinType=C', 'CabinType=D', 'CabinType=E', 'CabinType=F', 'CabinType=G', 'CabinType=None', 'Survived']), 'Survived')
+
+
+print("Testing set", get_set_acc(testing_set5, test_regressor5), "\n")
+
+
+
+training_set6 = DataFrame.from_array(df.to_array()[:500], df.columns)
+train_regressor6 = LinearRegressor(training_set5.select(['Sex', 'Pclass', 'Fare', 'Age', 'SibSp', 'SibSp=0', 'Parch=0', 'Embarked=C', 'Embarked=None', 'Embarked=Q', 'Embarked=S', 'CabinType=A', 'CabinType=B', 'CabinType=C', 'CabinType=D', 'CabinType=E', 'CabinType=F', 'CabinType=G', 'CabinType=None', 'CabinType=T', 'Survived']), 'Survived')
+
+print("(f) Training set", get_set_acc(training_set6, train_regressor6))
+print(train_regressor6.coefficients)
+
+
+testing_set5 = DataFrame.from_array(df.to_array()[500:], df.columns)
+test_regressor5 = LinearRegressor(testing_set6.select(['Sex', 'Pclass', 'Fare', 'Age', 'SibSp', 'SibSp=0', 'Parch=0', 'Embarked=C', 'Embarked=None', 'Embarked=Q', 'Embarked=S', 'CabinType=A', 'CabinType=B', 'CabinType=C', 'CabinType=D', 'CabinType=E', 'CabinType=F', 'CabinType=G', 'CabinType=None', 'CabinType=T' , 'Survived']), 'Survived')
+
+
+print("Testing set", get_set_acc(testing_set6, test_regressor6), "\n")

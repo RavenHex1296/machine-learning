@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.neighbors import KNeighborsClassifier
-
+'''
 df = pd.DataFrame(
     [['Shortbread', 0.14, 0.14, 0.28, 0.44], 
     ['Shortbread', 0.10, 0.18, 0.28, 0.44], 
@@ -66,3 +66,4 @@ plt.xlabel("k")
 plt.ylabel("accuracy")
 plt.title("Leave One Out Cross Validation")
 plt.savefig("Leave-One-Out Cross Validation.png")
+'''

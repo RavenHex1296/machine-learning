@@ -2,12 +2,12 @@ import math
 import random
 
 class DecisionTree():
-    def __init__(self, data_dict, min_size_to_split):
+    def __init__(self, data_dict, min_size_to_split, random_splits=None):
         self.point_data = data_dict
         self.entropy = self.calculate_entropy()
         self.branches = []
-        self.best_split = None
         self.min_size_to_split = min_size_to_split
+        self.random_splits = random_splits
 
     def get_all_points(self, data_dict=None):
         all_points = []
@@ -108,10 +108,7 @@ class DecisionTree():
         return possible_splits
 
     def get_best_split(self, data_dict=None):
-        set_best_split = False
-
         if data_dict == None:
-            set_best_split = True
             data_dict = self.point_data
 
         all_splits = self.get_all_possible_splits(data_dict)
@@ -127,10 +124,15 @@ class DecisionTree():
                 best_split = split
                 best_entropy = weighted_entropy
 
-        if set_best_split:
-            self.best_split = best_split
-
         return best_split
+
+    def get_random_split(self, data_dict=None):
+        if data_dict == None:
+            data_dict = self.point_data
+
+        all_splits = self.get_all_possible_splits(data_dict)
+
+        return random.choice(all_splits)
 
     def fit(self, decision_tree=None):
         if decision_tree == None:
@@ -139,25 +141,24 @@ class DecisionTree():
         if len(decision_tree.branches) != 0 or len(decision_tree.get_all_points()) <= self.min_size_to_split:
             return
 
-        decision_tree.get_best_split()
-        decision_tree.split(decision_tree.best_split)
-        branches = [branch for branch in decision_tree.branches if branch.entropy != 0]
-        next_branches = []
-
-        while True:
-            for branch in branches:
-                if len(branch.get_all_points()) <= self.min_size_to_split or len(set(branch.get_all_points())) == 1:
-                    continue
-
-                branch.get_best_split()
-                branch.split(branch.best_split)
-                next_branches += [next_branch for next_branch in branch.branches if next_branch.entropy != 0]
-
-            branches = next_branches
+        if self.random_splits != True:
+            decision_tree.split(decision_tree.get_best_split())
+            branches = [branch for branch in decision_tree.branches if branch.entropy != 0]
             next_branches = []
 
-            if len(branches) == 0:
-                break
+            while True:
+                for branch in branches:
+                    if len(branch.get_all_points()) <= self.min_size_to_split or len(set(branch.get_all_points())) == 1:
+                        continue
+
+                    branch.split(branch.get_best_split())
+                    next_branches += [next_branch for next_branch in branch.branches if next_branch.entropy != 0]
+
+                branches = next_branches
+                next_branches = []
+
+                if len(branches) == 0:
+                    break          
 
     def get_point_type(self, decision_tree=None):
         if decision_tree == None:
@@ -180,12 +181,14 @@ class DecisionTree():
         if decision_tree == None:
             decision_tree = self
 
+        decision_tree.fit()
+
         while decision_tree.entropy != 0 and len(decision_tree.get_all_points()) > self.min_size_to_split and len(set(decision_tree.get_all_points())) != 1:
 
-            if unknown_point[decision_tree.best_split[0]] >= decision_tree.best_split[1]:
+            if unknown_point[decision_tree.get_best_split()[0]] >= decision_tree.get_best_split()[1]:
                 decision_tree = decision_tree.branches[0]
 
-            elif unknown_point[decision_tree.best_split[0]] < decision_tree.best_split[1]:
+            elif unknown_point[decision_tree.get_best_split()[0]] < decision_tree.get_best_split()[1]:
                 decision_tree = decision_tree.branches[1]
 
         return decision_tree.get_point_type()

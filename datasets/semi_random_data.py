@@ -1,12 +1,9 @@
 import random
-import matplotlib.pyplot as plt
 import math
+#import matplotlib.pyplot as plt
 
-x_points = []
-o_points = []
-
-x_centers = [(2, 2), (-2, -2)]
-o_centers = [(2, -2), (-2, 2)]
+point_data = {'x': [], 'o': []}
+centers = {'x': [(2, 2), (-2, -2)], 'o': [(2, -2), (-2, 2)]}
 
 
 def calculate_distance(initial_point, ending_point):
@@ -18,11 +15,9 @@ def calculate_distance(initial_point, ending_point):
 def find_closest_center(point, point_type):
     possible_centers = []
 
-    if point_type == 'x':
-        possible_centers = x_centers
-
-    if point_type == 'o':
-        possible_centers = o_centers
+    for key in centers:
+        if point_type == key:
+            possible_centers = centers[key]
 
     min_distance = 100000
     closest_center = (100, 100)
@@ -43,36 +38,27 @@ def probability(x):
 
 num_points = 0
 
-while num_points < 100:
+while num_points < 200:
     x = random.uniform(-4, 4)
     y = random.uniform(-4, 4)
 
-    closest_center = find_closest_center((x, y), 'x')
+    point_type = 'x'
+
+    if num_points < 100:
+        point_type = 'o'
+
+    closest_center = find_closest_center((x, y), point_type)
 
     distance = calculate_distance((x, y), closest_center)
 
     if probability(distance) >= random.uniform(0, 1):
-        x_points.append((x, y))
-        num_points += 1
-  
-
-num_points = 0
-
-while num_points < 100:
-    x = random.uniform(-4, 4)
-    y = random.uniform(-4, 4)
-
-    closest_center = find_closest_center((x, y), 'o')
-
-    distance = calculate_distance((x, y), closest_center)
-
-
-    if probability(distance) >= random.uniform(0, 1):
-        o_points.append((x, y))
+        point_data[point_type].append((x, y))
         num_points += 1
 
 
+'''
 plt.style.use('bmh')
-plt.plot([x[0] for x in x_points], [y[1] for y in x_points], 'ro')
-plt.plot([x[0] for x in o_points], [y[1] for y in o_points], 'bo')
+plt.plot([point[0] for point in point_data['x']], [point[1] for point in point_data['x']], 'ro')
+plt.plot([point[0] for point in point_data['o']], [point[1] for point in point_data['o']], 'bo')
 plt.savefig('semi_random_data.png')
+'''

@@ -2,7 +2,6 @@ import random
 import math
 #import matplotlib.pyplot as plt
 
-point_data = {'x': [], 'o': []}
 centers = {'x': [(2, 2), (-2, -2)], 'o': [(2, -2), (-2, 2)]}
 
 
@@ -36,24 +35,28 @@ def probability(x):
     return 2 ** (-1 * x)
 
 
-num_points = 0
+def get_semi_random_data(data_set_size):
+    num_points = 0
+    point_data = {'x': [], 'o': []}
 
-while num_points < 200:
-    x = random.uniform(-4, 4)
-    y = random.uniform(-4, 4)
+    while num_points < data_set_size:
+        x = random.uniform(-4, 4)
+        y = random.uniform(-4, 4)
 
-    point_type = 'x'
+        point_type = 'x'
 
-    if num_points < 100:
-        point_type = 'o'
+        if num_points < data_set_size / 2:
+            point_type = 'o'
 
-    closest_center = find_closest_center((x, y), point_type)
+        closest_center = find_closest_center((x, y), point_type)
 
-    distance = calculate_distance((x, y), closest_center)
+        distance = calculate_distance((x, y), closest_center)
 
-    if probability(distance) >= random.uniform(0, 1):
-        point_data[point_type].append((x, y))
-        num_points += 1
+        if probability(distance) >= random.uniform(0, 1):
+            point_data[point_type].append((x, y))
+            num_points += 1
+
+    return point_data
 
 
 '''

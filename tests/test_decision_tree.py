@@ -186,7 +186,9 @@ plt.savefig('test.png')
 data = {'x': [(1, 5), (2, 5), (1, 3), (2, 4)], 'o': [(1, 4), (2, 3)]}
 
 decision_tree = DecisionTree(data, 1)
+decision_tree.fit()
 random_tree = DecisionTree(data, 1, True)
+random_tree.fit()
 
 random.seed(0)
 assert decision_tree.predict((3, 4)) == random_tree.predict((3, 4))
@@ -197,8 +199,5 @@ assert decision_tree.predict((2, 2)) == random_tree.predict((2, 2))
 random.seed(0)
 assert decision_tree.predict((0, 0)) == random_tree.predict((0, 0))
 
-data = {'x': [(0, 1), (0, 1), (0, 2), (1, 1), (1, 2), (1, 2)], 'o': [(0, 2), (1, 1), (1, 1), (1, 2)]}
-decision_tree = DecisionTree(data, 1)
-random_tree = DecisionTree(data, 1, True)
 
 print('PASSED')

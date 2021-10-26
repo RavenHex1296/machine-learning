@@ -80,6 +80,8 @@ def get_training_set(training_folds, testing_fold):
     points = [fold for fold in all_folds if fold != testing_fold]
     return add_to_dict(points)
 
+
+'''
 point_data = get_semi_random_data(200)
 all_folds = get_multiple_folds(5, point_data, 40)
 num_trees = [1, 10, 20, 50, 100, 500, 1000]
@@ -93,7 +95,7 @@ for num_tree in num_trees:
     for fold in all_folds:
         training_set = get_training_set(all_folds, fold)
         forest = RandomForest(training_set, 1, num_tree, True)
-        forest.get_forest(num_tree)
+        forest.get_forest()
         accuracy += get_accuracy(forest, fold)
 
     accuracy /= len(all_folds)
@@ -106,18 +108,16 @@ plt.style.use('bmh')
 plt.plot(num_trees, accuracies)
 plt.xlabel('num_trees')
 plt.ylabel('5-fold Cross Valiation Accuracy')
-plt.savefig('random_tree_graph.png')
+plt.savefig('random_split_forest.png')
 
 
 '''
 point_data = get_semi_random_data(200)
-all_folds = get_multiple_folds(10, point_data, 20)
-
-num_trees = [1, 10, 20, 50]
+all_folds = get_multiple_folds(5, point_data, 40)
+num_trees = [1, 10, 20, 50, 100, 500]
 accuracies = []
 
 start_time = time.time()
-
 
 for num_tree in num_trees:
     accuracy = 0
@@ -125,7 +125,7 @@ for num_tree in num_trees:
     for fold in all_folds:
         training_set = get_training_set(all_folds, fold)
         forest = RandomForest(training_set, 10, num_tree, random_splits=None, p=0.8)
-        forest.get_forest(num_tree)
+        forest.get_forest()
         accuracy += get_accuracy(forest, fold)
 
     accuracy /= len(all_folds)
@@ -136,6 +136,5 @@ print(time.time() - start_time)
 plt.style.use('bmh')
 plt.plot(num_trees, accuracies)
 plt.xlabel('num_trees')
-plt.ylabel('10-fold Cross Valiation Accuracy')
+plt.ylabel('5-fold Cross Valiation Accuracy')
 plt.savefig('random_tree_best_split.png')
-'''

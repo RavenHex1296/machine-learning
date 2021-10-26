@@ -46,8 +46,8 @@ class RandomForest():
             training_set = self.get_random_p_percent(point_data, self.p)
             return DecisionTree(training_set, self.min_size_to_split)
 
-    def get_forest(self, num_trees):
-        for _ in range(num_trees):
+    def get_forest(self):
+        for _ in range(self.num_trees):
             tree = self.get_tree(self.point_data)
             tree.fit(tree)
             self.forest.append(tree)

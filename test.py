@@ -1,0 +1,1 @@
+print(n for n in range(0, 10, 0.01))

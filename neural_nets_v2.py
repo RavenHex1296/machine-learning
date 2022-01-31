@@ -63,16 +63,32 @@ class NeuralNet:
         return self.nodes[node_num - 1]
 
 
-def get_node_derivatives(initial_points, input_neural_net):
+def get_node_derivatives(initial_points, node_weights, bias_nodes):
     node_derivatives = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
+    random_net = NeuralNet(6, node_weights, 2, bias_nodes)
 
-    for node in reversed(input_neural_net.nodes):
+    for node in reversed(random_net.nodes):
         for x, y in initial_points:
-            neural_net = NeuralNet()
+            neural_net = NeuralNet(6, node_weights, x, bias_nodes)
+            neural_net.build_neural_net()
 
             if node.node_num == 6:
-                node_derivatives[node.node_num] += 2 * (input_neural_net.get_node(6).node_output - y)
+                node_derivatives[node.node_num] += 2 * (neural_net.get_node(6).node_output - y)
 
+            if node.node_num == 5:
+                node_derivatives[node.node_num] += node_derivatives[6] * derivatve_f(neural_net.get_node(6).node_input) * node_weights['56']
+
+            if node.node_num == 4:
+                node_derivatives[node.node_num] += node_derivatives[6] * derivatve_f(neural_net.get_node(6).node_input) * node_weights['46']
+
+            if node.node_num == 3:
+                node_derivatives[node.node_num] += node_derivatives[6] * derivatve_f(neural_net.get_node(6).node_input) * node_weights['36']
+
+            if node.node_num == 2:
+                node_derivatives[node.node_num] +=  node_derivatives[4] * derivatve_f(neural_net.get_node(6).node_input) * node_weights['24'] +  node_derivatives[3] * derivatve_f(neural_net.get_node(6).node_input) * node_weights['23']
+
+            if node.node_num == 1:
+                node_derivatives[node.node_num] +=  node_derivatives[4] * derivatve_f(neural_net.get_node(6).node_input) * node_weights['14'] +  node_derivatives[3] * derivatve_f(neural_net.get_node(6).node_input) * node_weights['13']
 
     return node_derivatives
 
@@ -80,23 +96,23 @@ def get_node_derivatives(initial_points, input_neural_net):
 def get_weight_derivatives(initial_points, node_weights, bias_nodes):
     weight_derivatives = {'13': 0, '36': 0, '14': 0, '46': 0, '56': 0, '23': 0, '24': 0}
     weight_ids = ['13', '36', '14', '46', '56', '23', '24']
-    node_derivatives = get_node_derivatives(initial_points, input_neural_net)
-
-    neural_net = NeuralNet(9, node_weights, 3, bias_nodes)
-    neural_net.build_neural_net()
+    node_derivatives = get_node_derivatives(initial_points, node_weights, bias_nodes)
 
     for x, y in weight_ids:
         for point in initial_points:
-            weight_derivatives[x + y] += node_derivatives[int(y)] * derivatve_f(input_neural_net.get_node(int(y)).node_input) * input_neural_net.get_node(int(x)).node_output
+            neural_net = NeuralNet(6, node_weights, point[0], bias_nodes)
+            neural_net.build_neural_net()
+            weight_derivatives[x + y] += node_derivatives[int(y)] * derivatve_f(neural_net.get_node(int(y)).node_input) * neural_net.get_node(int(x)).node_output
 
     return weight_derivatives
 
 
-def RSS(points, neural_net):
+def RSS(points, node_weights, bias_nodes):
     rss = 0
 
-    for point in points:
-        x, y = point
+    for x, y in points:
+        neural_net = NeuralNet(9, node_weights, x, bias_nodes)
+        neural_net.build_neural_net()
         prediction = neural_net.get_node(6).node_output
         rss += (y - prediction) ** 2
 
@@ -110,33 +126,31 @@ def run(points, alpha, num_steps, node_weights, bias_nodes):
     num_step = 0
 
     for _ in range(num_steps):
-        weight_derivatives = get_weight_derivatives(3, node_weights, bias_nodes)
+        weight_derivatives = get_weight_derivatives([(0, 5), (2,3), (5, 10)], node_weights, bias_nodes)
 
         for weight in node_weights:
             node_weights[weight] = node_weights[weight] - weight_derivatives[weight] * alpha
 
         if num_step % 100 == 0:
-            print("RSS at step ", num_step, ": ", RSS(points, neural_net))
+            print("RSS at step ", num_step, ": ", RSS(points, node_weights, bias_nodes))
 
-        rss_values.append(RSS(points, neural_net))
+        rss_values.append(RSS(points, node_weights, bias_nodes))
         num_step += 1
 
-    neural_net = NeuralNet(9, node_weights, 3, bias_nodes)
-    neural_net.build_neural_net()
-    print("Final RSS: ", RSS(points, neural_net))
+    print("Final RSS: ", RSS(points, node_weights, bias_nodes))
 
     return node_weights
 
 node_weights = {'13': 1, '36': 1, '14': 1, '46': 1, '56': 1, '23': 1, '24': 1}
 bias_nodes = [2, 5]
-final_values = run([(0, 5), (2,3), (5, 10)], 0.0000001, 50000, node_weights, bias_nodes)
+final_values = run([(0, 5), (2,3), (5, 10)], 0.000001, 40000, node_weights, bias_nodes)
 
 '''
 plt.style.use('bmh')
 plt.plot([n for n in range(1, len(rss_values) + 1)], [n for n in rss_values])
 plt.xlabel('num_steps')
 plt.ylabel('rss')
-plt.savefig('forward_propagation.png')
+plt.savefig('backward_propagation.png')
 
 '''
 
@@ -156,15 +170,15 @@ final_predicted_values = []
 initial_node_weights = {'13': 1, '36': 1, '14': 1, '46': 1, '56': 1, '23': 1, '24': 1}
 
 for x in x_values:
-    neural_net = NeuralNet(9, initial_node_weights, x, bias_nodes)
+    neural_net = NeuralNet(6, initial_node_weights, x, bias_nodes)
     neural_net.build_neural_net()
-    initial_predicted_values.append(neural_net.get_node(9).node_output)
+    initial_predicted_values.append(neural_net.get_node(6).node_output)
 
-    final_net = NeuralNet(9, final_values, x, bias_nodes)
+    final_net = NeuralNet(6, final_values, x, bias_nodes)
     final_net.build_neural_net()
-    final_predicted_values.append(final_net.get_node(9).node_output)
+    final_predicted_values.append(final_net.get_node(6).node_output)
 
 
 plt.plot(x_values, initial_predicted_values, label='Initial')
 plt.plot(x_values, final_predicted_values, label='Final')
-plt.savefig('forward_propagation_regression.png')
+plt.savefig('backward_propagation_regression.png')

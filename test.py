@@ -1,1 +1,4 @@
-print(n for n in range(0, 10, 0.01))
+x = {'13':0, '24': 0}
+
+for z, y in x:
+    print(z+ y)

@@ -1,4 +1,4 @@
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 
 def predict(x, w13, w36, w14, w46, w56, w23, w24):
@@ -108,18 +108,27 @@ def run(points, alpha, num_steps, w13, w36, w14, w46, w56, w23, w24):
     print("Initial RSS: ", RSS(points, w13, w36, w14, w46, w56, w23, w24))
 
     for _ in range(num_steps):
-        w13 = w13 - dRSS_dw13(points, w13, w36, w14, w46, w56, w23, w24) * alpha
-        w36 = w36 - dRSS_dw36(points, w13, w36, w14, w46, w56, w23, w24) * alpha
-        w14 = w14 - dRSS_dw14(points, w13, w36, w14, w46, w56, w23, w24) * alpha
-        w46 = w46 - dRSS_dw46(points, w13, w36, w14, w46, w56, w23, w24) * alpha
-        w56 = w56 - dRSS_dw56(points, w13, w36, w14, w46, w56, w23, w24) * alpha
-        w23 = w23 - dRSS_dw23(points, w13, w36, w14, w46, w56, w23, w24) * alpha
-        w24 = w24 - dRSS_dw24(points, w13, w36, w14, w46, w56, w23, w24) * alpha
+        d13 = dRSS_dw13(points, w13, w36, w14, w46, w56, w23, w24) * alpha
+        d36 = dRSS_dw36(points, w13, w36, w14, w46, w56, w23, w24) * alpha
+        d14 = dRSS_dw14(points, w13, w36, w14, w46, w56, w23, w24) * alpha
+        d46 = dRSS_dw46(points, w13, w36, w14, w46, w56, w23, w24) * alpha
+        d56 = dRSS_dw56(points, w13, w36, w14, w46, w56, w23, w24) * alpha
+        d23 = dRSS_dw23(points, w13, w36, w14, w46, w56, w23, w24) * alpha
+        d24 = dRSS_dw24(points, w13, w36, w14, w46, w56, w23, w24) * alpha
+
+        w13 = w13 - d13
+        w36 = w36 - d36
+        w14 = w14 - d14
+        w46 = w46 - d46
+        w56 = w56 - d56
+        w23 = w23 - d23
+        w24 = w24 - d24
 
         if num_step % 100 == 0:
             print("RSS at step ", num_step, ": ", RSS(points, w13, w36, w14, w46, w56, w23, w24))
 
         rss_values.append(RSS(points, w13, w36, w14, w46, w56, w23, w24))
+        print(num_step, d13/alpha, d36/alpha, d14/alpha, d46/alpha, d56/alpha, d23/alpha, d24/alpha)
         num_step += 1
 
 
@@ -129,16 +138,17 @@ def run(points, alpha, num_steps, w13, w36, w14, w46, w56, w23, w24):
     return [w13, w36, w14, w46, w56, w23, w24]
 
 
-final_values = run([(0, 5), (2,3), (5, 10)], 0.001, 1000, 1, 1, 1, 1, 1, 1, 1)
+final_values = run([(0, 5), (2,3), (5, 10)], 0.0001, 1, 1, 1, 1, 1, 1, 1, 1)
+print(final_values)
 
-
+'''
 plt.style.use('bmh')
 plt.plot([n for n in range(1, 1000 + 1)], [n for n in rss_values])
 plt.xlabel('num_steps')
 plt.ylabel('rss')
 plt.savefig('neural_nets.png')
 
-'''
+
 x_values = []
 
 

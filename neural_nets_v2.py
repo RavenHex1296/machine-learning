@@ -1,5 +1,5 @@
-import matplotlib.pyplot as plt
-
+#import matplotlib.pyplot as plt
+import math
 
 def f(x):
     return max(0, x)
@@ -50,6 +50,8 @@ class NeuralNet:
 
             node.node_input = total_input
             node.node_output = f(total_input)
+
+        return self
 
     def get_node_outputs(self):
         info_dict = {}
@@ -111,7 +113,7 @@ def RSS(points, node_weights, bias_nodes):
     rss = 0
 
     for x, y in points:
-        neural_net = NeuralNet(9, node_weights, x, bias_nodes)
+        neural_net = NeuralNet(6, node_weights, x, bias_nodes)
         neural_net.build_neural_net()
         prediction = neural_net.get_node(6).node_output
         rss += (y - prediction) ** 2
@@ -126,7 +128,7 @@ def run(points, alpha, num_steps, node_weights, bias_nodes):
     num_step = 0
 
     for _ in range(num_steps):
-        weight_derivatives = get_weight_derivatives([(0, 5), (2,3), (5, 10)], node_weights, bias_nodes)
+        weight_derivatives = get_weight_derivatives([(0, 5), (2, 3), (5, 10)], node_weights, bias_nodes)
 
         for weight in node_weights:
             node_weights[weight] = node_weights[weight] - weight_derivatives[weight] * alpha
@@ -135,6 +137,7 @@ def run(points, alpha, num_steps, node_weights, bias_nodes):
             print("RSS at step ", num_step, ": ", RSS(points, node_weights, bias_nodes))
 
         rss_values.append(RSS(points, node_weights, bias_nodes))
+        print(num_step, weight_derivatives)
         num_step += 1
 
     print("Final RSS: ", RSS(points, node_weights, bias_nodes))
@@ -143,16 +146,19 @@ def run(points, alpha, num_steps, node_weights, bias_nodes):
 
 node_weights = {'13': 1, '36': 1, '14': 1, '46': 1, '56': 1, '23': 1, '24': 1}
 bias_nodes = [2, 5]
-final_values = run([(0, 5), (2,3), (5, 10)], 0.000001, 40000, node_weights, bias_nodes)
+neural_net = NeuralNet(6, node_weights, 2, bias_nodes)
+print(neural_net.build_neural_net().get_node(6).node_output)
+
 
 '''
+final_values = run([(0, 5), (2,3), (5, 10)], 0.0001, 2, node_weights, bias_nodes)
+print(final_values)
 plt.style.use('bmh')
 plt.plot([n for n in range(1, len(rss_values) + 1)], [n for n in rss_values])
 plt.xlabel('num_steps')
 plt.ylabel('rss')
 plt.savefig('backward_propagation.png')
 
-'''
 
 x_values = []
 
@@ -181,4 +187,10 @@ for x in x_values:
 
 plt.plot(x_values, initial_predicted_values, label='Initial')
 plt.plot(x_values, final_predicted_values, label='Final')
-plt.savefig('backward_propagation_regression.png')
+plt.xlim([-1, 11])
+plt.ylim([-1, 11])
+plt.savefig('backward_propagation_regression-xd.png')
+'''
+#x^2 diverges, probs because exponentially always increasing
+#same for e^x and e^e^x
+#1/x and 1/x^5 diverges because 0 cant be an input

@@ -1,4 +1,6 @@
 import math
+import matplotlib.pyplot as plt
+import random
 
 def f(x):
     if x > 0:
@@ -51,6 +53,7 @@ class NeuralNet:
                 total_input += input_node.node_output * self.node_weights[str(input_node.node_num) + str(node.node_num)]
 
             node.node_input = total_input
+
             node.node_output = f(total_input)
 
         return self
@@ -78,32 +81,42 @@ def set_up_multiple_initial_points(num_nodes, node_weights, points, bias_node_nu
 
 
 def get_node_derivatives(points_with_nets):
-    node_derivatives = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
     individual_stuff = {}
 
     for point in points_with_nets:
         individual_stuff[point] = {}
-    
+
+    #for key in points_with_nets:
+        #for node in reversed(points_with_nets[key].nodes):
 
     for key in points_with_nets:
         for node in reversed(points_with_nets[key].nodes):
-            if node.node_num == 6:
-                individual_stuff[key][node.node_num] = 2 * (points_with_nets[key].get_node(6).node_output - key[1])
+            if node.node_num == 9:
+                individual_stuff[key][node.node_num] = 2 * (points_with_nets[key].get_node(9).node_output - key[1])
 
-            if node.node_num == 5:
-                individual_stuff[key][node.node_num] = individual_stuff[key][6] * derivatve_f(points_with_nets[key].get_node(6).node_input) * points_with_nets[key].node_weights['56']
+            if node.node_num == 8:
+                individual_stuff[key][node.node_num] = individual_stuff[key][9] * derivatve_f(points_with_nets[key].get_node(9).node_input) * points_with_nets[key].node_weights['89']
+
+            if node.node_num == 7:
+                individual_stuff[key][node.node_num] = individual_stuff[key][9] * derivatve_f(points_with_nets[key].get_node(9).node_input) * points_with_nets[key].node_weights['79'] 
+
+            if node.node_num == 6:
+                individual_stuff[key][node.node_num] = individual_stuff[key][9] * derivatve_f(points_with_nets[key].get_node(9).node_input) * points_with_nets[key].node_weights['69']
+
+            if node.node_num == 5: 
+                individual_stuff[key][node.node_num] = individual_stuff[key][7] * derivatve_f(points_with_nets[key].get_node(7).node_input) * points_with_nets[key].node_weights['57'] + individual_stuff[key][6] * derivatve_f(points_with_nets[key].get_node(6).node_input) * points_with_nets[key].node_weights['56']
 
             if node.node_num == 4:
-                individual_stuff[key][node.node_num] = individual_stuff[key][6] * derivatve_f(points_with_nets[key].get_node(6).node_input) * points_with_nets[key].node_weights['46']
+                individual_stuff[key][node.node_num] = individual_stuff[key][7] * derivatve_f(points_with_nets[key].get_node(7).node_input) * points_with_nets[key].node_weights['47'] + individual_stuff[key][6] * derivatve_f(points_with_nets[key].get_node(6).node_input) * points_with_nets[key].node_weights['46']
 
             if node.node_num == 3:
-                individual_stuff[key][node.node_num] = individual_stuff[key][6] * derivatve_f(points_with_nets[key].get_node(6).node_input) * points_with_nets[key].node_weights['36']
+                individual_stuff[key][node.node_num] = individual_stuff[key][7] * derivatve_f(points_with_nets[key].get_node(7).node_input) * points_with_nets[key].node_weights['37'] + individual_stuff[key][6] * derivatve_f(points_with_nets[key].get_node(6).node_input) * points_with_nets[key].node_weights['36']
 
             if node.node_num == 2:
-                individual_stuff[key][node.node_num] =  individual_stuff[key][4] * derivatve_f(points_with_nets[key].get_node(6).node_input) * points_with_nets[key].node_weights['24'] +  individual_stuff[key][3] * derivatve_f(points_with_nets[key].get_node(6).node_input) * points_with_nets[key].node_weights['23']
+                individual_stuff[key][node.node_num] = individual_stuff[key][4] * derivatve_f(points_with_nets[key].get_node(4).node_input) * points_with_nets[key].node_weights['24'] + individual_stuff[key][3] * derivatve_f(points_with_nets[key].get_node(3).node_input) * points_with_nets[key].node_weights['23']
 
             if node.node_num == 1:
-                individual_stuff[key][node.node_num] =  individual_stuff[key][4] * derivatve_f(points_with_nets[key].get_node(6).node_input) * points_with_nets[key].node_weights['14'] +  individual_stuff[key][3] * derivatve_f(points_with_nets[key].get_node(6).node_input) * points_with_nets[key].node_weights['13']
+                individual_stuff[key][node.node_num] = individual_stuff[key][4] * derivatve_f(points_with_nets[key].get_node(4).node_input) * points_with_nets[key].node_weights['14'] + individual_stuff[key][3] * derivatve_f(points_with_nets[key].get_node(3).node_input) * points_with_nets[key].node_weights['13']
 
     #for point in individual_stuff:
         #for node in individual_stuff[point]:
@@ -128,6 +141,7 @@ def get_weight_derivatives(num_nodes, node_weights, points, bias_nodes):
 
     for point in points_with_nets:
         for x, y in node_weights:
+
             individual_stuff[point][x + y] = node_derivatives[point][int(y)] * derivatve_f(points_with_nets[point].get_node(int(y)).node_input) * points_with_nets[point].get_node(int(x)).node_output
 
 
@@ -142,9 +156,9 @@ def RSS(points, node_weights, bias_nodes):
     rss = 0
 
     for x, y in points:
-        neural_net = NeuralNet(6, node_weights, x, bias_nodes)
+        neural_net = NeuralNet(9, node_weights, x, bias_nodes)
         neural_net.build_neural_net()
-        prediction = neural_net.get_node(6).node_output
+        prediction = neural_net.get_node(9).node_output
         rss += (y - prediction) ** 2
 
     return rss
@@ -158,13 +172,18 @@ def run(points, alpha, num_steps, num_nodes, node_weights, bias_nodes):
 
     for _ in range(num_steps):
         weight_derivatives = get_weight_derivatives(num_nodes, node_weights, points, bias_nodes)
-        print(num_step, weight_derivatives)
 
         for weight in node_weights:
             node_weights[weight] = node_weights[weight] - weight_derivatives[weight] * alpha
 
         if num_step % 100 == 0:
             print("RSS at step ", num_step, ": ", RSS(points, node_weights, bias_nodes))
+
+        #if num_step == 0:
+            #print(weight_derivatives)
+
+        #if num_step == 1:
+            #print(node_weights)
 
         rss_values.append(RSS(points, node_weights, bias_nodes))
         num_step += 1
@@ -173,58 +192,109 @@ def run(points, alpha, num_steps, num_nodes, node_weights, bias_nodes):
 
     return node_weights
 
-print(run([(0, 5), (2,3), (5, 10)], 0.0001, 2, 6, {'13': 1, '36': 1, '14': 1, '46': 1, '56': 1, '23': 1, '24': 1}, [2, 5]))
+points = [(-5, -3), (-4, -1), (-3, 1), (-2, 2), (-1, -1), (1, -1), (2, 1), (3, 2), (4, 3), (5, 4), (6, 2), (7, 0)]
+x_list = []
+y_list = []
 
-#print(get_node_derivatives(set_up_multiple_initial_points(6, {'13': 1, '36': 1, '14': 1, '46': 1, '56': 1, '23': 1, '24': 1},[(0, 5), (2,3), (5, 10)], [2, 5])))
-#3, 7, 13 respectively
+for x, y in points:
+    x_list.append(x)
+    y_list.append(y)
 
+x_max = max(x_list)
+x_min = min(x_list)
+y_max = max(y_list)
+y_min = min(y_list)
+
+new_points = []
+
+for x, y in points:
+    new_points.append(((10 * x - 10 * x_min) / (x_max - x_min), (10 * y - 10 * y_min) / (y_max - y_min)))
+
+weight_ids = ['89', '79', '69', '57', '56', '47', '46', '37', '36', '24', '23', '14', '13']
+
+initial_weights = {}
+
+for weight in weight_ids:
+    initial_weights[weight] = ((- 1) ** (int(weight[1]) + int(weight[0]))) * (min(int(weight[0]), int(weight[1])) / max(int(weight[0]), int(weight[1])))
+    #initial_weights[weight] = random.uniform(-1, 1)
+
+
+bias_nodes = [2, 5, 8]
+#run(points, alpha, num_steps, num_nodes, node_weights, bias_nodes):
+final_values = run(points, 0.001, 10000, 9, initial_weights, bias_nodes)
+
+
+print(final_values)
+plt.style.use('bmh')
+plt.plot([n for n in range(1, len(rss_values) + 1)], [n for n in rss_values])
+plt.xlabel('num_steps')
+plt.ylabel('rss')
+plt.savefig('9_node.png')
+'''
+
+x_values = []
+
+
+for n in range(-8, 10):
+    for num in range(0, 101):
+        x_values.append(n + num * 0.01)
+
+
+plt.scatter([point[0] for point in new_points], [point[1] for point in new_points])
+
+
+initial_predicted_values = []
+final_predicted_values = []
+
+for x in x_values:
+    neural_net = NeuralNet(9, initial_weights, x, bias_nodes)
+    neural_net.build_neural_net()
+    initial_predicted_values.append(neural_net.get_node(9).node_output)
+
+    final_net = NeuralNet(9, final_values, x, bias_nodes)
+    final_net.build_neural_net()
+    final_predicted_values.append(final_net.get_node(9).node_output)
+
+
+plt.plot([x for x in x_values], [y for y in initial_predicted_values], label='Initial')
+plt.plot([x  for x in x_values], [y  for y in final_predicted_values], label='Final')
+plt.xlim([-0, 15])
+plt.ylim([-0, 15])
+plt.savefig('normalized_regression.png')
+#why is rss so wack
+'''
 '''
 def get_node_derivatives(points_with_nets):
     node_derivatives = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
     individual_stuff = {}
 
     for point in points_with_nets:
-        individual_stuff[point] = node_derivatives
+        individual_stuff[point] = {}
     
 
     for key in points_with_nets:
         for node in reversed(points_with_nets[key].nodes):
-            if node.node_num == 6:
-                node_derivatives[node.node_num] += 2 * (points_with_nets[key].get_node(6).node_output - key[1])
+            #if node.node_num == 6:
+                individual_stuff[key][node.node_num] = 2 * (points_with_nets[key].get_node(6).node_output - key[1])
 
             if node.node_num == 5:
-                print("d", node_derivatives[6])
-                node_derivatives[node.node_num] += node_derivatives[6] * derivatve_f(points_with_nets[key].get_node(6).node_input) * points_with_nets[key].node_weights['56']
+                individual_stuff[key][node.node_num] = individual_stuff[key][6] * derivatve_f(points_with_nets[key].get_node(6).node_input) * points_with_nets[key].node_weights['56']
 
             if node.node_num == 4:
-                node_derivatives[node.node_num] += node_derivatives[6] * derivatve_f(points_with_nets[key].get_node(6).node_input) * points_with_nets[key].node_weights['46']
+                individual_stuff[key][node.node_num] = individual_stuff[key][6] * derivatve_f(points_with_nets[key].get_node(6).node_input) * points_with_nets[key].node_weights['46']
 
             if node.node_num == 3:
-                node_derivatives[node.node_num] += node_derivatives[6] * derivatve_f(points_with_nets[key].get_node(6).node_input) * points_with_nets[key].node_weights['36']
+                individual_stuff[key][node.node_num] = individual_stuff[key][6] * derivatve_f(points_with_nets[key].get_node(6).node_input) * points_with_nets[key].node_weights['36']
 
             if node.node_num == 2:
-                node_derivatives[node.node_num] +=  node_derivatives[4] * derivatve_f(points_with_nets[key].get_node(6).node_input) * points_with_nets[key].node_weights['24'] +  node_derivatives[3] * derivatve_f(points_with_nets[key].get_node(6).node_input) * points_with_nets[key].node_weights['23']
+                individual_stuff[key][node.node_num] =  individual_stuff[key][4] * derivatve_f(points_with_nets[key].get_node(6).node_input) * points_with_nets[key].node_weights['24'] +  individual_stuff[key][3] * derivatve_f(points_with_nets[key].get_node(6).node_input) * points_with_nets[key].node_weights['23']
 
             if node.node_num == 1:
-                node_derivatives[node.node_num] +=  node_derivatives[4] * derivatve_f(points_with_nets[key].get_node(6).node_input) * points_with_nets[key].node_weights['14'] +  node_derivatives[3] * derivatve_f(points_with_nets[key].get_node(6).node_input) * points_with_nets[key].node_weights['13']
+                individual_stuff[key][node.node_num] =  individual_stuff[key][4] * derivatve_f(points_with_nets[key].get_node(6).node_input) * points_with_nets[key].node_weights['14'] +  individual_stuff[key][3] * derivatve_f(points_with_nets[key].get_node(6).node_input) * points_with_nets[key].node_weights['13']
 
-    return node_derivatives
+    #for point in individual_stuff:
+        #for node in individual_stuff[point]:
+            #node_derivatives[node] += individual_stuff[point][node]
 
-def get_weight_derivatives(num_nodes, node_weights, points, bias_nodes):
-    weight_derivatives = {}
-    weight_ids = []
-
-    for weight in node_weights:
-        weight_derivatives[weight] = 0
-        weight_ids.append(weight)
-
-    points_with_nets = set_up_multiple_initial_points(num_nodes, node_weights, points, bias_nodes)
-
-    node_derivatives = get_node_derivatives(points_with_nets)
-
-    for x, y in weight_ids:
-        for key in points_with_nets:
-            weight_derivatives[x + y] += node_derivatives[int(y)] * derivatve_f(points_with_nets[key].get_node(int(y)).node_input) * points_with_nets[key].get_node(int(x)).node_output
-
-    return weight_derivatives
+    return individual_stuff
 '''

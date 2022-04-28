@@ -48,13 +48,16 @@ class Simplex:
 
     def get_strictest_constraint(self, increase_var_index): #returns index of strictest constraint
         constraints = self.matrix_representation[:-1]
-        strictest_constraint = 0
+        strictest_constraint = self.matrix_representation[:-1][0]
+        stricted_constraint_value = 100000
 
-        for n in range(0, len(constraints)):
-            if abs(constraints[n][-1] / constraints[n][increase_var_index]) < abs(constraints[strictest_constraint][-1] / constraints[strictest_constraint][increase_var_index]):
-                strictest_constraint = n
+        for constraint in constraints:
+            if constraint[increase_var_index] > 0 and constraint[-1] / constraint[increase_var_index] < stricted_constraint_value:
+                stricted_constraint_value = constraint[-1] / constraint[increase_var_index]
+                strictest_constraint = constraint
 
-        return strictest_constraint
+        return self.matrix_representation.index(strictest_constraint)
+
 
     def reduce(self, strictest_constraint_index, increase_var_index):   
         reduced_constraint_row = []
@@ -79,16 +82,43 @@ class Simplex:
 
             if row != strictest_constraint:
                 scalar_multiple = row[increase_var_index]
-
                 row = list(np.array(row) - scalar_multiple * np.array(strictest_constraint))
-
                 self.matrix_representation.append(row) 
 
         return self.matrix_representation
 
+    def get_columns(self):
+        columns = []
+
+        for column_index in range(len(self.matrix_representation[0])):
+            columns.append([row[column_index] for row in self.matrix_representation])
+
+        return columns
+
+    def get_original_variables(self):
+        num_variables = len(self.matrix_representation[0]) - 1 - self.num_constrants
+        variables = {}
+        columns = self.get_columns()
+
+        for variable_index in range(num_variables):
+            variables[variable_index + 1] = None
+
+        for n in range(0, num_variables):
+            num_ones = len([num for num in columns[n] if num == 1])
+
+            if num_ones == 1:
+                variables[n + 1] = self.matrix_representation[columns[n].index(1)][-1]
+
+            else:
+                variables[n + 1] = 0
+
+
+        return variables
+
     def run(self):
         self.insert_slack_variables()
         num_iteration = 0
+        print(self.matrix_representation)
 
         while self.keep_going():
             #print("Interation:", num_iteration)
@@ -99,11 +129,19 @@ class Simplex:
             num_iteration += 1
 
 
-        return self.matrix_representation
+        max_equation = self.matrix_representation[-1]
+        variables = self.get_original_variables()
+        variables['max'] = -max_equation[-1]
+
+        print(self.matrix_representation)
+
+        return variables
 
 
 
-
-simplex = Simplex([[3, 2, 5, 55], [2, 1, 1, 26], [1, 1, 3, 30], [5, 2, 4,  57], [20, 10, 15, 0]])
+#simplex = Simplex([[3, 2, 5, 55], [2, 1, 1, 26], [1, 1, 3, 30], [5, 2, 4,  57], [20, 10, 15, 0]])
 #simplex = Simplex([[2, 1, 1, 14], [4, 2, 3, 28], [2, 5, 5, 30], [1, 2, 1, 0]])
+#simplex = Simplex([[3, 2, 0, 5], [2, 1, -1, 13], [0, 0, 1, 4], [2, 3, 1, 0]])
+#simplex = Simplex([[4, 2, 0, 400], [2, 2, 2, 252], [1, 2, 3, 200], [1, 1, 2, 900], [1, 1, 1, 0]])
+#simplex = Simplex([[2, 3, 6], [3, 7, 12], [7, 12, 0]])
 print(simplex.run())

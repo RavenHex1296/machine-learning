@@ -3,6 +3,7 @@ import random
 import itertools
 import numpy as np
 import matplotlib.pyplot as plt
+import time
 
 data_set = [(0.0 , 7) , (0.2 , 5.6) , (0.4 , 3.56) , (0.6 , 1.23) , (0.8 , -1.03) ,
 (1.0 , -2.89) , (1.2 , -4.06) , (1.4 , -4.39) , (1.6 , -3.88) , (1.8 , -2.64) ,
@@ -182,9 +183,31 @@ def get_sorted_by_rss_nets(neural_nets):
 
     return (sorted(population_list_of_tuples, key = lambda x: x[1]))
 
+
+x_values = []
+
+
+for n in range(1):
+    for num in range(0, 101):
+        x_values.append(n + num * 0.01)
+
+
 def run(num_generations): 
     avg_rss_values = []
     first_gen = make_first_gen(30)
+    plt.scatter([point[0] for point in normalized_data], [point[1] for point in normalized_data])
+
+    for neural_net in first_gen:
+
+        initial_predicted_values = []
+
+        for x in x_values:
+            neural_net.build_neural_net(x)
+            initial_predicted_values.append(neural_net.get_node(24).node_output)
+
+        plt.plot([x for x in x_values], initial_predicted_values, color="red")
+
+
 
     avg_rss_values.append(get_avg_rss_value(first_gen, normalized_data))
 
@@ -192,18 +215,37 @@ def run(num_generations):
     parents = [x for x, y in sorted_tuple_list[:15]]
 
     for _ in range(num_generations - 1):
-        current_gen = make_new_gen(parents)
+        current_gen = make_new_gen(parents) + parents
         avg_rss_values.append(get_avg_rss_value(current_gen, normalized_data))
-
-        sorted_tuple_list = get_sorted_by_rss_nets(first_gen)
+        sorted_tuple_list = get_sorted_by_rss_nets(current_gen)
         parents = [x for x, y in sorted_tuple_list[:15]]
+
+    for neural_net in current_gen:
+
+        final_predicted_values = []
+
+        for x in x_values:
+            neural_net.build_neural_net(x)
+            final_predicted_values.append(neural_net.get_node(24).node_output)
+
+        plt.plot([x for x in x_values], final_predicted_values, color="blue")
+        plt.xlabel('x')
+        plt.ylabel('predicted values')
+    plt.savefig('initial_vs_final_neural_nets.png')
+    plt.clf()
 
     return avg_rss_values
 
 
-avg_values = run(500)
+
+start_time = time.time()
+num_generations = 5000
+avg_values = run(num_generations)
 print(avg_values)
-plt.plot([x for x in range(500)], avg_values)
+plt.plot([x for x in range(num_generations)], avg_values)
 plt.xlabel('# generations completed')
 plt.ylabel('avg rss values')
 plt.savefig('avg_rss_evolved_neural_net.png')
+print(time.time() - start_time)
+
+

@@ -1,4 +1,5 @@
 import math
+import random
 import itertools
 from itertools import permutations
 
@@ -32,7 +33,7 @@ class Node:
 
 
 class EvolvedNeuralNet:
-    def __init__(self, num_nodes, node_weights, bias_node_nums):
+    def __init__(self, num_nodes, node_weights, bias_node_nums, mutation_rate):
         self.nodes = [Node(n + 1) for n in range(num_nodes)]
         self.node_weights = node_weights
         self.bias_nodes = bias_node_nums
@@ -77,10 +78,7 @@ class EvolvedNeuralNet:
         return self.nodes[node_num - 1]
 
 
-population = []
-bias_node_nums = [12, 19, 23]
-
-def weight_ids(layer_sizes, bias_node_nums):
+def get_weight_ids(layer_sizes, bias_node_nums):
     weight_ids = []
     num_nodes_in_layer = {}
     num_nodes = 0
@@ -118,14 +116,39 @@ def weight_ids(layer_sizes, bias_node_nums):
     return weight_ids
 
     
+def RSS(points, neural_net):
+    rss = 0
+
+    for x, y in points:
+        neural_net.build_neural_net(x)
+        prediction = neural_net.get_node(24).node_output
+        rss += (y - prediction) ** 2
+
+    return rss
+
+
             
+population = {}
+bias_node_nums = [12, 19, 23]
 
+for n in range(30):
+    weight_ids = get_weight_ids([1, 10, 6, 3, 1], bias_node_nums)
+    weights = {}
 
-weight_ids = weight_ids([1, 10, 6, 3, 1], bias_node_nums)
-weights = {}
+    for weight_id in weight_ids:
+        weights[weight_id] = random.uniform(-0.2, 0.2)	
+    
+    neural_net = EvolvedNeuralNet(24, weights, bias_node_nums, 0.05)
+    population[neural_net] = None
 
-for weight_id in weight_ids:
-    weights[weight_id] = 1
- 
-neural_net = EvolvedNeuralNet(24, weights, bias_node_nums)
-neural_net.build_neural_net(0.05)
+population_list_of_tuples = []
+
+for neural_net in population:
+    rss = RSS(normalized_data, neural_net)
+    population[neural_net] = rss
+    population_list_of_tuples.append((neural_net, rss))
+
+sorted_tuple_list = (sorted(population_list_of_tuples, key = lambda x: x[1]))
+parents = [x for x, y in sorted_tuple_list[:15]]
+
+print(len(parents))

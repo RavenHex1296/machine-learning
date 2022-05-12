@@ -2,6 +2,7 @@ import math
 import random
 import itertools
 import numpy as np
+import matplotlib.pyplot as plt
 
 data_set = [(0.0 , 7) , (0.2 , 5.6) , (0.4 , 3.56) , (0.6 , 1.23) , (0.8 , -1.03) ,
 (1.0 , -2.89) , (1.2 , -4.06) , (1.4 , -4.39) , (1.6 , -3.88) , (1.8 , -2.64) ,
@@ -14,6 +15,7 @@ min_x = min([x for x, y in data_set])
 max_x = max([x for x, y in data_set])
 min_y = min([y for x, y in data_set])
 max_y = max([y for x, y in data_set])
+bias_node_nums = [12, 19, 23]
 
 for x, y in data_set:
     normalized_x = (x - min_x) / (max_x - min_y)
@@ -128,42 +130,80 @@ def RSS(points, neural_net):
     return rss
 
 
-            
-first_gen = {}
-bias_node_nums = [12, 19, 23]
+def make_new_gen(parents):
+    children = []
 
-for n in range(30):
-    weight_ids = get_weight_ids([1, 10, 6, 3, 1], bias_node_nums)
-    weights = {}
+    for parent in parents:
+        child_weights = {}
 
-    for weight_id in weight_ids:
-        weights[weight_id] = random.uniform(-0.2, 0.2)	
-    
-    neural_net = EvolvedNeuralNet(24, weights, bias_node_nums, 0.05)
-    first_gen[neural_net] = None
+        for weight in parent.node_weights:
+            child_weights[weight] = parent.node_weights[weight] + parent.mutation_rate * np.random.normal(0, 1)
+
+        child_mutation_rate = parent.mutation_rate * math.exp(np.random.normal(0, 1) / ((2 ** 0.5) * (len(child_weights.keys()) ** 0.25)))
+
+        child = EvolvedNeuralNet(24, child_weights, bias_node_nums, child_mutation_rate)
+        children.append(child)
+
+    return children
 
 
+def make_first_gen(population_size):
+    first_gen = []
 
-population_list_of_tuples = []
+    for n in range(population_size):
+        weight_ids = get_weight_ids([1, 10, 6, 3, 1], bias_node_nums)
+        weights = {}
 
-for neural_net in first_gen:
-    rss = RSS(normalized_data, neural_net)
-    first_gen[neural_net] = rss
-    population_list_of_tuples.append((neural_net, rss))
+        for weight_id in weight_ids:
+            weights[weight_id] = random.uniform(-0.2, 0.2)	
+        
+        neural_net = EvolvedNeuralNet(24, weights, bias_node_nums, 0.05)
+        first_gen.append(neural_net)
 
-sorted_tuple_list = (sorted(population_list_of_tuples, key = lambda x: x[1]))
-parents = [x for x, y in sorted_tuple_list[:15]]
+    return first_gen
 
-children = []
 
-for parent in parents:
-    child_weights = {}
+def get_avg_rss_value(neural_nets, points):
+    rss_total = 0
 
-    for weight in parent.node_weights:
-        child_weights[weight] = parent.node_weights[weight] + parent.mutation_rate * np.random.normal(0, 1)
+    for neural_net in neural_nets:
+        rss = RSS(points, neural_net)
+        rss_total += rss
 
-    child_mutation_rate = parent.mutation_rate * math.exp(np.random.normal(0, 1) / ((2 ** 0.5) * (len(child_weights.keys()) ** 0.25)))
+    return rss_total / len(neural_nets)
 
-    child = EvolvedNeuralNet(24, weights, bias_node_nums, child_mutation_rate)
-    children.append(child)
 
+def get_sorted_by_rss_nets(neural_nets):
+    population_list_of_tuples = []
+
+    for neural_net in neural_nets:
+        rss = RSS(normalized_data, neural_net)
+        population_list_of_tuples.append((neural_net, rss))
+
+    return (sorted(population_list_of_tuples, key = lambda x: x[1]))
+
+def run(num_generations): 
+    avg_rss_values = []
+    first_gen = make_first_gen(30)
+
+    avg_rss_values.append(get_avg_rss_value(first_gen, normalized_data))
+
+    sorted_tuple_list = get_sorted_by_rss_nets(first_gen)
+    parents = [x for x, y in sorted_tuple_list[:15]]
+
+    for _ in range(num_generations - 1):
+        current_gen = make_new_gen(parents)
+        avg_rss_values.append(get_avg_rss_value(current_gen, normalized_data))
+
+        sorted_tuple_list = get_sorted_by_rss_nets(first_gen)
+        parents = [x for x, y in sorted_tuple_list[:15]]
+
+    return avg_rss_values
+
+
+avg_values = run(500)
+print(avg_values)
+plt.plot([x for x in range(500)], avg_values)
+plt.xlabel('# generations completed')
+plt.ylabel('avg rss values')
+plt.savefig('avg_rss_evolved_neural_net.png')

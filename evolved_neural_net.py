@@ -1,7 +1,7 @@
 import math
 import random
 import itertools
-from itertools import permutations
+import numpy as np
 
 data_set = [(0.0 , 7) , (0.2 , 5.6) , (0.4 , 3.56) , (0.6 , 1.23) , (0.8 , -1.03) ,
 (1.0 , -2.89) , (1.2 , -4.06) , (1.4 , -4.39) , (1.6 , -3.88) , (1.8 , -2.64) ,
@@ -37,6 +37,7 @@ class EvolvedNeuralNet:
         self.nodes = [Node(n + 1) for n in range(num_nodes)]
         self.node_weights = node_weights
         self.bias_nodes = bias_node_nums
+        self.mutation_rate = mutation_rate
 
         for bias_node_num in self.bias_nodes:
             self.nodes[bias_node_num - 1].node_output = 1
@@ -128,7 +129,7 @@ def RSS(points, neural_net):
 
 
             
-population = {}
+first_gen = {}
 bias_node_nums = [12, 19, 23]
 
 for n in range(30):
@@ -139,16 +140,30 @@ for n in range(30):
         weights[weight_id] = random.uniform(-0.2, 0.2)	
     
     neural_net = EvolvedNeuralNet(24, weights, bias_node_nums, 0.05)
-    population[neural_net] = None
+    first_gen[neural_net] = None
+
+
 
 population_list_of_tuples = []
 
-for neural_net in population:
+for neural_net in first_gen:
     rss = RSS(normalized_data, neural_net)
-    population[neural_net] = rss
+    first_gen[neural_net] = rss
     population_list_of_tuples.append((neural_net, rss))
 
 sorted_tuple_list = (sorted(population_list_of_tuples, key = lambda x: x[1]))
 parents = [x for x, y in sorted_tuple_list[:15]]
 
-print(len(parents))
+children = []
+
+for parent in parents:
+    child_weights = {}
+
+    for weight in parent.node_weights:
+        child_weights[weight] = parent.node_weights[weight] + parent.mutation_rate * np.random.normal(0, 1)
+
+    child_mutation_rate = parent.mutation_rate * math.exp(np.random.normal(0, 1) / ((2 ** 0.5) * (len(child_weights.keys()) ** 0.25)))
+
+    child = EvolvedNeuralNet(24, weights, bias_node_nums, child_mutation_rate)
+    children.append(child)
+

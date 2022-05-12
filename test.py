@@ -1,3 +1,4 @@
 import numpy as np
+import random
 
-print([1,2,3,4,5,6,7][:1])
+print(np.random.normal(0, 1))

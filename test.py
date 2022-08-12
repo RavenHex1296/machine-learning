@@ -1,4 +1,5 @@
-import numpy as np
 import random
 
-print(np.random.normal(0, 1))
+x= 1
+x*=2
+print(x)

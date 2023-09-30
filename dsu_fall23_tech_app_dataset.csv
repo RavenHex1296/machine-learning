@@ -1,0 +1,869 @@
+Driver,Country,Has_Won_A_Championship,Total_Races,Race_Wins,Seasons,Pole_Positions,Total_Championships_Won,Race_Podiums,Decade
+Carlo Abate,Italy,False,0.0,0.0,"1962, 1963",0.0,0.0,0.0,1960
+George Abecassis,United Kingdom,False,2.0,0.0,"1951, 1952",0.0,0.0,0.0,1950
+Kenny Acheson,United Kingdom,False,3.0,0.0,"1983, 1985",0.0,0.0,0.0,1980
+Andrea de Adamich,Italy,False,30.0,0.0,"1968, 1970, 1971, 1972, 1973",0.0,0.0,0.0,1970
+Philippe Adams,Belgium,False,2.0,0.0,1994,0.0,0.0,0.0,1990
+Walt Ader,United States,False,1.0,0.0,1950,0.0,0.0,0.0,1950
+Kurt Adolff,West Germany,False,1.0,0.0,1953,0.0,0.0,0.0,1950
+Fred Agabashian,United States,False,8.0,0.0,"1950, 1951, 1952, 1953, 1954, 1955, 1956, 1957",1.0,0.0,0.0,1950
+Kurt Ahrens Jr.,West Germany,False,4.0,0.0,"1966, 1967, 1968, 1969",0.0,0.0,0.0,1970
+Jack Aitken,United Kingdom,False,1.0,0.0,2020,0.0,0.0,0.0,2020
+Christijan Albers,Netherlands,False,46.0,0.0,"2005, 2006, 2007",0.0,0.0,0.0,2010
+Alexander Albon,Thailand,False,60.0,0.0,"2019, 2020, 2022",0.0,0.0,2.0,2020
+Michele Alboreto,Italy,False,194.0,5.0,"1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994",2.0,0.0,23.0,1990
+Jean Alesi,France,False,201.0,1.0,"1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001",2.0,0.0,32.0,2000
+Jaime Alguersuari,Spain,False,46.0,0.0,"2009, 2010, 2011",0.0,0.0,0.0,2010
+Philippe Alliot,France,False,109.0,0.0,"1984, 1985, 1986, 1987, 1988, 1989, 1990, 1993, 1994",0.0,0.0,0.0,1990
+Cliff Allison,United Kingdom,False,16.0,0.0,"1958, 1959, 1960, 1961",0.0,0.0,1.0,1960
+Fernando Alonso,Spain,True,356.0,32.0,"2001, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2021, 2022",22.0,2.0,99.0,2010
+Giovanna Amati,Italy,False,0.0,0.0,1992,0.0,0.0,0.0,1990
+George Amick,United States,False,1.0,0.0,1958,0.0,0.0,1.0,1960
+Red Amick,United States,False,2.0,0.0,"1959, 1960",0.0,0.0,0.0,1960
+Chris Amon,New Zealand,False,96.0,0.0,"1963, 1964, 1965, 1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976",5.0,0.0,11.0,1970
+Bob Anderson,United Kingdom,False,25.0,0.0,"1963, 1964, 1965, 1966, 1967",0.0,0.0,1.0,1960
+Conny Andersson,Sweden,False,1.0,0.0,"1976, 1977",0.0,0.0,0.0,1980
+Emil Andres,United States,False,0.0,0.0,1950,0.0,0.0,0.0,1950
+Mario Andretti,United States,True,128.0,12.0,"1968, 1969, 1970, 1971, 1972, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982",18.0,1.0,19.0,1980
+Michael Andretti,United States,False,13.0,0.0,1993,0.0,0.0,1.0,1990
+Keith Andrews,United States,False,2.0,0.0,"1955, 1956",0.0,0.0,0.0,1960
+Elio de Angelis,Italy,False,108.0,2.0,"1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986",3.0,0.0,9.0,1980
+Marco Apicella,Italy,False,1.0,0.0,1993,0.0,0.0,0.0,1990
+Mário de Araújo Cabral,Portugal,False,4.0,0.0,"1959, 1960, 1963, 1964",0.0,0.0,0.0,1960
+Frank Armi,United States,False,1.0,0.0,1954,0.0,0.0,0.0,1950
+Chuck Arnold,United States,False,1.0,0.0,1959,0.0,0.0,0.0,1960
+René Arnoux,France,False,149.0,7.0,"1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989",18.0,0.0,22.0,1980
+Peter Arundell,United Kingdom,False,11.0,0.0,"1963, 1964, 1966",0.0,0.0,2.0,1960
+Alberto Ascari,Italy,True,32.0,13.0,"1950, 1951, 1952, 1953, 1954, 1955",14.0,2.0,17.0,1950
+Peter Ashdown,United Kingdom,False,1.0,0.0,1959,0.0,0.0,0.0,1960
+Ian Ashley,United Kingdom,False,4.0,0.0,"1974, 1975, 1976, 1977",0.0,0.0,0.0,1980
+Gerry Ashmore,United Kingdom,False,3.0,0.0,"1961, 1962",0.0,0.0,0.0,1960
+Bill Aston,United Kingdom,False,1.0,0.0,1952,0.0,0.0,0.0,1950
+Richard Attwood,United Kingdom,False,16.0,0.0,"1964, 1965, 1967, 1968, 1969",0.0,0.0,1.0,1970
+Manny Ayulo,United States,False,4.0,0.0,"1951, 1952, 1953, 1954",0.0,0.0,1.0,1950
+Luca Badoer,Italy,False,50.0,0.0,"1993, 1995, 1996, 1999, 2009",0.0,0.0,0.0,2000
+Giancarlo Baghetti,Italy,False,21.0,1.0,"1961, 1962, 1963, 1964, 1965, 1966, 1967",0.0,0.0,1.0,1960
+Julian Bailey,United Kingdom,False,7.0,0.0,"1988, 1991",0.0,0.0,0.0,1990
+Mauro Baldi,Italy,False,36.0,0.0,"1982, 1983, 1984, 1985",0.0,0.0,0.0,1980
+Bobby Ball,United States,False,2.0,0.0,"1951, 1952",0.0,0.0,0.0,1950
+Marcel Balsa,France,False,1.0,0.0,1952,0.0,0.0,0.0,1950
+Lorenzo Bandini,Italy,False,42.0,1.0,"1961, 1962, 1963, 1964, 1965, 1966, 1967",1.0,0.0,8.0,1960
+Henry Banks,United States,False,3.0,0.0,"1950, 1951, 1952",0.0,0.0,0.0,1950
+Fabrizio Barbazza,Italy,False,8.0,0.0,"1991, 1993",0.0,0.0,0.0,1990
+John Barber,United Kingdom,False,1.0,0.0,1953,0.0,0.0,0.0,1950
+Skip Barber,United States,False,5.0,0.0,"1971, 1972",0.0,0.0,0.0,1970
+Paolo Barilla,Italy,False,9.0,0.0,"1989, 1990",0.0,0.0,0.0,1990
+Rubens Barrichello,Brazil,False,322.0,11.0,"1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011",14.0,0.0,68.0,2000
+Michael Bartels,Germany,False,0.0,0.0,1991,0.0,0.0,0.0,1990
+Edgar Barth,"East Germany, West Germany",False,5.0,0.0,"1953, 1957, 1958, 1960, 1961, 1964",0.0,0.0,0.0,1960
+Giorgio Bassi,Italy,False,1.0,0.0,1965,0.0,0.0,0.0,1960
+Erwin Bauer,West Germany,False,1.0,0.0,1953,0.0,0.0,0.0,1950
+Zsolt Baumgartner,Hungary,False,20.0,0.0,"2003, 2004",0.0,0.0,0.0,2000
+Élie Bayol,France,False,7.0,0.0,"1952, 1953, 1954, 1955, 1956",0.0,0.0,0.0,1950
+Don Beauman,United Kingdom,False,1.0,0.0,1954,0.0,0.0,0.0,1950
+Karl-Günther Bechem[g],West Germany,False,2.0,0.0,"1952, 1953",0.0,0.0,0.0,1950
+Jean Behra,France,False,52.0,0.0,"1952, 1953, 1954, 1955, 1956, 1957, 1958, 1959",0.0,0.0,9.0,1960
+Derek Bell,United Kingdom,False,9.0,0.0,"1968, 1969, 1970, 1971, 1972, 1974",0.0,0.0,0.0,1970
+Stefan Bellof,West Germany,False,20.0,0.0,"1984, 1985",0.0,0.0,0.0,1980
+Paul Belmondo,France,False,7.0,0.0,"1992, 1994",0.0,0.0,0.0,1990
+Tom Belsø,Denmark,False,2.0,0.0,"1973, 1974",0.0,0.0,0.0,1970
+Jean-Pierre Beltoise,France,False,86.0,1.0,"1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974",0.0,0.0,8.0,1970
+Olivier Beretta,Monaco,False,9.0,0.0,1994,0.0,0.0,0.0,1990
+Allen Berg,Canada,False,9.0,0.0,1986,0.0,0.0,0.0,1990
+Georges Berger,Belgium,False,2.0,0.0,"1953, 1954",0.0,0.0,0.0,1950
+Gerhard Berger,Austria,False,210.0,10.0,"1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997",12.0,0.0,48.0,1990
+Éric Bernard,France,False,45.0,0.0,"1989, 1990, 1991, 1994",0.0,0.0,1.0,1990
+Enrique Bernoldi,Brazil,False,28.0,0.0,"2001, 2002",0.0,0.0,0.0,2000
+Enrico Bertaggia,Italy,False,0.0,0.0,1989,0.0,0.0,0.0,1990
+Tony Bettenhausen,United States,False,11.0,0.0,"1950, 1951, 1952, 1953, 1954, 1955, 1956, 1957, 1958, 1959, 1960",0.0,0.0,1.0,1960
+Mike Beuttler,United Kingdom,False,28.0,0.0,"1971, 1972, 1973",0.0,0.0,0.0,1970
+Birabongse Bhanudej,Thailand,False,19.0,0.0,"1950, 1951, 1952, 1953, 1954",0.0,0.0,0.0,1950
+Jules Bianchi,France,False,34.0,0.0,"2013, 2014",0.0,0.0,0.0,2010
+Lucien Bianchi,Belgium,False,17.0,0.0,"1959, 1960, 1961, 1962, 1963, 1965, 1968",0.0,0.0,1.0,1960
+Gino Bianco,Brazil,False,4.0,0.0,1952,0.0,0.0,0.0,1950
+Hans Binder,Austria,False,13.0,0.0,"1976, 1977, 1978",0.0,0.0,0.0,1980
+Clemente Biondetti,Italy,False,1.0,0.0,1950,0.0,0.0,0.0,1950
+Pablo Birger,Argentina,False,2.0,0.0,"1953, 1955",0.0,0.0,0.0,1950
+Art Bisch,United States,False,1.0,0.0,1958,0.0,0.0,0.0,1960
+Harry Blanchard,United States,False,1.0,0.0,1959,0.0,0.0,0.0,1960
+Michael Bleekemolen,Netherlands,False,1.0,0.0,"1977, 1978",0.0,0.0,0.0,1980
+Alex Blignaut,South Africa,False,0.0,0.0,1965,0.0,0.0,0.0,1960
+Trevor Blokdyk,South Africa,False,1.0,0.0,"1963, 1965",0.0,0.0,0.0,1960
+Mark Blundell,United Kingdom,False,61.0,0.0,"1991, 1993, 1994, 1995",0.0,0.0,3.0,1990
+Raul Boesel,Brazil,False,23.0,0.0,"1982, 1983",0.0,0.0,0.0,1980
+Menato Boffa,Italy,False,0.0,0.0,1961,0.0,0.0,0.0,1960
+Bob Bondurant,United States,False,9.0,0.0,"1965, 1966",0.0,0.0,0.0,1970
+Felice Bonetto,Italy,False,15.0,0.0,"1950, 1951, 1952, 1953",0.0,0.0,2.0,1950
+Jo Bonnier,Sweden,False,104.0,1.0,"1956, 1957, 1958, 1959, 1960, 1961, 1962, 1963, 1964, 1965, 1966, 1967, 1968, 1969, 1970, 1971",1.0,0.0,1.0,1960
+Roberto Bonomi,Argentina,False,1.0,0.0,1960,0.0,0.0,0.0,1960
+Juan Manuel Bordeu,Argentina,False,0.0,0.0,1961,0.0,0.0,0.0,1960
+Slim Borgudd,Sweden,False,10.0,0.0,"1981, 1982",0.0,0.0,0.0,1980
+Luki Botha,South Africa,False,1.0,0.0,1967,0.0,0.0,0.0,1970
+Valtteri Bottas,Finland,False,201.0,10.0,"2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022",20.0,0.0,67.0,2020
+Jean-Christophe Boullion,France,False,11.0,0.0,1995,0.0,0.0,0.0,2000
+Sébastien Bourdais,France,False,27.0,0.0,"2008, 2009",0.0,0.0,0.0,2010
+Thierry Boutsen,Belgium,False,163.0,3.0,"1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993",1.0,0.0,15.0,1990
+Johnny Boyd,United States,False,6.0,0.0,"1955, 1956, 1957, 1958, 1959, 1960",0.0,0.0,1.0,1960
+David Brabham,Australia,False,24.0,0.0,"1990, 1994",0.0,0.0,0.0,1990
+Gary Brabham,Australia,False,0.0,0.0,1990,0.0,0.0,0.0,1990
+Jack Brabham,Australia,True,126.0,14.0,"1955, 1956, 1957, 1958, 1959, 1960, 1961, 1962, 1963, 1964, 1965, 1966, 1967, 1968, 1969, 1970",13.0,3.0,31.0,1960
+Bill Brack,Canada,False,3.0,0.0,"1968, 1969, 1972",0.0,0.0,0.0,1970
+Ernesto Brambilla,Italy,False,0.0,0.0,"1963, 1969",0.0,0.0,0.0,1970
+Vittorio Brambilla,Italy,False,74.0,1.0,"1974, 1975, 1976, 1977, 1978, 1979, 1980",1.0,0.0,1.0,1980
+Toni Branca,Switzerland,False,3.0,0.0,"1950, 1951",0.0,0.0,0.0,1950
+Gianfranco Brancatelli,Italy,False,0.0,0.0,1979,0.0,0.0,0.0,1980
+Eric Brandon,United Kingdom,False,5.0,0.0,"1952, 1954",0.0,0.0,0.0,1950
+Don Branson,United States,False,2.0,0.0,"1959, 1960",0.0,0.0,0.0,1960
+Tom Bridger,United Kingdom,False,1.0,0.0,1958,0.0,0.0,0.0,1960
+Tony Brise,United Kingdom,False,10.0,0.0,1975,0.0,0.0,0.0,1980
+Chris Bristow,United Kingdom,False,4.0,0.0,"1959, 1960",0.0,0.0,0.0,1960
+Peter Broeker,Canada,False,1.0,0.0,1963,0.0,0.0,0.0,1960
+Tony Brooks,United Kingdom,False,38.0,6.0,"1956, 1957, 1958, 1959, 1960, 1961",3.0,0.0,10.0,1960
+Alan Brown,United Kingdom,False,8.0,0.0,"1952, 1953, 1954",0.0,0.0,0.0,1950
+Walt Brown,United States,False,2.0,0.0,"1950, 1951",0.0,0.0,0.0,1950
+Warwick Brown,Australia,False,1.0,0.0,1976,0.0,0.0,0.0,1980
+Adolf Brudes,West Germany,False,1.0,0.0,1952,0.0,0.0,0.0,1950
+Martin Brundle,United Kingdom,False,158.0,0.0,"1984, 1985, 1986, 1987, 1988, 1989, 1991, 1992, 1993, 1994, 1995, 1996",0.0,0.0,9.0,1990
+Gianmaria Bruni,Italy,False,18.0,0.0,2004,0.0,0.0,0.0,2000
+Jimmy Bryan,United States,False,9.0,1.0,"1952, 1953, 1954, 1955, 1956, 1957, 1958, 1959, 1960",0.0,0.0,3.0,1960
+Clemar Bucci,Argentina,False,5.0,0.0,"1954, 1955",0.0,0.0,0.0,1950
+Ronnie Bucknum,United States,False,11.0,0.0,"1964, 1965, 1966",0.0,0.0,0.0,1960
+Ivor Bueb,United Kingdom,False,5.0,0.0,"1957, 1958, 1959",0.0,0.0,0.0,1960
+Sébastien Buemi,Switzerland,False,55.0,0.0,"2009, 2010, 2011",0.0,0.0,0.0,2010
+Luiz Bueno,Brazil,False,1.0,0.0,1973,0.0,0.0,0.0,1970
+Ian Burgess,United Kingdom,False,16.0,0.0,"1958, 1959, 1960, 1961, 1962, 1963",0.0,0.0,0.0,1960
+Luciano Burti,Brazil,False,14.0,0.0,"2000, 2001",0.0,0.0,0.0,2000
+Roberto Bussinello,Italy,False,2.0,0.0,"1961, 1965",0.0,0.0,0.0,1960
+Jenson Button,United Kingdom,True,306.0,15.0,"2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017",8.0,1.0,50.0,2010
+Tommy Byrne,Ireland,False,2.0,0.0,1982,0.0,0.0,0.0,1980
+Giulio Cabianca,Italy,False,3.0,0.0,"1958, 1959, 1960",0.0,0.0,0.0,1960
+Phil Cade,United States,False,0.0,0.0,1959,0.0,0.0,0.0,1960
+Alex Caffi,Italy,False,56.0,0.0,"1986, 1987, 1988, 1989, 1990, 1991",0.0,0.0,0.0,1990
+John Campbell-Jones,United Kingdom,False,2.0,0.0,"1962, 1963",0.0,0.0,0.0,1960
+Adrián Campos,Spain,False,17.0,0.0,"1987, 1988",0.0,0.0,0.0,1990
+John Cannon,Canada,False,1.0,0.0,1971,0.0,0.0,0.0,1970
+Eitel Cantoni,Uruguay,False,3.0,0.0,1952,0.0,0.0,0.0,1950
+Bill Cantrell,United States,False,1.0,0.0,1950,0.0,0.0,0.0,1950
+Ivan Capelli,Italy,False,93.0,0.0,"1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993",0.0,0.0,3.0,1990
+Piero Carini,Italy,False,3.0,0.0,"1952, 1953",0.0,0.0,0.0,1950
+Duane Carter,United States,False,8.0,0.0,"1950, 1951, 1952, 1953, 1954, 1955, 1959, 1960",0.0,0.0,1.0,1950
+Eugenio Castellotti,Italy,False,14.0,0.0,"1955, 1956, 1957",1.0,0.0,3.0,1960
+Johnny Cecotto,Venezuela,False,18.0,0.0,"1983, 1984",0.0,0.0,0.0,1980
+Andrea de Cesaris,Italy,False,208.0,0.0,"1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994",1.0,0.0,5.0,1990
+François Cevert,France,False,46.0,1.0,"1970, 1971, 1972, 1973",0.0,0.0,13.0,1970
+Eugène Chaboud,France,False,3.0,0.0,"1950, 1951",0.0,0.0,0.0,1950
+Jay Chamberlain,United States,False,1.0,0.0,1962,0.0,0.0,0.0,1960
+Karun Chandhok,India,False,11.0,0.0,"2010, 2011",0.0,0.0,0.0,2010
+Alain de Changy,Belgium,False,0.0,0.0,1959,0.0,0.0,0.0,1960
+Colin Chapman,United Kingdom,False,0.0,0.0,1956,0.0,0.0,0.0,1960
+Dave Charlton,South Africa,False,11.0,0.0,"1965, 1967, 1968, 1970, 1971, 1972, 1973, 1974, 1975",0.0,0.0,0.0,1970
+Pedro Chaves,Portugal,False,0.0,0.0,1991,0.0,0.0,0.0,1990
+Bill Cheesbourg,United States,False,3.0,0.0,"1957, 1958, 1959",0.0,0.0,0.0,1960
+Eddie Cheever,United States,False,132.0,0.0,"1978, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989",0.0,0.0,9.0,1980
+Andrea Chiesa,Switzerland,False,3.0,0.0,1992,0.0,0.0,0.0,1990
+Max Chilton,United Kingdom,False,35.0,0.0,"2013, 2014",0.0,0.0,0.0,2010
+Ettore Chimeri,Venezuela,False,1.0,0.0,1960,0.0,0.0,0.0,1960
+Louis Chiron,Monaco,False,15.0,0.0,"1950, 1951, 1953, 1955, 1956, 1958",0.0,0.0,1.0,1950
+Joie Chitwood,United States,False,1.0,0.0,1950,0.0,0.0,0.0,1950
+Bob Christie,United States,False,5.0,0.0,"1956, 1957, 1958, 1959, 1960",0.0,0.0,0.0,1960
+Johnny Claes,Belgium,False,23.0,0.0,"1950, 1951, 1952, 1953, 1955",0.0,0.0,0.0,1950
+David Clapham,South Africa,False,0.0,0.0,1965,0.0,0.0,0.0,1960
+Jim Clark,United Kingdom,True,72.0,25.0,"1960, 1961, 1962, 1963, 1964, 1965, 1966, 1967, 1968",33.0,2.0,32.0,1960
+Kevin Cogan,United States,False,0.0,0.0,"1980, 1981",0.0,0.0,0.0,1980
+Peter Collins,United Kingdom,False,32.0,3.0,"1952, 1953, 1954, 1955, 1956, 1957, 1958",0.0,0.0,9.0,1960
+Bernard Collomb,France,False,4.0,0.0,"1961, 1962, 1963, 1964",0.0,0.0,0.0,1960
+Alberto Colombo,Italy,False,0.0,0.0,1978,0.0,0.0,0.0,1980
+Érik Comas,France,False,59.0,0.0,"1991, 1992, 1993, 1994",0.0,0.0,0.0,1990
+Franco Comotti,Italy,False,2.0,0.0,"1950, 1952",0.0,0.0,0.0,1950
+George Connor,United States,False,3.0,0.0,"1950, 1951, 1952",0.0,0.0,0.0,1950
+George Constantine,United States,False,1.0,0.0,1959,0.0,0.0,0.0,1960
+John Cordts,Canada,False,1.0,0.0,1969,0.0,0.0,0.0,1970
+David Coulthard,United Kingdom,False,246.0,13.0,"1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008",12.0,0.0,62.0,2000
+Piers Courage,United Kingdom,False,27.0,0.0,"1967, 1968, 1969, 1970",0.0,0.0,2.0,1970
+Chris Craft,United Kingdom,False,1.0,0.0,1971,0.0,0.0,0.0,1970
+Jim Crawford,United Kingdom,False,2.0,0.0,1975,0.0,0.0,0.0,1980
+Ray Crawford,United States,False,3.0,0.0,"1955, 1956, 1959",0.0,0.0,0.0,1960
+Alberto Crespo,Argentina,False,0.0,0.0,1952,0.0,0.0,0.0,1950
+Antonio Creus,Spain,False,1.0,0.0,1960,0.0,0.0,0.0,1960
+Larry Crockett,United States,False,1.0,0.0,1954,0.0,0.0,0.0,1950
+Tony Crook,United Kingdom,False,2.0,0.0,"1952, 1953",0.0,0.0,0.0,1950
+Art Cross,United States,False,4.0,0.0,"1952, 1953, 1954, 1955",0.0,0.0,1.0,1950
+Geoffrey Crossley,United Kingdom,False,2.0,0.0,1950,0.0,0.0,0.0,1950
+Jérôme d'Ambrosio,Belgium,False,20.0,0.0,"2011, 2012",0.0,0.0,0.0,2010
+Chuck Daigh,United States,False,3.0,0.0,1960,0.0,0.0,0.0,1960
+Yannick Dalmas,France,False,24.0,0.0,"1987, 1988, 1989, 1990, 1994",0.0,0.0,0.0,1990
+Derek Daly,Ireland,False,49.0,0.0,"1978, 1979, 1980, 1981, 1982",0.0,0.0,0.0,1980
+Christian Danner,West Germany,False,36.0,0.0,"1985, 1986, 1987, 1989",0.0,0.0,0.0,1990
+Jorge Daponte,Argentina,False,2.0,0.0,1954,0.0,0.0,0.0,1950
+Anthony Davidson,United Kingdom,False,24.0,0.0,"2002, 2005, 2007, 2008",0.0,0.0,0.0,2010
+Jimmy Davies,United States,False,5.0,0.0,"1950, 1951, 1953, 1954, 1955",0.0,0.0,1.0,1950
+Colin Davis,United Kingdom,False,2.0,0.0,1959,0.0,0.0,0.0,1960
+Jimmy Daywalt,United States,False,6.0,0.0,"1953, 1954, 1955, 1956, 1957, 1959",0.0,0.0,0.0,1960
+Jean-Denis Délétraz,Switzerland,False,3.0,0.0,"1994, 1995",0.0,0.0,0.0,1990
+Patrick Depailler,France,False,95.0,2.0,"1972, 1974, 1975, 1976, 1977, 1978, 1979, 1980",1.0,0.0,19.0,1980
+Pedro Diniz,Brazil,False,98.0,0.0,"1995, 1996, 1997, 1998, 1999, 2000",0.0,0.0,0.0,2000
+Duke Dinsmore,United States,False,4.0,0.0,"1950, 1951, 1953, 1956",0.0,0.0,0.0,1950
+Frank Dochnal,United States,False,0.0,0.0,1963,0.0,0.0,0.0,1960
+José Dolhem,France,False,1.0,0.0,1974,0.0,0.0,0.0,1970
+Martin Donnelly,United Kingdom,False,13.0,0.0,"1989, 1990",0.0,0.0,0.0,1990
+Mark Donohue,United States,False,14.0,0.0,"1971, 1974, 1975",0.0,0.0,1.0,1970
+Robert Doornbos,Monaco Netherlands,False,11.0,0.0,"2005, 2006",0.0,0.0,0.0,2010
+Ken Downing,United Kingdom,False,2.0,0.0,1952,0.0,0.0,0.0,1950
+Bob Drake,United States,False,1.0,0.0,1960,0.0,0.0,0.0,1960
+Paddy Driver,South Africa,False,1.0,0.0,"1963, 1974",0.0,0.0,0.0,1970
+Piero Drogo,Italy,False,1.0,0.0,1960,0.0,0.0,0.0,1960
+Bernard de Dryver,Belgium,False,0.0,0.0,"1977, 1978",0.0,0.0,0.0,1980
+Johnny Dumfries,United Kingdom,False,15.0,0.0,1986,0.0,0.0,0.0,1990
+Geoff Duke,United Kingdom,False,0.0,0.0,1961,0.0,0.0,0.0,1960
+Len Duncan,United States,False,1.0,0.0,1954,0.0,0.0,0.0,1950
+Piero Dusio,Italy,False,0.0,0.0,1952,0.0,0.0,0.0,1950
+George Eaton,Canada,False,11.0,0.0,"1969, 1970, 1971",0.0,0.0,0.0,1970
+Bernie Ecclestone,United Kingdom,False,0.0,0.0,1958,0.0,0.0,0.0,1960
+Don Edmunds,United States,False,1.0,0.0,1957,0.0,0.0,0.0,1960
+Guy Edwards,United Kingdom,False,11.0,0.0,"1974, 1976, 1977",0.0,0.0,0.0,1980
+Vic Elford,United Kingdom,False,13.0,0.0,"1968, 1969, 1971",0.0,0.0,0.0,1970
+Ed Elisian,United States,False,5.0,0.0,"1954, 1955, 1956, 1957, 1958",0.0,0.0,0.0,1960
+Paul Emery,United Kingdom,False,1.0,0.0,"1956, 1958",0.0,0.0,0.0,1960
+Tomáš Enge,Czech Republic,False,3.0,0.0,2001,0.0,0.0,0.0,2000
+Paul England,Australia,False,1.0,0.0,1957,0.0,0.0,0.0,1960
+Marcus Ericsson,Sweden,False,97.0,0.0,"2014, 2015, 2016, 2017, 2018",0.0,0.0,0.0,2020
+Harald Ertl,Austria,False,19.0,0.0,"1975, 1976, 1977, 1978, 1980",0.0,0.0,0.0,1980
+Nasif Estéfano,Argentina,False,1.0,0.0,"1960, 1962",0.0,0.0,0.0,1960
+Philippe Étancelin,France,False,12.0,0.0,"1950, 1951, 1952",0.0,0.0,0.0,1950
+Bob Evans,United Kingdom,False,10.0,0.0,"1975, 1976",0.0,0.0,0.0,1980
+Corrado Fabi,Italy,False,12.0,0.0,"1983, 1984",0.0,0.0,0.0,1980
+Teo Fabi,Italy,False,64.0,0.0,"1982, 1984, 1985, 1986, 1987",3.0,0.0,2.0,1980
+Pascal Fabre,France,False,11.0,0.0,1987,0.0,0.0,0.0,1990
+Carlo Facetti,Italy,False,0.0,0.0,1974,0.0,0.0,0.0,1970
+Luigi Fagioli,Italy,False,7.0,1.0,"1950, 1951",0.0,0.0,6.0,1950
+Jack Fairman,United Kingdom,False,12.0,0.0,"1953, 1955, 1956, 1957, 1958, 1959, 1960, 1961",0.0,0.0,0.0,1960
+Juan Manuel Fangio,Argentina,True,51.0,24.0,"1950, 1951, 1953, 1954, 1955, 1956, 1957, 1958",29.0,5.0,35.0,1950
+Nino Farina,Italy,True,33.0,5.0,"1950, 1951, 1952, 1953, 1954, 1955",5.0,1.0,20.0,1950
+Walt Faulkner,United States,False,5.0,0.0,"1950, 1951, 1953, 1954, 1955",1.0,0.0,0.0,1950
+William Ferguson,South Africa,False,0.0,0.0,1972,0.0,0.0,0.0,1970
+Maria Teresa de Filippis,Italy,False,3.0,0.0,"1958, 1959",0.0,0.0,0.0,1960
+Ralph Firman,Ireland,False,14.0,0.0,2003,0.0,0.0,0.0,2000
+Ludwig Fischer,West Germany,False,0.0,0.0,1952,0.0,0.0,0.0,1950
+Rudi Fischer,Switzerland,False,7.0,0.0,"1951, 1952",0.0,0.0,2.0,1950
+Mike Fisher,United States,False,1.0,0.0,1967,0.0,0.0,0.0,1970
+Giancarlo Fisichella,Italy,False,229.0,3.0,"1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009",4.0,0.0,19.0,2000
+John Fitch,United States,False,2.0,0.0,"1953, 1955",0.0,0.0,0.0,1950
+Christian Fittipaldi,Brazil,False,40.0,0.0,"1992, 1993, 1994",0.0,0.0,0.0,1990
+Emerson Fittipaldi,Brazil,True,144.0,14.0,"1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980",6.0,2.0,35.0,1980
+Pietro Fittipaldi,Brazil,False,2.0,0.0,2020,0.0,0.0,0.0,2020
+Wilson Fittipaldi,Brazil,False,35.0,0.0,"1972, 1973, 1975",0.0,0.0,0.0,1970
+Theo Fitzau,East Germany,False,1.0,0.0,1953,0.0,0.0,0.0,1950
+Pat Flaherty,United States,False,6.0,1.0,"1950, 1953, 1954, 1955, 1956, 1959",1.0,0.0,1.0,1950
+Jan Flinterman,Netherlands,False,1.0,0.0,1952,0.0,0.0,0.0,1950
+Ron Flockhart,United Kingdom,False,14.0,0.0,"1954, 1956, 1957, 1958, 1959, 1960",0.0,0.0,1.0,1960
+Myron Fohr,United States,False,1.0,0.0,1950,0.0,0.0,0.0,1950
+Gregor Foitek,Switzerland,False,7.0,0.0,"1989, 1990",0.0,0.0,0.0,1990
+George Follmer,United States,False,12.0,0.0,1973,0.0,0.0,1.0,1970
+George Fonder,United States,False,2.0,0.0,"1952, 1954",0.0,0.0,0.0,1950
+Norberto Fontana,Argentina,False,4.0,0.0,1997,0.0,0.0,0.0,2000
+Asdrúbal Fontes Bayardo,Uruguay,False,0.0,0.0,1959,0.0,0.0,0.0,1960
+Carl Forberg,United States,False,1.0,0.0,1951,0.0,0.0,0.0,1950
+Gene Force,United States,False,2.0,0.0,"1951, 1960",0.0,0.0,0.0,1960
+Franco Forini,Switzerland,False,2.0,0.0,1987,0.0,0.0,0.0,1990
+Philip Fotheringham-Parker,United Kingdom,False,1.0,0.0,1951,0.0,0.0,0.0,1950
+A. J. Foyt,United States,False,3.0,0.0,"1958, 1959, 1960",0.0,0.0,0.0,1960
+Giorgio Francia,Italy,False,0.0,0.0,"1977, 1981",0.0,0.0,0.0,1980
+Don Freeland,United States,False,8.0,0.0,"1953, 1954, 1955, 1956, 1957, 1958, 1959, 1960",0.0,0.0,1.0,1960
+Heinz-Harald Frentzen,Germany,False,156.0,3.0,"1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003",2.0,0.0,18.0,2000
+Paul Frère,Belgium,False,11.0,0.0,"1952, 1953, 1954, 1955, 1956",0.0,0.0,1.0,1950
+Patrick Friesacher,Austria,False,11.0,0.0,2005,0.0,0.0,0.0,2000
+Joe Fry,United Kingdom,False,1.0,0.0,1950,0.0,0.0,0.0,1950
+Hiroshi Fushida,Japan,False,0.0,0.0,1975,0.0,0.0,0.0,1980
+Beppe Gabbiani,Italy,False,3.0,0.0,"1978, 1981",0.0,0.0,0.0,1980
+Bertrand Gachot,Belgium France,False,47.0,0.0,"1989, 1990, 1991, 1992, 1994, 1995",0.0,0.0,0.0,1990
+Patrick Gaillard,France,False,2.0,0.0,1979,0.0,0.0,0.0,1980
+Divina Galica,United Kingdom,False,0.0,0.0,"1976, 1978",0.0,0.0,0.0,1980
+Nanni Galli,Italy,False,17.0,0.0,"1970, 1971, 1972, 1973",0.0,0.0,0.0,1970
+Oscar Alfredo Gálvez,Argentina,False,1.0,0.0,1953,0.0,0.0,0.0,1950
+Fred Gamble,United States,False,1.0,0.0,1960,0.0,0.0,0.0,1960
+Howden Ganley,New Zealand,False,35.0,0.0,"1971, 1972, 1973, 1974",0.0,0.0,0.0,1970
+Giedo van der Garde,Netherlands,False,19.0,0.0,2013,0.0,0.0,0.0,2010
+Frank Gardner,Australia,False,8.0,0.0,"1964, 1965, 1968",0.0,0.0,0.0,1970
+Billy Garrett,United States,False,2.0,0.0,"1956, 1958",0.0,0.0,0.0,1960
+Jo Gartner,Austria,False,8.0,0.0,1984,0.0,0.0,0.0,1980
+Pierre Gasly,France,False,109.0,1.0,"2017, 2018, 2019, 2020, 2021, 2022",0.0,0.0,3.0,2020
+Tony Gaze,Australia,False,3.0,0.0,1952,0.0,0.0,0.0,1950
+Geki,Italy,False,2.0,0.0,"1964, 1965, 1966",0.0,0.0,0.0,1960
+Olivier Gendebien,Belgium,False,14.0,0.0,"1956, 1958, 1959, 1960, 1961",0.0,0.0,2.0,1960
+Marc Gené,Spain,False,36.0,0.0,"1999, 2000, 2003, 2004",0.0,0.0,0.0,2000
+Elmer George,United States,False,1.0,0.0,1957,0.0,0.0,0.0,1960
+Bob Gerard,United Kingdom,False,8.0,0.0,"1950, 1951, 1953, 1954, 1956, 1957",0.0,0.0,0.0,1950
+Gerino Gerini,Italy,False,6.0,0.0,"1956, 1958",0.0,0.0,0.0,1960
+Peter Gethin,United Kingdom,False,30.0,1.0,"1970, 1971, 1972, 1973, 1974",0.0,0.0,1.0,1970
+Piercarlo Ghinzani,Italy,False,74.0,0.0,"1981, 1983, 1984, 1985, 1986, 1987, 1988, 1989",0.0,0.0,0.0,1990
+Bruno Giacomelli,Italy,False,69.0,0.0,"1977, 1978, 1979, 1980, 1981, 1982, 1983, 1990",1.0,0.0,1.0,1980
+Dick Gibson,United Kingdom,False,2.0,0.0,"1957, 1958",0.0,0.0,0.0,1960
+Gimax,Italy,False,0.0,0.0,1978,0.0,0.0,0.0,1980
+Richie Ginther,United States,False,52.0,1.0,"1960, 1961, 1962, 1963, 1964, 1965, 1966, 1967",0.0,0.0,14.0,1960
+Antonio Giovinazzi,Italy,False,62.0,0.0,"2017, 2019, 2020, 2021",0.0,0.0,0.0,2020
+Yves Giraud-Cabantous,France,False,13.0,0.0,"1950, 1951, 1952, 1953",0.0,0.0,0.0,1950
+Ignazio Giunti,Italy,False,4.0,0.0,1970,0.0,0.0,0.0,1970
+Timo Glock,Germany,False,91.0,0.0,"2004, 2008, 2009, 2010, 2011, 2012",0.0,0.0,3.0,2010
+Helm Glöckler,West Germany,False,0.0,0.0,1953,0.0,0.0,0.0,1950
+Paco Godia,Spain,False,13.0,0.0,"1951, 1954, 1956, 1957, 1958",0.0,0.0,0.0,1960
+Carel Godin de Beaufort,Netherlands,False,28.0,0.0,"1957, 1958, 1959, 1960, 1961, 1962, 1963, 1964",0.0,0.0,0.0,1960
+Christian Goethals,Belgium,False,1.0,0.0,1958,0.0,0.0,0.0,1960
+Paul Goldsmith,United States,False,3.0,0.0,"1958, 1959, 1960",0.0,0.0,1.0,1960
+José Froilán González,Argentina,False,26.0,2.0,"1950, 1951, 1952, 1953, 1954, 1955, 1956, 1957, 1960",3.0,0.0,15.0,1950
+Óscar González,Uruguay,False,1.0,0.0,1956,0.0,0.0,0.0,1960
+Aldo Gordini,France,False,1.0,0.0,1951,0.0,0.0,0.0,1950
+Horace Gould,United Kingdom,False,14.0,0.0,"1954, 1955, 1956, 1957, 1958, 1960",0.0,0.0,0.0,1960
+Jean-Marc Gounon,France,False,9.0,0.0,"1993, 1994",0.0,0.0,0.0,1990
+Emmanuel de Graffenried,Switzerland,False,22.0,0.0,"1950, 1951, 1952, 1953, 1954, 1956",0.0,0.0,0.0,1950
+Lucas di Grassi,Brazil,False,18.0,0.0,2010,0.0,0.0,0.0,2010
+Cecil Green,United States,False,2.0,0.0,"1950, 1951",0.0,0.0,0.0,1950
+Keith Greene,United Kingdom,False,3.0,0.0,"1959, 1960, 1961, 1962",0.0,0.0,0.0,1960
+Masten Gregory,United States,False,38.0,0.0,"1957, 1958, 1959, 1960, 1961, 1962, 1963, 1965",0.0,0.0,3.0,1960
+Cliff Griffith,United States,False,3.0,0.0,"1951, 1952, 1956",0.0,0.0,0.0,1950
+Georges Grignard,France,False,1.0,0.0,1951,0.0,0.0,0.0,1950
+Bobby Grim,United States,False,2.0,0.0,"1959, 1960",0.0,0.0,0.0,1960
+Romain Grosjean,France,False,179.0,0.0,"2009, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020",0.0,0.0,10.0,2020
+Olivier Grouillard,France,False,41.0,0.0,"1989, 1990, 1991, 1992",0.0,0.0,0.0,1990
+Brian Gubby,United Kingdom,False,0.0,0.0,1965,0.0,0.0,0.0,1960
+André Guelfi,France,False,1.0,0.0,1958,0.0,0.0,0.0,1960
+Miguel Ángel Guerra,Argentina,False,1.0,0.0,1981,0.0,0.0,0.0,1980
+Roberto Guerrero,Colombia,False,21.0,0.0,"1982, 1983",0.0,0.0,0.0,1980
+Maurício Gugelmin,Brazil,False,74.0,0.0,"1988, 1989, 1990, 1991, 1992",0.0,0.0,1.0,1990
+Dan Gurney,United States,False,86.0,4.0,"1959, 1960, 1961, 1962, 1963, 1964, 1965, 1966, 1967, 1968, 1970",3.0,0.0,19.0,1960
+Esteban Gutiérrez,Mexico,False,59.0,0.0,"2013, 2014, 2016",0.0,0.0,0.0,2010
+Hubert Hahne,West Germany,False,2.0,0.0,"1967, 1968, 1970",0.0,0.0,0.0,1970
+Mike Hailwood,United Kingdom,False,50.0,0.0,"1963, 1964, 1965, 1971, 1972, 1973, 1974",0.0,0.0,2.0,1970
+Mika Häkkinen,Finland,True,161.0,20.0,"1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001",26.0,2.0,51.0,2000
+Bruce Halford,United Kingdom,False,8.0,0.0,"1956, 1957, 1959, 1960",0.0,0.0,0.0,1960
+Jim Hall,United States,False,11.0,0.0,"1960, 1961, 1962, 1963",0.0,0.0,0.0,1960
+Duncan Hamilton,United Kingdom,False,5.0,0.0,"1951, 1952, 1953",0.0,0.0,0.0,1950
+Lewis Hamilton,United Kingdom,True,311.0,103.0,"2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022",103.0,7.0,191.0,2010
+David Hampshire,United Kingdom,False,2.0,0.0,1950,0.0,0.0,0.0,1950
+Sam Hanks,United States,False,8.0,1.0,"1950, 1951, 1952, 1953, 1954, 1955, 1956, 1957",0.0,0.0,4.0,1950
+Walt Hansgen,United States,False,2.0,0.0,"1961, 1964",0.0,0.0,0.0,1960
+Mike Harris,South Africa,False,1.0,0.0,1962,0.0,0.0,0.0,1960
+Cuth Harrison,United Kingdom,False,3.0,0.0,1950,0.0,0.0,0.0,1950
+Brian Hart,United Kingdom,False,0.0,0.0,1967,0.0,0.0,0.0,1970
+Brendon Hartley,New Zealand,False,25.0,0.0,"2017, 2018",0.0,0.0,0.0,2020
+Gene Hartley,United States,False,8.0,0.0,"1950, 1952, 1953, 1954, 1955, 1956, 1957, 1958, 1959, 1960",0.0,0.0,0.0,1960
+Rio Haryanto,Indonesia,False,12.0,0.0,2016,0.0,0.0,0.0,2020
+Masahiro Hasemi,Japan,False,1.0,0.0,1976,0.0,0.0,0.0,1980
+Naoki Hattori,Japan,False,0.0,0.0,1991,0.0,0.0,0.0,1990
+Paul Hawkins,Australia,False,3.0,0.0,1965,0.0,0.0,0.0,1960
+Mike Hawthorn,United Kingdom,True,45.0,3.0,"1952, 1953, 1954, 1955, 1956, 1957, 1958",4.0,1.0,18.0,1960
+Boy Hayje,Netherlands,False,3.0,0.0,"1976, 1977",0.0,0.0,0.0,1980
+Willi Heeks,West Germany,False,2.0,0.0,"1952, 1953",0.0,0.0,0.0,1950
+Nick Heidfeld,Germany,False,183.0,0.0,"2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011",1.0,0.0,13.0,2010
+Theo Helfrich,West Germany,False,3.0,0.0,"1952, 1953, 1954",0.0,0.0,0.0,1950
+Mack Hellings,United States,False,2.0,0.0,"1950, 1951",0.0,0.0,0.0,1950
+Brian Henton,United Kingdom,False,19.0,0.0,"1975, 1977, 1981, 1982",0.0,0.0,0.0,1980
+Johnny Herbert,United Kingdom,False,160.0,3.0,"1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000",0.0,0.0,7.0,1990
+Al Herman,United States,False,5.0,0.0,"1955, 1956, 1957, 1959, 1960",0.0,0.0,0.0,1960
+Hans Herrmann,West Germany,False,17.0,0.0,"1953, 1954, 1955, 1957, 1958, 1959, 1960, 1961",0.0,0.0,1.0,1960
+François Hesnault,France,False,19.0,0.0,"1984, 1985",0.0,0.0,0.0,1980
+Hans Heyer,West Germany,False,1.0,0.0,1977,0.0,0.0,0.0,1980
+Damon Hill,United Kingdom,True,115.0,22.0,"1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999",20.0,1.0,42.0,2000
+Graham Hill,United Kingdom,True,176.0,14.0,"1958, 1959, 1960, 1961, 1962, 1963, 1964, 1965, 1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975",13.0,2.0,36.0,1970
+Phil Hill,United States,True,49.0,3.0,"1958, 1959, 1960, 1961, 1962, 1963, 1964, 1966",6.0,1.0,16.0,1960
+Peter Hirt,Switzerland,False,5.0,0.0,"1951, 1952, 1953",0.0,0.0,0.0,1950
+David Hobbs,United Kingdom,False,7.0,0.0,"1967, 1968, 1971, 1974",0.0,0.0,0.0,1970
+Gary Hocking,Rhodesia and Nyasaland,False,0.0,0.0,1962,0.0,0.0,0.0,1960
+Ingo Hoffmann,Brazil,False,3.0,0.0,"1976, 1977",0.0,0.0,0.0,1980
+Bill Holland,United States,False,2.0,0.0,"1950, 1953",0.0,0.0,1.0,1950
+Jackie Holmes,United States,False,2.0,0.0,"1950, 1953",0.0,0.0,0.0,1950
+Bill Homeier,United States,False,3.0,0.0,"1954, 1955, 1960",0.0,0.0,0.0,1960
+Kazuyoshi Hoshino,Japan,False,2.0,0.0,"1976, 1977",0.0,0.0,0.0,1980
+Jerry Hoyt,United States,False,4.0,0.0,"1950, 1953, 1954, 1955",1.0,0.0,0.0,1950
+Nico Hülkenberg,Germany,False,182.0,0.0,"2010, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2022",1.0,0.0,0.0,2020
+Denny Hulme,New Zealand,True,112.0,8.0,"1965, 1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974",1.0,1.0,33.0,1970
+James Hunt,United Kingdom,True,92.0,10.0,"1973, 1974, 1975, 1976, 1977, 1978, 1979",14.0,1.0,23.0,1980
+Jim Hurtubise,United States,False,1.0,0.0,1960,0.0,0.0,0.0,1960
+Gus Hutchison,United States,False,1.0,0.0,1970,0.0,0.0,0.0,1970
+Jacky Ickx,Belgium,False,114.0,8.0,"1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979",13.0,0.0,25.0,1970
+Yuji Ide,Japan,False,4.0,0.0,2006,0.0,0.0,0.0,2010
+Jesús Iglesias,Argentina,False,1.0,0.0,1955,0.0,0.0,0.0,1960
+Taki Inoue,Japan,False,18.0,0.0,"1994, 1995",0.0,0.0,0.0,1990
+Innes Ireland,United Kingdom,False,50.0,1.0,"1959, 1960, 1961, 1962, 1963, 1964, 1965, 1966",0.0,0.0,4.0,1960
+Eddie Irvine,United Kingdom,False,145.0,4.0,"1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002",0.0,0.0,26.0,2000
+Chris Irwin,United Kingdom,False,10.0,0.0,"1966, 1967",0.0,0.0,0.0,1970
+Jean-Pierre Jabouille,France,False,49.0,2.0,"1974, 1975, 1977, 1978, 1979, 1980, 1981",6.0,0.0,2.0,1980
+Jimmy Jackson,United States,False,2.0,0.0,"1950, 1954",0.0,0.0,0.0,1950
+Joe James,United States,False,2.0,0.0,"1951, 1952",0.0,0.0,0.0,1950
+John James,United Kingdom,False,1.0,0.0,1951,0.0,0.0,0.0,1950
+Jean-Pierre Jarier,France,False,135.0,0.0,"1971, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983",3.0,0.0,3.0,1980
+Max Jean[w],France,False,1.0,0.0,1971,0.0,0.0,0.0,1970
+Stefan Johansson,Sweden,False,79.0,0.0,"1980, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991",0.0,0.0,12.0,1990
+Eddie Johnson,United States,False,9.0,0.0,"1952, 1953, 1954, 1955, 1956, 1957, 1958, 1959, 1960",0.0,0.0,0.0,1960
+Leslie Johnson,United Kingdom,False,1.0,0.0,1950,0.0,0.0,0.0,1950
+Bruce Johnstone,South Africa,False,1.0,0.0,1962,0.0,0.0,0.0,1960
+Alan Jones,Australia,True,116.0,12.0,"1975, 1976, 1977, 1978, 1979, 1980, 1981, 1983, 1985, 1986",6.0,1.0,24.0,1980
+Tom Jones,United States,False,0.0,0.0,1967,0.0,0.0,0.0,1970
+Juan Jover,Spain,False,0.0,0.0,1951,0.0,0.0,0.0,1950
+Oswald Karch,West Germany,False,1.0,0.0,1953,0.0,0.0,0.0,1950
+Narain Karthikeyan,India,False,46.0,0.0,"2005, 2011, 2012",0.0,0.0,0.0,2010
+Ukyo Katayama,Japan,False,95.0,0.0,"1992, 1993, 1994, 1995, 1996, 1997",0.0,0.0,0.0,1990
+Ken Kavanagh,Australia,False,0.0,0.0,1958,0.0,0.0,0.0,1960
+Rupert Keegan,United Kingdom,False,25.0,0.0,"1977, 1978, 1980, 1982",0.0,0.0,0.0,1980
+Eddie Keizan,South Africa,False,3.0,0.0,"1973, 1974, 1975",0.0,0.0,0.0,1970
+Al Keller,United States,False,5.0,0.0,"1955, 1956, 1957, 1958, 1959",0.0,0.0,0.0,1960
+Joe Kelly,Ireland,False,2.0,0.0,"1950, 1951",0.0,0.0,0.0,1950
+David Kennedy,Ireland,False,0.0,0.0,1980,0.0,0.0,0.0,1980
+Loris Kessel,Switzerland,False,3.0,0.0,"1976, 1977",0.0,0.0,0.0,1980
+Bruce Kessler,United States,False,0.0,0.0,1958,0.0,0.0,0.0,1960
+Nicolas Kiesa,Denmark,False,5.0,0.0,2003,0.0,0.0,0.0,2000
+Leo Kinnunen,Finland,False,1.0,0.0,1974,0.0,0.0,0.0,1970
+Danny Kladis,United States,False,1.0,0.0,1954,0.0,0.0,0.0,1950
+Hans Klenk,West Germany,False,1.0,0.0,1952,0.0,0.0,0.0,1950
+Peter de Klerk,South Africa,False,4.0,0.0,"1963, 1965, 1969, 1970",0.0,0.0,0.0,1970
+Christian Klien,Austria,False,49.0,0.0,"2004, 2005, 2006, 2010",0.0,0.0,0.0,2010
+Karl Kling,West Germany,False,11.0,0.0,"1954, 1955",0.0,0.0,2.0,1950
+Ernst Klodwig,East Germany,False,2.0,0.0,"1952, 1953",0.0,0.0,0.0,1950
+Kamui Kobayashi,Japan,False,75.0,0.0,"2009, 2010, 2011, 2012, 2014",0.0,0.0,1.0,2010
+Helmuth Koinigg,Austria,False,2.0,0.0,1974,0.0,0.0,0.0,1970
+Heikki Kovalainen,Finland,False,111.0,1.0,"2007, 2008, 2009, 2010, 2011, 2012, 2013",1.0,0.0,4.0,2010
+Mikko Kozarowitzky,Finland,False,0.0,0.0,1977,0.0,0.0,0.0,1980
+Willi Krakau,West Germany,False,0.0,0.0,1952,0.0,0.0,0.0,1950
+Rudolf Krause,East Germany,False,2.0,0.0,"1952, 1953",0.0,0.0,0.0,1950
+Robert Kubica,Poland,False,99.0,1.0,"2006, 2007, 2008, 2009, 2010, 2019, 2021",1.0,0.0,12.0,2010
+Kurt Kuhnke,West Germany,False,0.0,0.0,1963,0.0,0.0,0.0,1960
+Masami Kuwashima,Japan,False,0.0,0.0,1976,0.0,0.0,0.0,1980
+Daniil Kvyat,Russia,False,110.0,0.0,"2014, 2015, 2016, 2017, 2019, 2020",0.0,0.0,3.0,2020
+Robert La Caze,Morocco,False,1.0,0.0,1958,0.0,0.0,0.0,1960
+Jacques Laffite,France,False,176.0,6.0,"1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986",7.0,0.0,32.0,1980
+Franck Lagorce,France,False,2.0,0.0,1994,0.0,0.0,0.0,1990
+Jan Lammers,Netherlands,False,23.0,0.0,"1979, 1980, 1981, 1982, 1992",0.0,0.0,0.0,1980
+Pedro Lamy,Portugal,False,32.0,0.0,"1993, 1994, 1995, 1996",0.0,0.0,0.0,1990
+Chico Landi,Brazil,False,6.0,0.0,"1951, 1952, 1953, 1956",0.0,0.0,0.0,1950
+Hermann Lang,West Germany,False,2.0,0.0,"1953, 1954",0.0,0.0,0.0,1950
+Claudio Langes,Italy,False,0.0,0.0,1990,0.0,0.0,0.0,1990
+Nicola Larini,Italy,False,49.0,0.0,"1987, 1988, 1989, 1990, 1991, 1992, 1994, 1997",0.0,0.0,1.0,1990
+Oscar Larrauri,Argentina,False,8.0,0.0,"1988, 1989",0.0,0.0,0.0,1990
+Gérard Larrousse,France,False,1.0,0.0,1974,0.0,0.0,0.0,1970
+Jud Larson,United States,False,2.0,0.0,"1958, 1959",0.0,0.0,0.0,1960
+Nicholas Latifi,Canada,False,61.0,0.0,"2020, 2021, 2022",0.0,0.0,0.0,2020
+Niki Lauda,Austria,True,171.0,25.0,"1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1982, 1983, 1984, 1985",24.0,3.0,54.0,1980
+Roger Laurent,Belgium,False,2.0,0.0,1952,0.0,0.0,0.0,1950
+Giovanni Lavaggi,Italy,False,7.0,0.0,"1995, 1996",0.0,0.0,0.0,2000
+Chris Lawrence,United Kingdom,False,2.0,0.0,1966,0.0,0.0,0.0,1970
+Charles Leclerc,Monaco,False,103.0,5.0,"2018, 2019, 2020, 2021, 2022",18.0,0.0,24.0,2020
+Michel Leclère,France,False,7.0,0.0,"1975, 1976",0.0,0.0,0.0,1980
+Neville Lederle,South Africa,False,1.0,0.0,"1962, 1965",0.0,0.0,0.0,1960
+Geoff Lees,United Kingdom,False,5.0,0.0,"1978, 1979, 1980, 1982",0.0,0.0,0.0,1980
+Gijs van Lennep,Netherlands,False,8.0,0.0,"1971, 1973, 1974, 1975",0.0,0.0,0.0,1970
+Arthur Legat,Belgium,False,2.0,0.0,"1952, 1953",0.0,0.0,0.0,1950
+JJ Lehto,Finland,False,62.0,0.0,"1989, 1990, 1991, 1992, 1993, 1994",0.0,0.0,1.0,1990
+Lamberto Leoni,Italy,False,1.0,0.0,"1977, 1978",0.0,0.0,0.0,1980
+Les Leston,United Kingdom,False,2.0,0.0,"1956, 1957",0.0,0.0,0.0,1960
+Pierre Levegh,France,False,6.0,0.0,"1950, 1951",0.0,0.0,0.0,1950
+Bayliss Levrett,United States,False,1.0,0.0,1950,0.0,0.0,0.0,1950
+Jackie Lewis,United Kingdom,False,9.0,0.0,"1961, 1962",0.0,0.0,0.0,1960
+Stuart Lewis-Evans,United Kingdom,False,14.0,0.0,"1957, 1958",2.0,0.0,2.0,1960
+Guy Ligier,France,False,12.0,0.0,"1966, 1967",0.0,0.0,0.0,1970
+Andy Linden,United States,False,7.0,0.0,"1951, 1952, 1953, 1954, 1955, 1956, 1957",0.0,0.0,0.0,1950
+Roberto Lippi,Italy,False,1.0,0.0,"1961, 1962, 1963",0.0,0.0,0.0,1960
+Vitantonio Liuzzi,Italy,False,80.0,0.0,"2005, 2006, 2007, 2009, 2010, 2011",0.0,0.0,0.0,2010
+Dries van der Lof,Netherlands,False,1.0,0.0,1952,0.0,0.0,0.0,1950
+Lella Lombardi,Italy,False,12.0,0.0,"1974, 1975, 1976",0.0,0.0,0.0,1980
+Ricardo Londoño,Colombia,False,0.0,0.0,1981,0.0,0.0,0.0,1980
+Ernst Loof,West Germany,False,1.0,0.0,1953,0.0,0.0,0.0,1950
+André Lotterer,Germany,False,1.0,0.0,2014,0.0,0.0,0.0,2010
+Henri Louveau,France,False,2.0,0.0,"1950, 1951",0.0,0.0,0.0,1950
+John Love,Rhodesia,False,9.0,0.0,"1962, 1963, 1964, 1965, 1967, 1968, 1969, 1970, 1971, 1972",0.0,0.0,1.0,1970
+Pete Lovely,United States,False,7.0,0.0,"1959, 1960, 1969, 1970, 1971",0.0,0.0,0.0,1970
+Roger Loyer,France,False,1.0,0.0,1954,0.0,0.0,0.0,1950
+Jean Lucas,France,False,1.0,0.0,1955,0.0,0.0,0.0,1960
+Jean Lucienbonnet,France,False,0.0,0.0,1959,0.0,0.0,0.0,1960
+Erik Lundgren,Sweden,False,0.0,0.0,1951,0.0,0.0,0.0,1950
+Brett Lunger,United States,False,34.0,0.0,"1975, 1976, 1977, 1978",0.0,0.0,0.0,1980
+Mike MacDowel,United Kingdom,False,1.0,0.0,1957,0.0,0.0,0.0,1960
+Herbert MacKay-Fraser,United States,False,1.0,0.0,1957,0.0,0.0,0.0,1960
+Bill Mackey,United States,False,1.0,0.0,1951,0.0,0.0,0.0,1950
+Lance Macklin,United Kingdom,False,13.0,0.0,"1952, 1953, 1954, 1955",0.0,0.0,0.0,1950
+Damien Magee,United Kingdom,False,1.0,0.0,"1975, 1976",0.0,0.0,0.0,1980
+Tony Maggs,South Africa,False,25.0,0.0,"1961, 1962, 1963, 1964, 1965",0.0,0.0,3.0,1960
+Mike Magill,United States,False,3.0,0.0,"1957, 1958, 1959",0.0,0.0,0.0,1960
+Umberto Maglioli,Italy,False,10.0,0.0,"1953, 1954, 1955, 1956, 1957",0.0,0.0,2.0,1960
+Jan Magnussen,Denmark,False,24.0,0.0,"1995, 1997, 1998",0.0,0.0,0.0,2000
+Kevin Magnussen,Denmark,False,142.0,0.0,"2014, 2015, 2016, 2017, 2018, 2019, 2020, 2022",1.0,0.0,1.0,2020
+Guy Mairesse,France,False,3.0,0.0,"1950, 1951",0.0,0.0,0.0,1950
+Willy Mairesse,Belgium,False,12.0,0.0,"1960, 1961, 1962, 1963, 1965",0.0,0.0,1.0,1960
+Pastor Maldonado,Venezuela,False,95.0,1.0,"2011, 2012, 2013, 2014, 2015",1.0,0.0,1.0,2010
+Nigel Mansell,United Kingdom,True,187.0,31.0,"1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1994, 1995",32.0,1.0,59.0,1990
+Sergio Mantovani,Italy,False,7.0,0.0,"1953, 1954, 1955",0.0,0.0,0.0,1950
+Johnny Mantz,United States,False,0.0,0.0,1953,0.0,0.0,0.0,1950
+Robert Manzon,France,False,28.0,0.0,"1950, 1951, 1952, 1953, 1954, 1955, 1956",0.0,0.0,2.0,1950
+Onofre Marimón,Argentina,False,11.0,0.0,"1951, 1953, 1954",0.0,0.0,2.0,1950
+Helmut Marko,Austria,False,10.0,0.0,"1971, 1972",0.0,0.0,0.0,1970
+Tarso Marques,Brazil,False,24.0,0.0,"1996, 1997, 2001",0.0,0.0,0.0,2000
+Leslie Marr,United Kingdom,False,2.0,0.0,"1954, 1955",0.0,0.0,0.0,1950
+Tony Marsh,United Kingdom,False,4.0,0.0,"1957, 1958, 1961",0.0,0.0,0.0,1960
+Eugène Martin,France,False,2.0,0.0,1950,0.0,0.0,0.0,1950
+Pierluigi Martini,Italy,False,118.0,0.0,"1984, 1985, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995",0.0,0.0,0.0,1990
+Jochen Mass,West Germany,False,105.0,1.0,"1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1982",0.0,0.0,8.0,1980
+Felipe Massa,Brazil,False,269.0,11.0,"2002, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017",16.0,0.0,41.0,2010
+Cristiano da Matta,Brazil,False,28.0,0.0,"2003, 2004",0.0,0.0,0.0,2000
+Michael May,Switzerland,False,2.0,0.0,1961,0.0,0.0,0.0,1960
+Timmy Mayer,United States,False,1.0,0.0,1962,0.0,0.0,0.0,1960
+Nikita Mazepin,RAF,False,21.0,0.0,2021,0.0,0.0,0.0,2020
+François Mazet,France,False,1.0,0.0,1971,0.0,0.0,0.0,1970
+Gastón Mazzacane,Argentina,False,21.0,0.0,"2000, 2001",0.0,0.0,0.0,2000
+Kenneth McAlpine,United Kingdom,False,7.0,0.0,"1952, 1953, 1955",0.0,0.0,0.0,1950
+Perry McCarthy,United Kingdom,False,0.0,0.0,1992,0.0,0.0,0.0,1990
+Ernie McCoy,United States,False,1.0,0.0,"1953, 1954",0.0,0.0,0.0,1950
+Johnny McDowell,United States,False,3.0,0.0,"1950, 1951, 1952",0.0,0.0,0.0,1950
+Jack McGrath,United States,False,6.0,0.0,"1950, 1951, 1952, 1953, 1954, 1955",1.0,0.0,2.0,1950
+Brian McGuire,Australia,False,0.0,0.0,1977,0.0,0.0,0.0,1980
+Bruce McLaren,New Zealand,False,100.0,4.0,"1958, 1959, 1960, 1961, 1962, 1963, 1964, 1965, 1966, 1967, 1968, 1969, 1970",0.0,0.0,27.0,1960
+Allan McNish,United Kingdom,False,16.0,0.0,2002,0.0,0.0,0.0,2000
+Graham McRae,New Zealand,False,1.0,0.0,1973,0.0,0.0,0.0,1970
+Jim McWithey,United States,False,2.0,0.0,"1959, 1960",0.0,0.0,0.0,1960
+Carlos Menditeguy,Argentina,False,10.0,0.0,"1953, 1954, 1955, 1956, 1957, 1958, 1960",0.0,0.0,1.0,1960
+Roberto Merhi,Spain,False,13.0,0.0,2015,0.0,0.0,0.0,2020
+Harry Merkel,West Germany,False,0.0,0.0,1952,0.0,0.0,0.0,1950
+Arturo Merzario,Italy,False,57.0,0.0,"1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979",0.0,0.0,0.0,1980
+Roberto Mieres,Argentina,False,17.0,0.0,"1953, 1954, 1955",0.0,0.0,0.0,1950
+François Migault,France,False,13.0,0.0,"1972, 1974, 1975",0.0,0.0,0.0,1970
+John Miles,United Kingdom,False,12.0,0.0,"1969, 1970",0.0,0.0,0.0,1970
+Ken Miles,United Kingdom,False,0.0,0.0,1961,0.0,0.0,0.0,1960
+André Milhoux,Belgium,False,1.0,0.0,1956,0.0,0.0,0.0,1960
+Chet Miller,United States,False,2.0,0.0,"1951, 1952",0.0,0.0,0.0,1950
+Gerhard Mitter,West Germany,False,5.0,0.0,"1963, 1964, 1965",0.0,0.0,0.0,1960
+Stefano Modena,Italy,False,70.0,0.0,"1987, 1988, 1989, 1990, 1991, 1992",0.0,0.0,2.0,1990
+Thomas Monarch,United States,False,0.0,0.0,1963,0.0,0.0,0.0,1960
+Franck Montagny,France,False,7.0,0.0,2006,0.0,0.0,0.0,2010
+Tiago Monteiro,Portugal,False,37.0,0.0,"2005, 2006",0.0,0.0,1.0,2010
+Andrea Montermini,Italy,False,19.0,0.0,"1994, 1995, 1996",0.0,0.0,0.0,2000
+Peter Monteverdi,Switzerland,False,0.0,0.0,1961,0.0,0.0,0.0,1960
+Robin Montgomerie-Charrington,United Kingdom,False,1.0,0.0,1952,0.0,0.0,0.0,1950
+Juan Pablo Montoya,Colombia,False,94.0,7.0,"2001, 2002, 2003, 2004, 2005, 2006",13.0,0.0,30.0,2000
+Gianni Morbidelli,Italy,False,67.0,0.0,"1990, 1991, 1992, 1994, 1995, 1997",0.0,0.0,1.0,1990
+Roberto Moreno,Brazil,False,41.0,0.0,"1982, 1987, 1989, 1990, 1991, 1992, 1995",0.0,0.0,1.0,1990
+Dave Morgan,United Kingdom,False,1.0,0.0,1975,0.0,0.0,0.0,1980
+Silvio Moser,Switzerland,False,12.0,0.0,"1967, 1968, 1969, 1970, 1971",0.0,0.0,0.0,1970
+Bill Moss,United Kingdom,False,0.0,0.0,1959,0.0,0.0,0.0,1960
+Stirling Moss,United Kingdom,False,66.0,16.0,"1951, 1952, 1953, 1954, 1955, 1956, 1957, 1958, 1959, 1960, 1961",16.0,0.0,24.0,1960
+Gino Munaron,Italy,False,4.0,0.0,1960,0.0,0.0,0.0,1960
+David Murray,United Kingdom,False,4.0,0.0,"1950, 1951, 1952",0.0,0.0,0.0,1950
+Luigi Musso,Italy,False,24.0,1.0,"1953, 1954, 1955, 1956, 1957, 1958",0.0,0.0,7.0,1960
+Kazuki Nakajima,Japan,False,36.0,0.0,"2007, 2008, 2009",0.0,0.0,0.0,2010
+Satoru Nakajima,Japan,False,74.0,0.0,"1987, 1988, 1989, 1990, 1991",0.0,0.0,0.0,1990
+Shinji Nakano,Japan,False,33.0,0.0,"1997, 1998",0.0,0.0,0.0,2000
+Duke Nalon,United States,False,3.0,0.0,"1951, 1952, 1953",1.0,0.0,0.0,1950
+Alessandro Nannini,Italy,False,76.0,1.0,"1986, 1987, 1988, 1989, 1990",0.0,0.0,9.0,1990
+Emanuele Naspetti,Italy,False,6.0,0.0,"1992, 1993",0.0,0.0,0.0,1990
+Felipe Nasr,Brazil,False,39.0,0.0,"2015, 2016",0.0,0.0,0.0,2020
+Massimo Natili,Italy,False,1.0,0.0,1961,0.0,0.0,0.0,1960
+Brian Naylor,United Kingdom,False,7.0,0.0,"1957, 1958, 1959, 1960, 1961",0.0,0.0,0.0,1960
+Mike Nazaruk,United States,False,3.0,0.0,"1951, 1953, 1954",0.0,0.0,1.0,1950
+Tiff Needell,United Kingdom,False,1.0,0.0,1980,0.0,0.0,0.0,1980
+Jac Nellemann,Denmark,False,0.0,0.0,1976,0.0,0.0,0.0,1980
+Patrick Nève,Belgium,False,10.0,0.0,"1976, 1977, 1978",0.0,0.0,0.0,1980
+John Nicholson,New Zealand,False,1.0,0.0,"1974, 1975",0.0,0.0,0.0,1970
+Cal Niday,United States,False,3.0,0.0,"1953, 1954, 1955",0.0,0.0,0.0,1950
+Helmut Niedermayr,West Germany,False,1.0,0.0,1952,0.0,0.0,0.0,1950
+Brausch Niemann,South Africa,False,1.0,0.0,"1963, 1965",0.0,0.0,0.0,1960
+Gunnar Nilsson,Sweden,False,31.0,1.0,"1976, 1977",0.0,0.0,4.0,1980
+Hideki Noda,Japan,False,3.0,0.0,1994,0.0,0.0,0.0,1990
+Lando Norris,United Kingdom,False,83.0,0.0,"2019, 2020, 2021, 2022",1.0,0.0,6.0,2020
+Rodney Nuckey,United Kingdom,False,1.0,0.0,1953,0.0,0.0,0.0,1950
+Robert O'Brien,United States,False,1.0,0.0,1952,0.0,0.0,0.0,1950
+Esteban Ocon,France,False,112.0,1.0,"2016, 2017, 2018, 2020, 2021, 2022",0.0,0.0,2.0,2020
+Pat O'Connor,United States,False,5.0,0.0,"1954, 1955, 1956, 1957, 1958",1.0,0.0,0.0,1960
+Casimiro de Oliveira,Portugal,False,0.0,0.0,1958,0.0,0.0,0.0,1960
+Jackie Oliver,United Kingdom,False,50.0,0.0,"1968, 1969, 1970, 1971, 1972, 1973, 1977",0.0,0.0,2.0,1970
+Danny Ongais,United States,False,4.0,0.0,"1977, 1978",0.0,0.0,0.0,1980
+Rikky von Opel,Liechtenstein,False,10.0,0.0,"1973, 1974",0.0,0.0,0.0,1970
+Karl Oppitzhauser,Austria,False,0.0,0.0,1976,0.0,0.0,0.0,1980
+Fritz d'Orey,Brazil,False,3.0,0.0,1959,0.0,0.0,0.0,1960
+Arthur Owen,United Kingdom,False,1.0,0.0,1960,0.0,0.0,0.0,1960
+Carlos Pace,Brazil,False,72.0,1.0,"1972, 1973, 1974, 1975, 1976, 1977",1.0,0.0,6.0,1970
+Nello Pagani,Italy,False,1.0,0.0,1950,0.0,0.0,0.0,1950
+Riccardo Paletti,Italy,False,2.0,0.0,1982,0.0,0.0,0.0,1980
+Torsten Palm,Sweden,False,1.0,0.0,1975,0.0,0.0,0.0,1980
+Jolyon Palmer,United Kingdom,False,35.0,0.0,"2016, 2017",0.0,0.0,0.0,2020
+Jonathan Palmer,United Kingdom,False,83.0,0.0,"1983, 1984, 1985, 1986, 1987, 1988, 1989",0.0,0.0,0.0,1990
+Olivier Panis,France,False,157.0,1.0,"1994, 1995, 1996, 1997, 1998, 1999, 2001, 2002, 2003, 2004",0.0,0.0,5.0,2000
+Giorgio Pantano,Italy,False,14.0,0.0,2004,0.0,0.0,0.0,2000
+Massimiliano Papis,Italy,False,7.0,0.0,1995,0.0,0.0,0.0,2000
+Mike Parkes,United Kingdom,False,6.0,0.0,"1959, 1966, 1967",1.0,0.0,2.0,1960
+Reg Parnell,United Kingdom,False,6.0,0.0,"1950, 1951, 1952, 1954",0.0,0.0,1.0,1950
+Tim Parnell,United Kingdom,False,2.0,0.0,"1959, 1961, 1963",0.0,0.0,0.0,1960
+Johnnie Parsons,United States,False,9.0,1.0,"1950, 1951, 1952, 1953, 1954, 1955, 1956, 1957, 1958",0.0,0.0,1.0,1950
+Riccardo Patrese,Italy,False,256.0,6.0,"1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993",8.0,0.0,37.0,1980
+Al Pease,Canada,False,2.0,0.0,"1967, 1968, 1969",0.0,0.0,0.0,1970
+Roger Penske,United States,False,2.0,0.0,"1961, 1962",0.0,0.0,0.0,1960
+Cesare Perdisa,Italy,False,8.0,0.0,"1955, 1956, 1957",0.0,0.0,2.0,1960
+Sergio Pérez,Mexico,False,236.0,4.0,"2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022",1.0,0.0,27.0,2020
+Luis Pérez-Sala,Spain,False,26.0,0.0,"1988, 1989",0.0,0.0,0.0,1990
+Larry Perkins,Australia,False,11.0,0.0,"1974, 1976, 1977",0.0,0.0,0.0,1980
+Henri Pescarolo,France,False,57.0,0.0,"1968, 1970, 1971, 1972, 1973, 1974, 1976",0.0,0.0,1.0,1970
+Alessandro Pesenti-Rossi,Italy,False,3.0,0.0,1976,0.0,0.0,0.0,1980
+Josef Peters,West Germany,False,1.0,0.0,1952,0.0,0.0,0.0,1950
+Ronnie Peterson,Sweden,False,123.0,10.0,"1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978",14.0,0.0,26.0,1970
+Vitaly Petrov,Russia,False,57.0,0.0,"2010, 2011, 2012",0.0,0.0,1.0,2010
+Alfredo Pián,Argentina,False,0.0,0.0,1950,0.0,0.0,0.0,1950
+Oscar Piastri,Australia,False,1.0,0.0,2023,0.0,0.0,0.0,2020
+Charles Pic,France,False,39.0,0.0,"2012, 2013",0.0,0.0,0.0,2010
+François Picard,France,False,1.0,0.0,1958,0.0,0.0,0.0,1960
+Ernie Pieterse,South Africa,False,2.0,0.0,"1962, 1963, 1965",0.0,0.0,0.0,1960
+Paul Pietsch,West Germany,False,3.0,0.0,"1950, 1951, 1952",0.0,0.0,0.0,1950
+André Pilette,Belgium,False,9.0,0.0,"1951, 1953, 1954, 1956, 1961, 1963, 1964",0.0,0.0,0.0,1960
+Teddy Pilette,Belgium,False,1.0,0.0,"1974, 1977",0.0,0.0,0.0,1980
+Luigi Piotti,Italy,False,5.0,0.0,"1955, 1956, 1957, 1958",0.0,0.0,0.0,1960
+David Piper,United Kingdom,False,2.0,0.0,"1959, 1960",0.0,0.0,0.0,1960
+Nelson Piquet,Brazil,True,204.0,23.0,"1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991",24.0,3.0,60.0,1980
+Nelson Piquet Jr.,Brazil,False,28.0,0.0,"2008, 2009",0.0,0.0,1.0,2010
+Renato Pirocchi,Italy,False,1.0,0.0,1961,0.0,0.0,0.0,1960
+Didier Pironi,France,False,70.0,3.0,"1978, 1979, 1980, 1981, 1982",4.0,0.0,13.0,1980
+Emanuele Pirro,Italy,False,37.0,0.0,"1989, 1990, 1991",0.0,0.0,0.0,1990
+Antônio Pizzonia,Brazil,False,20.0,0.0,"2003, 2004, 2005",0.0,0.0,0.0,2000
+Eric van de Poele,Belgium,False,5.0,0.0,"1991, 1992",0.0,0.0,0.0,1990
+Jacques Pollet,France,False,5.0,0.0,"1954, 1955",0.0,0.0,0.0,1950
+Ben Pon,Netherlands,False,1.0,0.0,1962,0.0,0.0,0.0,1960
+Dennis Poore,United Kingdom,False,2.0,0.0,1952,0.0,0.0,0.0,1950
+Alfonso de Portago,Spain,False,5.0,0.0,"1956, 1957",0.0,0.0,1.0,1960
+Sam Posey,United States,False,2.0,0.0,"1971, 1972",0.0,0.0,0.0,1970
+Charles Pozzi,France,False,1.0,0.0,1950,0.0,0.0,0.0,1950
+Jackie Pretorius,South Africa,False,3.0,0.0,"1965, 1968, 1971, 1973",0.0,0.0,0.0,1970
+Ernesto Prinoth,Italy,False,0.0,0.0,1962,0.0,0.0,0.0,1960
+David Prophet,United Kingdom,False,2.0,0.0,"1963, 1965",0.0,0.0,0.0,1960
+Alain Prost,France,True,199.0,51.0,"1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1993",33.0,4.0,106.0,1990
+Tom Pryce,United Kingdom,False,42.0,0.0,"1974, 1975, 1976, 1977",1.0,0.0,2.0,1980
+David Purley,United Kingdom,False,7.0,0.0,"1973, 1974, 1977",0.0,0.0,0.0,1970
+Clive Puzey,Rhodesia,False,0.0,0.0,1965,0.0,0.0,0.0,1960
+Dieter Quester,Austria,False,1.0,0.0,"1969, 1974",0.0,0.0,0.0,1970
+Ian Raby,United Kingdom,False,3.0,0.0,"1963, 1964, 1965",0.0,0.0,0.0,1960
+Bobby Rahal,United States,False,2.0,0.0,1978,0.0,0.0,0.0,1980
+Kimi Räikkönen,Finland,True,349.0,21.0,"2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021",18.0,1.0,103.0,2010
+Hermano da Silva Ramos,Brazil,False,7.0,0.0,"1955, 1956",0.0,0.0,0.0,1960
+Pierre-Henri Raphanel,France,False,1.0,0.0,"1988, 1989",0.0,0.0,0.0,1990
+Dick Rathmann,United States,False,5.0,0.0,"1950, 1956, 1958, 1959, 1960",1.0,0.0,0.0,1960
+Jim Rathmann,United States,False,10.0,1.0,"1950, 1952, 1953, 1954, 1955, 1956, 1957, 1958, 1959, 1960",0.0,0.0,4.0,1960
+Roland Ratzenberger,Austria,False,1.0,0.0,1994,0.0,0.0,0.0,1990
+Héctor Rebaque,Mexico,False,41.0,0.0,"1977, 1978, 1979, 1980, 1981",0.0,0.0,0.0,1980
+Brian Redman,United Kingdom,False,12.0,0.0,"1968, 1970, 1971, 1972, 1973, 1974",0.0,0.0,1.0,1970
+Jimmy Reece,United States,False,6.0,0.0,"1952, 1954, 1955, 1956, 1957, 1958",0.0,0.0,0.0,1960
+Ray Reed,Rhodesia,False,0.0,0.0,1965,0.0,0.0,0.0,1960
+Alan Rees,United Kingdom,False,1.0,0.0,1967,0.0,0.0,0.0,1970
+Clay Regazzoni,Switzerland,False,132.0,5.0,"1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980",5.0,0.0,28.0,1980
+Paul di Resta,United Kingdom,False,59.0,0.0,"2011, 2012, 2013, 2017",0.0,0.0,0.0,2010
+Carlos Reutemann,Argentina,False,146.0,12.0,"1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982",6.0,0.0,45.0,1980
+Lance Reventlow,United States,False,1.0,0.0,1960,0.0,0.0,0.0,1960
+Peter Revson,United States,False,30.0,2.0,"1964, 1971, 1972, 1973, 1974",1.0,0.0,8.0,1970
+John Rhodes,United Kingdom,False,1.0,0.0,1965,0.0,0.0,0.0,1960
+Alex Ribeiro,Brazil,False,10.0,0.0,"1976, 1977, 1979",0.0,0.0,0.0,1980
+Daniel Ricciardo,Australia,False,232.0,8.0,"2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022",3.0,0.0,32.0,2020
+Ken Richardson,United Kingdom,False,0.0,0.0,1951,0.0,0.0,0.0,1950
+Fritz Riess,West Germany,False,1.0,0.0,1952,0.0,0.0,0.0,1950
+Jim Rigsby,United States,False,1.0,0.0,1952,0.0,0.0,0.0,1950
+Jochen Rindt,Austria,True,60.0,6.0,"1964, 1965, 1966, 1967, 1968, 1969, 1970",10.0,1.0,13.0,1970
+John Riseley-Prichard,United Kingdom,False,1.0,0.0,1954,0.0,0.0,0.0,1950
+Giovanni de Riu,Italy,False,0.0,0.0,1954,0.0,0.0,0.0,1950
+Richard Robarts,United Kingdom,False,3.0,0.0,1974,0.0,0.0,0.0,1970
+Pedro Rodríguez,Mexico,False,54.0,2.0,"1963, 1964, 1965, 1966, 1967, 1968, 1969, 1970, 1971",0.0,0.0,7.0,1970
+Ricardo Rodríguez,Mexico,False,5.0,0.0,"1961, 1962",0.0,0.0,0.0,1960
+Alberto Rodriguez Larreta,Argentina,False,1.0,0.0,1960,0.0,0.0,0.0,1960
+Franco Rol,Italy,False,5.0,0.0,"1950, 1951, 1952",0.0,0.0,0.0,1950
+Alan Rollinson,United Kingdom,False,0.0,0.0,1965,0.0,0.0,0.0,1960
+Tony Rolt,United Kingdom,False,3.0,0.0,"1950, 1953, 1955",0.0,0.0,0.0,1950
+Bertil Roos,Sweden,False,1.0,0.0,1974,0.0,0.0,0.0,1970
+Pedro de la Rosa,Spain,False,104.0,0.0,"1999, 2000, 2001, 2002, 2005, 2006, 2010, 2011, 2012",0.0,0.0,1.0,2010
+Keke Rosberg,Finland,True,114.0,5.0,"1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986",5.0,1.0,17.0,1980
+Nico Rosberg,Germany,True,206.0,23.0,"2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016",30.0,1.0,57.0,2010
+Mauri Rose,United States,False,2.0,0.0,"1950, 1951",0.0,0.0,1.0,1950
+Louis Rosier,France,False,38.0,0.0,"1950, 1951, 1952, 1953, 1954, 1955, 1956",0.0,0.0,2.0,1950
+Ricardo Rosset,Brazil,False,26.0,0.0,"1996, 1997, 1998",0.0,0.0,0.0,2000
+Alexander Rossi,United States,False,5.0,0.0,2015,0.0,0.0,0.0,2020
+Huub Rothengatter,Netherlands,False,25.0,0.0,"1984, 1985, 1986",0.0,0.0,0.0,1980
+Basil van Rooyen,South Africa,False,2.0,0.0,"1968, 1969",0.0,0.0,0.0,1970
+Lloyd Ruby,United States,False,2.0,0.0,"1960, 1961",0.0,0.0,0.0,1960
+Jean-Claude Rudaz,Switzerland,False,0.0,0.0,1964,0.0,0.0,0.0,1960
+George Russell,United Kingdom,False,83.0,1.0,"2019, 2020, 2021, 2022",1.0,0.0,9.0,2020
+Eddie Russo,United States,False,4.0,0.0,"1955, 1956, 1957, 1960",0.0,0.0,0.0,1960
+Paul Russo,United States,False,8.0,0.0,"1950, 1951, 1952, 1953, 1954, 1955, 1956, 1957, 1958, 1959, 1960",0.0,0.0,1.0,1960
+Troy Ruttman,United States,False,8.0,1.0,"1950, 1951, 1952, 1953, 1954, 1955, 1956, 1957, 1958, 1960",0.0,0.0,1.0,1950
+Peter Ryan,Canada,False,1.0,0.0,1961,0.0,0.0,0.0,1960
+Eddie Sachs,United States,False,4.0,0.0,"1957, 1958, 1959, 1960",1.0,0.0,0.0,1960
+Bob Said,United States,False,1.0,0.0,1959,0.0,0.0,0.0,1960
+Carlos Sainz Jr.,Spain,False,163.0,1.0,"2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022",3.0,0.0,15.0,2020
+Eliseo Salazar,Chile,False,24.0,0.0,"1981, 1982, 1983",0.0,0.0,0.0,1980
+Mika Salo,Finland,False,109.0,0.0,"1994, 1995, 1996, 1997, 1998, 1999, 2000, 2002",0.0,0.0,2.0,2000
+Roy Salvadori,United Kingdom,False,47.0,0.0,"1952, 1953, 1954, 1955, 1956, 1957, 1958, 1959, 1960, 1961, 1962",0.0,0.0,2.0,1960
+Consalvo Sanesi,Italy,False,5.0,0.0,"1950, 1951",0.0,0.0,0.0,1950
+Stéphane Sarrazin,France,False,1.0,0.0,1999,0.0,0.0,0.0,2000
+Logan Sargeant,United States,False,1.0,0.0,2023,0.0,0.0,0.0,2020
+Takuma Sato,Japan,False,90.0,0.0,"2002, 2003, 2004, 2005, 2006, 2007, 2008",0.0,0.0,1.0,2000
+Carl Scarborough,United States,False,2.0,0.0,"1951, 1953",0.0,0.0,0.0,1950
+Ludovico Scarfiotti,Italy,False,10.0,1.0,"1963, 1964, 1965, 1966, 1967, 1968",0.0,0.0,1.0,1970
+Giorgio Scarlatti,Italy,False,12.0,0.0,"1956, 1957, 1958, 1959, 1960, 1961",0.0,0.0,0.0,1960
+Ian Scheckter,South Africa,False,18.0,0.0,"1974, 1975, 1976, 1977",0.0,0.0,0.0,1980
+Jody Scheckter,South Africa,True,112.0,10.0,"1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980",3.0,1.0,33.0,1980
+Harry Schell,United States,False,56.0,0.0,"1950, 1951, 1952, 1953, 1954, 1955, 1956, 1957, 1958, 1959, 1960",0.0,0.0,2.0,1960
+Tim Schenken,Australia,False,34.0,0.0,"1970, 1971, 1972, 1973, 1974",0.0,0.0,1.0,1970
+Albert Scherrer,Switzerland,False,1.0,0.0,1953,0.0,0.0,0.0,1950
+Domenico Schiattarella,Italy,False,6.0,0.0,"1994, 1995",0.0,0.0,0.0,1990
+Heinz Schiller,Switzerland,False,1.0,0.0,1962,0.0,0.0,0.0,1960
+Bill Schindler,United States,False,3.0,0.0,"1950, 1951, 1952",0.0,0.0,0.0,1950
+Jean-Louis Schlesser,France,False,1.0,0.0,"1983, 1988",0.0,0.0,0.0,1990
+Jo Schlesser,France,False,3.0,0.0,1968,0.0,0.0,0.0,1970
+Bernd Schneider,West Germany,False,9.0,0.0,"1988, 1989, 1990",0.0,0.0,0.0,1990
+Rudolf Schoeller,Switzerland,False,1.0,0.0,1952,0.0,0.0,0.0,1950
+Rob Schroeder,United States,False,1.0,0.0,1962,0.0,0.0,0.0,1960
+Michael Schumacher,Germany,True,306.0,91.0,"1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2010, 2011, 2012",68.0,7.0,155.0,2000
+Mick Schumacher,Germany,False,43.0,0.0,"2021, 2022",0.0,0.0,0.0,2020
+Ralf Schumacher,Germany,False,180.0,6.0,"1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007",6.0,0.0,27.0,2000
+Vern Schuppan,Australia,False,9.0,0.0,"1972, 1974, 1975, 1977",0.0,0.0,0.0,1970
+Adolfo Schwelm Cruz,Argentina,False,1.0,0.0,1953,0.0,0.0,0.0,1950
+Bob Scott,United States,False,3.0,0.0,"1952, 1953, 1954",0.0,0.0,0.0,1950
+Archie Scott Brown,United Kingdom,False,1.0,0.0,1956,0.0,0.0,0.0,1960
+Piero Scotti,Italy,False,1.0,0.0,1956,0.0,0.0,0.0,1960
+Wolfgang Seidel,West Germany,False,10.0,0.0,"1953, 1958, 1960, 1961, 1962",0.0,0.0,0.0,1960
+Günther Seiffert,West Germany,False,0.0,0.0,1962,0.0,0.0,0.0,1960
+Ayrton Senna,Brazil,True,161.0,41.0,"1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994",65.0,3.0,80.0,1990
+Bruno Senna,Brazil,False,46.0,0.0,"2010, 2011, 2012",0.0,0.0,0.0,2010
+Dorino Serafini,Italy,False,1.0,0.0,1950,0.0,0.0,1.0,1950
+Chico Serra,Brazil,False,18.0,0.0,"1981, 1982, 1983",0.0,0.0,0.0,1980
+Doug Serrurier,South Africa,False,2.0,0.0,"1962, 1963, 1965",0.0,0.0,0.0,1960
+Johnny Servoz-Gavin,France,False,12.0,0.0,"1967, 1968, 1969, 1970",0.0,0.0,1.0,1970
+Tony Settember,United States,False,6.0,0.0,"1962, 1963",0.0,0.0,0.0,1960
+Hap Sharp,United States,False,6.0,0.0,"1961, 1962, 1963, 1964",0.0,0.0,0.0,1960
+Brian Shawe-Taylor,United Kingdom,False,2.0,0.0,"1950, 1951",0.0,0.0,0.0,1950
+Carroll Shelby,United States,False,8.0,0.0,"1958, 1959",0.0,0.0,0.0,1960
+Tony Shelly,New Zealand,False,1.0,0.0,1962,0.0,0.0,0.0,1960
+Jo Siffert,Switzerland,False,96.0,2.0,"1962, 1963, 1964, 1965, 1966, 1967, 1968, 1969, 1970, 1971",2.0,0.0,6.0,1970
+André Simon,France,False,11.0,0.0,"1951, 1952, 1955, 1956, 1957",0.0,0.0,0.0,1950
+Sergey Sirotkin,Russia,False,21.0,0.0,2018,0.0,0.0,0.0,2020
+Rob Slotemaker,Netherlands,False,0.0,0.0,1962,0.0,0.0,0.0,1960
+Moisés Solana,Mexico,False,8.0,0.0,"1963, 1964, 1965, 1966, 1967, 1968",0.0,0.0,0.0,1970
+Alex Soler-Roig,Spain,False,6.0,0.0,"1970, 1971, 1972",0.0,0.0,0.0,1970
+Raymond Sommer,France,False,5.0,0.0,1950,0.0,0.0,0.0,1950
+Vincenzo Sospiri,Italy,False,0.0,0.0,1997,0.0,0.0,0.0,2000
+Stephen South,United Kingdom,False,0.0,0.0,1980,0.0,0.0,0.0,1980
+Mike Sparken,France,False,1.0,0.0,1955,0.0,0.0,0.0,1960
+Scott Speed,United States,False,28.0,0.0,"2006, 2007",0.0,0.0,0.0,2010
+Mike Spence,United Kingdom,False,36.0,0.0,"1963, 1964, 1965, 1966, 1967, 1968",0.0,0.0,1.0,1970
+Alan Stacey,United Kingdom,False,7.0,0.0,"1958, 1959, 1960",0.0,0.0,0.0,1960
+Gaetano Starrabba,Italy,False,1.0,0.0,1961,0.0,0.0,0.0,1960
+Will Stevens,United Kingdom,False,18.0,0.0,"2014, 2015",0.0,0.0,0.0,2010
+Chuck Stevenson,United States,False,5.0,0.0,"1951, 1952, 1953, 1954, 1960",0.0,0.0,0.0,1950
+Ian Stewart,United Kingdom,False,1.0,0.0,1953,0.0,0.0,0.0,1950
+Jackie Stewart,United Kingdom,True,99.0,27.0,"1965, 1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973",17.0,3.0,43.0,1970
+Jimmy Stewart,United Kingdom,False,1.0,0.0,1953,0.0,0.0,0.0,1950
+Siegfried Stohr,Italy,False,9.0,0.0,1981,0.0,0.0,0.0,1980
+Rolf Stommelen,West Germany,False,54.0,0.0,"1970, 1971, 1972, 1973, 1974, 1975, 1976, 1978",0.0,0.0,1.0,1970
+Philippe Streiff,France,False,53.0,0.0,"1984, 1985, 1986, 1987, 1988",0.0,0.0,1.0,1990
+Lance Stroll,Canada,False,123.0,0.0,"2017, 2018, 2019, 2020, 2021, 2022",1.0,0.0,3.0,2020
+Hans Stuck,West Germany,False,3.0,0.0,"1951, 1952, 1953",0.0,0.0,0.0,1950
+Hans-Joachim Stuck,West Germany,False,74.0,0.0,"1974, 1975, 1976, 1977, 1978, 1979",0.0,0.0,2.0,1980
+Otto Stuppacher,Austria,False,0.0,0.0,1976,0.0,0.0,0.0,1980
+Danny Sullivan,United States,False,15.0,0.0,1983,0.0,0.0,0.0,1980
+Marc Surer,Switzerland,False,82.0,0.0,"1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986",0.0,0.0,0.0,1980
+John Surtees,United Kingdom,True,111.0,6.0,"1960, 1961, 1962, 1963, 1964, 1965, 1966, 1967, 1968, 1969, 1970, 1971, 1972",8.0,1.0,24.0,1970
+Andy Sutcliffe,United Kingdom,False,0.0,0.0,1977,0.0,0.0,0.0,1980
+Adrian Sutil,Germany,False,128.0,0.0,"2007, 2008, 2009, 2010, 2011, 2013, 2014",0.0,0.0,0.0,2010
+Len Sutton,United States,False,3.0,0.0,"1958, 1959, 1960",0.0,0.0,0.0,1960
+Aguri Suzuki,Japan,False,65.0,0.0,"1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995",0.0,0.0,1.0,1990
+Toshio Suzuki,Japan,False,2.0,0.0,1993,0.0,0.0,0.0,1990
+Jacques Swaters,Belgium,False,7.0,0.0,"1951, 1953, 1954",0.0,0.0,0.0,1950
+Bob Sweikert,United States,False,5.0,1.0,"1952, 1953, 1954, 1955, 1956",0.0,0.0,1.0,1950
+Toranosuke Takagi,Japan,False,32.0,0.0,"1998, 1999",0.0,0.0,0.0,2000
+Noritake Takahara,Japan,False,2.0,0.0,"1976, 1977",0.0,0.0,0.0,1980
+Kunimitsu Takahashi,Japan,False,1.0,0.0,1977,0.0,0.0,0.0,1980
+Patrick Tambay,France,False,114.0,2.0,"1977, 1978, 1979, 1981, 1982, 1983, 1984, 1985, 1986",5.0,0.0,11.0,1980
+Luigi Taramazzo,Italy,False,0.0,0.0,1958,0.0,0.0,0.0,1960
+Gabriele Tarquini,Italy,False,38.0,0.0,"1987, 1988, 1989, 1990, 1991, 1992, 1995",0.0,0.0,0.0,1990
+Piero Taruffi,Italy,False,18.0,1.0,"1950, 1951, 1952, 1954, 1955, 1956",0.0,0.0,5.0,1950
+Dennis Taylor,United Kingdom,False,0.0,0.0,1959,0.0,0.0,0.0,1960
+Henry Taylor,United Kingdom,False,8.0,0.0,"1959, 1960, 1961",0.0,0.0,0.0,1960
+John Taylor,United Kingdom,False,5.0,0.0,"1964, 1966",0.0,0.0,0.0,1960
+Mike Taylor,United Kingdom,False,1.0,0.0,"1959, 1960",0.0,0.0,0.0,1960
+Trevor Taylor,United Kingdom,False,27.0,0.0,"1959, 1961, 1962, 1963, 1964, 1966",0.0,0.0,1.0,1960
+Marshall Teague,United States,False,3.0,0.0,"1953, 1954, 1957",0.0,0.0,0.0,1950
+Shorty Templeman,United States,False,3.0,0.0,"1955, 1958, 1960",0.0,0.0,0.0,1960
+Max de Terra,Switzerland,False,2.0,0.0,"1952, 1953",0.0,0.0,0.0,1950
+André Testut,Monaco,False,0.0,0.0,"1958, 1959",0.0,0.0,0.0,1960
+Mike Thackwell,New Zealand,False,2.0,0.0,"1980, 1984",0.0,0.0,0.0,1980
+Alfonso Thiele,United States,False,1.0,0.0,1960,0.0,0.0,0.0,1960
+Eric Thompson,United Kingdom,False,1.0,0.0,1952,0.0,0.0,0.0,1950
+Johnny Thomson,United States,False,8.0,0.0,"1953, 1954, 1955, 1956, 1957, 1958, 1959, 1960",1.0,0.0,1.0,1960
+Leslie Thorne,United Kingdom,False,1.0,0.0,1954,0.0,0.0,0.0,1950
+Bud Tingelstad,United States,False,1.0,0.0,1960,0.0,0.0,0.0,1960
+Sam Tingle,Rhodesia,False,5.0,0.0,"1963, 1965, 1967, 1968, 1969",0.0,0.0,0.0,1970
+Desmond Titterington,United Kingdom,False,1.0,0.0,1956,0.0,0.0,0.0,1960
+Johnnie Tolan,United States,False,3.0,0.0,"1956, 1957, 1958",0.0,0.0,0.0,1960
+Alejandro de Tomaso,Argentina,False,2.0,0.0,"1957, 1959",0.0,0.0,0.0,1960
+Charles de Tornaco,Belgium,False,2.0,0.0,"1952, 1953",0.0,0.0,0.0,1950
+Tony Trimmer,United Kingdom,False,0.0,0.0,"1975, 1976, 1977, 1978",0.0,0.0,0.0,1980
+Maurice Trintignant,France,False,82.0,2.0,"1950, 1951, 1952, 1953, 1954, 1955, 1956, 1957, 1958, 1959, 1960, 1961, 1962, 1963, 1964",0.0,0.0,10.0,1960
+Wolfgang von Trips,West Germany,False,27.0,2.0,"1956, 1957, 1958, 1959, 1960, 1961",1.0,0.0,6.0,1960
+Jarno Trulli,Italy,False,252.0,1.0,"1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011",4.0,0.0,11.0,2000
+Yuki Tsunoda,Japan,False,43.0,0.0,"2021, 2022",0.0,0.0,0.0,2020
+Esteban Tuero,Argentina,False,16.0,0.0,1998,0.0,0.0,0.0,2000
+Guy Tunmer,South Africa,False,1.0,0.0,1975,0.0,0.0,0.0,1980
+Jack Turner,United States,False,4.0,0.0,"1956, 1957, 1958, 1959",0.0,0.0,0.0,1960
+Toni Ulmen,West Germany,False,2.0,0.0,1952,0.0,0.0,0.0,1950
+Bobby Unser,United States,False,1.0,0.0,1968,0.0,0.0,0.0,1970
+Jerry Unser Jr.,United States,False,1.0,0.0,1958,0.0,0.0,0.0,1960
+Alberto Uria,Uruguay,False,2.0,0.0,"1955, 1956",0.0,0.0,0.0,1960
+Nino Vaccarella,Italy,False,4.0,0.0,"1961, 1962, 1965",0.0,0.0,0.0,1960
+Stoffel Vandoorne,Belgium,False,41.0,0.0,"2016, 2017, 2018",0.0,0.0,0.0,2020
+Bob Veith,United States,False,5.0,0.0,"1956, 1957, 1958, 1959, 1960",0.0,0.0,0.0,1960
+Jean-Éric Vergne,France,False,58.0,0.0,"2012, 2013, 2014",0.0,0.0,0.0,2010
+Jos Verstappen,Netherlands,False,106.0,0.0,"1994, 1995, 1996, 1997, 1998, 2000, 2001, 2003",0.0,0.0,2.0,2000
+Max Verstappen,Netherlands,True,164.0,36.0,"2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022",21.0,2.0,78.0,2020
+Sebastian Vettel,Germany,True,299.0,53.0,"2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022",57.0,4.0,122.0,2010
+Gilles Villeneuve,Canada,False,67.0,6.0,"1977, 1978, 1979, 1980, 1981, 1982",2.0,0.0,13.0,1980
+Jacques Villeneuve,Canada,True,163.0,11.0,"1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006",13.0,1.0,23.0,2000
+Jacques Villeneuve Sr.,Canada,False,0.0,0.0,"1981, 1983",0.0,0.0,0.0,1980
+Luigi Villoresi,Italy,False,31.0,0.0,"1950, 1951, 1952, 1953, 1954, 1955, 1956",0.0,0.0,8.0,1950
+Emilio de Villota,Spain,False,2.0,0.0,"1976, 1977, 1978, 1981, 1982",0.0,0.0,0.0,1980
+Ottorino Volonterio,Switzerland,False,3.0,0.0,"1954, 1956, 1957",0.0,0.0,0.0,1960
+Jo Vonlanthen,Switzerland,False,1.0,0.0,1975,0.0,0.0,0.0,1980
+Ernie de Vos,Canada,False,0.0,0.0,1963,0.0,0.0,0.0,1960
+Nyck de Vries,Netherlands,False,2.0,0.0,2022,0.0,0.0,0.0,2020
+Bill Vukovich,United States,False,5.0,2.0,"1951, 1952, 1953, 1954, 1955",1.0,0.0,2.0,1950
+Syd van der Vyver,South Africa,False,0.0,0.0,1962,0.0,0.0,0.0,1960
+Fred Wacker,United States,False,3.0,0.0,"1953, 1954",0.0,0.0,0.0,1950
+David Walker,Australia,False,11.0,0.0,"1971, 1972",0.0,0.0,0.0,1970
+Peter Walker,United Kingdom,False,4.0,0.0,"1950, 1951, 1955",0.0,0.0,0.0,1950
+Lee Wallard,United States,False,2.0,1.0,"1950, 1951",0.0,0.0,1.0,1950
+Heini Walter,Switzerland,False,1.0,0.0,1962,0.0,0.0,0.0,1960
+Rodger Ward,United States,False,12.0,1.0,"1951, 1952, 1953, 1954, 1955, 1956, 1957, 1958, 1959, 1960, 1963",0.0,0.0,2.0,1960
+Derek Warwick,United Kingdom,False,147.0,0.0,"1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1993",0.0,0.0,4.0,1990
+John Watson,United Kingdom,False,152.0,5.0,"1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1985",2.0,0.0,20.0,1980
+Spider Webb,United States,False,4.0,0.0,"1950, 1952, 1953, 1954",0.0,0.0,0.0,1950
+Mark Webber,Australia,False,215.0,9.0,"2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013",13.0,0.0,42.0,2010
+Pascal Wehrlein,Germany,False,39.0,0.0,"2016, 2017",0.0,0.0,0.0,2020
+Volker Weidler,West Germany,False,0.0,0.0,1989,0.0,0.0,0.0,1990
+Wayne Weiler,United States,False,1.0,0.0,1960,0.0,0.0,0.0,1960
+Karl Wendlinger,Austria,False,41.0,0.0,"1991, 1992, 1993, 1994, 1995",0.0,0.0,0.0,1990
+Peter Westbury,United Kingdom,False,1.0,0.0,1970,0.0,0.0,0.0,1970
+Chuck Weyant,United States,False,4.0,0.0,"1955, 1957, 1958, 1959",0.0,0.0,0.0,1960
+Ken Wharton,United Kingdom,False,15.0,0.0,"1952, 1953, 1954, 1955",0.0,0.0,0.0,1950
+Ted Whiteaway,United Kingdom,False,0.0,0.0,1955,0.0,0.0,0.0,1960
+Graham Whitehead,United Kingdom,False,1.0,0.0,1952,0.0,0.0,0.0,1950
+Peter Whitehead,United Kingdom,False,10.0,0.0,"1950, 1951, 1952, 1953, 1954",0.0,0.0,1.0,1950
+Bill Whitehouse,United Kingdom,False,1.0,0.0,1954,0.0,0.0,0.0,1950
+Robin Widdows,United Kingdom,False,1.0,0.0,1968,0.0,0.0,0.0,1970
+Eppie Wietzes,Canada,False,2.0,0.0,"1967, 1974",0.0,0.0,0.0,1970
+Mike Wilds,United Kingdom,False,3.0,0.0,"1974, 1975, 1976",0.0,0.0,0.0,1980
+Jonathan Williams,United Kingdom,False,1.0,0.0,1967,0.0,0.0,0.0,1970
+Roger Williamson,United Kingdom,False,2.0,0.0,1973,0.0,0.0,0.0,1970
+Dempsey Wilson,United States,False,2.0,0.0,"1958, 1960",0.0,0.0,0.0,1960
+Desiré Wilson,South Africa,False,0.0,0.0,1980,0.0,0.0,0.0,1980
+Justin Wilson,United Kingdom,False,16.0,0.0,2003,0.0,0.0,0.0,2000
+Vic Wilson,United Kingdom,False,1.0,0.0,"1960, 1966",0.0,0.0,0.0,1960
+Joachim Winkelhock,West Germany,False,0.0,0.0,1989,0.0,0.0,0.0,1990
+Manfred Winkelhock,West Germany,False,47.0,0.0,"1980, 1982, 1983, 1984, 1985",0.0,0.0,0.0,1980
+Markus Winkelhock,Germany,False,1.0,0.0,2007,0.0,0.0,0.0,2010
+Reine Wisell,Sweden,False,22.0,0.0,"1970, 1971, 1972, 1973, 1974",0.0,0.0,1.0,1970
+Roelof Wunderink,Netherlands,False,3.0,0.0,1975,0.0,0.0,0.0,1980
+Alexander Wurz,Austria,False,69.0,0.0,"1997, 1998, 1999, 2000, 2005, 2007",0.0,0.0,3.0,2000
+Sakon Yamamoto,Japan,False,21.0,0.0,"2006, 2007, 2010",0.0,0.0,0.0,2010
+Alex Yoong,Malaysia,False,14.0,0.0,"2001, 2002",0.0,0.0,0.0,2000
+Alessandro Zanardi,Italy,False,41.0,0.0,"1991, 1992, 1993, 1994, 1999",0.0,0.0,0.0,1990
+Emilio Zapico,Spain,False,0.0,0.0,1976,0.0,0.0,0.0,1980
+Zhou Guanyu,China,False,23.0,0.0,2022,0.0,0.0,0.0,2020
+Ricardo Zonta,Brazil,False,36.0,0.0,"1999, 2000, 2001, 2004, 2005",0.0,0.0,0.0,2000
+Renzo Zorzi,Italy,False,7.0,0.0,"1975, 1976, 1977",0.0,0.0,0.0,1980
+Ricardo Zunino,Argentina,False,10.0,0.0,"1979, 1980, 1981",0.0,0.0,0.0,1980

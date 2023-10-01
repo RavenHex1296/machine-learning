@@ -1,8 +1,6 @@
-import sys
 import pandas as pd 
 import numpy as np
 
-sys.path.append('src')
 
 df = pd.read_csv("dsu_fall23_tech_app_dataset.csv") 
 
